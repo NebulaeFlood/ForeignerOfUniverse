@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+    <FOU.Settings.Category.Label>Foreigner of Universe</FOU.Settings.Category.Label>
+
+    <FOU.Settings.Basic.Label>General</FOU.Settings.Basic.Label>
+
+    <FOU.Settings.NanitesMaxStorage.Label><![CDATA[<color=#D09B61>Nanites</color>]]> max storage capacity: </FOU.Settings.NanitesMaxStorage.Label>
+
+    <FOU.Settings.NanitesDailyReplication.Label><![CDATA[<color=#D09B61>Nanites</color>]]> daily replication: </FOU.Settings.NanitesDailyReplication.Label>
+    <FOU.Settings.NanitesDailyReplication.Tooltip>Configures the daily replication rate for <![CDATA[<color=#D09B61>higher dimensional nanites</color>]]>.</FOU.Settings.NanitesDailyReplication.Tooltip>
+
+    <FOU.Settings.PhoenixRegenerationPerDay.Label><![CDATA[<color=#D09B61>「Phoenix」</color>]]> daily restoration: </FOU.Settings.PhoenixRegenerationPerDay.Label>
+    <FOU.Settings.PhoenixRegenerationPerDay.Tooltip>Configures the daily physiological restoration capacity of <![CDATA[<color=#D09B61>「Phoenix」</color>]]>.</FOU.Settings.PhoenixRegenerationPerDay.Tooltip>
+
+    <FOU.Settings.MatterRecoveryCost.Label><![CDATA[<color=#D09B61>Matter recovery</color>]]> ability consumption: </FOU.Settings.MatterRecoveryCost.Label>
+    <FOU.Settings.MatterRecoveryCost.Tooltip>Configures the <![CDATA[<color=#D09B61>higher dimensional nanites</color>]]> cost for activating <![CDATA[<color=#D09B61>matter recovery</color>]]> ability.</FOU.Settings.MatterRecoveryCost.Tooltip>
+
+    <FOU.Settings.NanitesPerKilogram.Label>Nanites per kilogram: </FOU.Settings.NanitesPerKilogram.Label>
+    <FOU.Settings.NanitesPerKilogram.Tooltip>Configures per kilogram of matter yield of <![CDATA[<color=#D09B61>higher dimensional nanites</color>]]> by <![CDATA[<color=#D09B61>matter disintegration</color>]]> ability.</FOU.Settings.NanitesPerKilogram.Tooltip>
+
+	<FOU.Settings.KilogramsPerNanite.Label>Kilograms per nanite:</FOU.Settings.KilogramsPerNanite.Label>
+	<FOU.Settings.KilogramsPerNanite.Tooltip>Configures the <![CDATA[<color=#D09B61>higher dimensional nanites</color>]]> required per kilogram of matter reconstructed for <![CDATA[<color=#D09B61>matter weave</color>]]> ability.</FOU.Settings.KilogramsPerNanite.Tooltip>
+
+    <FOU.Settings.IndiscriminateDisintegrationCost.Label><![CDATA[<color=#D09B61>Indiscriminate disintegration</color>]]> ability consumption: </FOU.Settings.IndiscriminateDisintegrationCost.Label>
+    <FOU.Settings.IndiscriminateDisintegrationCost.Tooltip>Configures the <![CDATA[<color=#D09B61>higher dimensional nanites</color>]]> cost for activating <![CDATA[<color=#D09B61>indiscriminate disintegration</color>]]> ability.</FOU.Settings.IndiscriminateDisintegrationCost.Tooltip>
+
+    <FOU.Settings.IndiscriminateDisintegrationDamage.Label><![CDATA[<color=#D09B61>Indiscriminate disintegration</color>]]> ability damage: </FOU.Settings.IndiscriminateDisintegrationDamage.Label>
+    <FOU.Settings.IndiscriminateDisintegrationDamage.Tooltip>Configures the damage per target inflicted by <![CDATA[<color=#D09B61>indiscriminate disintegration</color>]]>.</FOU.Settings.IndiscriminateDisintegrationDamage.Tooltip>
+    
+    <FOU.Settings.IndiscriminateDisintegrationRadius.Label><![CDATA[<color=#D09B61>Indiscriminate disintegration</color>]]> ability radius: </FOU.Settings.IndiscriminateDisintegrationRadius.Label>
+    <FOU.Settings.IndiscriminateDisintegrationRadius.Tooltip>Configures the effective radius for <![CDATA[<color=#D09B61>indiscriminate disintegration</color>]]>.</FOU.Settings.IndiscriminateDisintegrationRadius.Tooltip>
+
+    <FOU.Settings.RecoveryProgramCooldown.Label><![CDATA[<color=#D09B61>Recovery program</color>]]> ability cooldown: </FOU.Settings.RecoveryProgramCooldown.Label>
+    <FOU.Settings.RecoveryProgramCooldown.Tooltip>Configures the cooldown for <![CDATA[<color=#D09B61>Recovery program</color>]]> from <![CDATA[<color=#D09B61>「Phoenix」</color>]]>.\n\nThe unit here is <![CDATA[<color=#D09B61>Tick</color>]]>, and 60,000 <![CDATA[<color=#D09B61>Ticks</color>]]> equal one in-game day.</FOU.Settings.RecoveryProgramCooldown.Tooltip>
+
+    <FOU.Settings.ResetButton.Label>Reset</FOU.Settings.ResetButton.Label>
+    <FOU.Settings.ResetButton.Tooltip>Resets the above options to default.</FOU.Settings.ResetButton.Tooltip>
+
+    <FOU.Settings.Protocols.Tooltip>Configure health conditions immunized by {0} protocol.</FOU.Settings.Protocols.Tooltip>
+
+    <FOU.Settings.Protocols.ImmuneDiseases.AddButton.Tooltip>Try to add new immunized health condition.</FOU.Settings.Protocols.ImmuneDiseases.AddButton.Tooltip>
+    <FOU.Settings.Protocols.ImmuneDiseases.InputBox.Tooltip>DefName of health condition to add.</FOU.Settings.Protocols.ImmuneDiseases.InputBox.Tooltip>
+    <FOU.Settings.Protocols.ImmuneDiseases.OverviewButton.Tooltip>View all loaded health conditions.</FOU.Settings.Protocols.ImmuneDiseases.OverviewButton.Tooltip>
+    <FOU.Settings.Protocols.ImmuneDiseases.ResetButton.Tooltip>Restore default settings.</FOU.Settings.Protocols.ImmuneDiseases.ResetButton.Tooltip>
+
+</LanguageData>

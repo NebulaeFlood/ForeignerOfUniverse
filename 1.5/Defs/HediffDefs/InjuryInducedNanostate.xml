@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <HediffDef>
+        <defName>FOU_InjuryInducedNanostate</defName>
+        <label>injury-Induced Nanostate</label>
+        <description>The higher-dimensional nanites have been activated by the host's fatal injury. They will induce a coma in the host to protect its consciousness and repair or reconstruct the host's body more quickly.
+\nSince the host's physical information has been recorded, even if the host's body is completely destroyed, the high-dimensional micro-machines can reconstruct it.</description>
+        <hediffClass>HediffWithComps</hediffClass>
+        <isBad>false</isBad>
+        <preventsDeath>true</preventsDeath>
+        
+        <stages>
+            <li>
+                <hungerRateFactor>0.05</hungerRateFactor>
+                <painFactor>0</painFactor>
+                <restFallFactor>0</restFallFactor>
+
+                <capMods>
+                    <li>
+                        <capacity>Consciousness</capacity>
+                        <setMax>0.1</setMax>
+                    </li>
+                </capMods>
+
+            </li>
+        </stages>
+
+        <comps>
+            <li Class="HediffCompProperties">
+                <compClass>ForeignerOfUniverse.Comps.Hediffs.DisappearsAfterLethalInjuriesDisappeared</compClass>
+            </li>            
+            <li Class="HediffCompProperties_DisappearsOnDeath"/>
+        </comps>
+    </HediffDef>
+
+</Defs>

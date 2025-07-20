@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+    
+    <FOU.ThingInfo.Confirm.Label>Spawn</FOU.ThingInfo.Confirm.Label>
+    <FOU.ThingInfo.Confirm.Tooltip>Spawn this item at the selected location.</FOU.ThingInfo.Confirm.Tooltip>
+
+    <FOU.ThingInfo.Delete.Label>Remove</FOU.ThingInfo.Delete.Label>
+    <FOU.ThingInfo.Delete.Tooltip>Remove {0} from records.</FOU.ThingInfo.Delete.Tooltip>
+
+    <FOU.ThingInfo.Disabled.Tooltip>Insufficient higher dimensional nanites.</FOU.ThingInfo.Disabled.Tooltip>
+
+    <FOU.ThingInfo.Number.Tooltip>Number of items to spawn.</FOU.ThingInfo.Number.Tooltip>
+
+</LanguageData>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+    <!-- EN: Name of this health condition.\n\nDisplays DefName when the mod isn't loaded. -->
+    <FOU.HediffInfo.Name.Tooltip>该健康状态的名称。\n\nMod 未加载时为对应的 DefName。</FOU.HediffInfo.Name.Tooltip>
+
+    <!-- EN: DefName -->
+    <FOU.HediffInfo.DefName.Label>DefName</FOU.HediffInfo.DefName.Label>
+    <!-- EN: The definition name of this health condition. -->
+    <FOU.HediffInfo.DefName.Tooltip>该健康状态的定义名。</FOU.HediffInfo.DefName.Tooltip>
+
+    <!-- EN: Description -->
+    <FOU.HediffInfo.Description.Label>描述</FOU.HediffInfo.Description.Label>
+    <!-- EN: Description text for this health condition. -->
+    <FOU.HediffInfo.Description.Tooltip>该健康状态的描述。</FOU.HediffInfo.Description.Tooltip>
+
+    <!-- EN: Activated -->
+    <FOU.HediffInfo.IsValid.Label>是否激活</FOU.HediffInfo.IsValid.Label>
+    <!-- EN: This health condition can only be activated when its corresponding mod is loaded. -->
+    <FOU.HediffInfo.IsValid.Tooltip>只有包含该健康状态的 Mod 被加载时，才能成为激活状态。</FOU.HediffInfo.IsValid.Tooltip>
+
+    <!-- EN: Remove -->
+    <FOU.HediffInfo.Delete.Label>移除</FOU.HediffInfo.Delete.Label>
+    <!-- EN: Remove {0} from immunized items. -->
+    <FOU.HediffInfo.Delete.Tooltip>将{0}从免疫项中移除。</FOU.HediffInfo.Delete.Tooltip>
+
+</LanguageData>

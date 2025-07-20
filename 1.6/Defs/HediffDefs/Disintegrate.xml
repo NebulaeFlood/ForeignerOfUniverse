@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <HediffDef>
+        <defName>FOU_Disintegrate</defName>
+        <label>disintegrate</label>
+        <description>Trauma caused by molecular disintegration via higher-dimensional nanites.</description>
+
+        <hediffClass>Hediff_Injury</hediffClass>
+        <tendable>true</tendable>
+        <displayWound>true</displayWound>
+
+        <labelNoun>a disintegrate trauma</labelNoun>
+        <labelNounPretty>{0} in the {1}</labelNounPretty>
+
+        <comps>
+            <li Class="HediffCompProperties_TendDuration">
+                <labelTendedWell>bandaged</labelTendedWell>
+                <labelTendedWellInner>stanched</labelTendedWellInner>
+                <labelSolidTendedWell>set</labelSolidTendedWell>
+            </li>
+            <li Class="HediffCompProperties_GetsPermanent">
+                <compClass>ForeignerOfUniverse.Comps.Hediffs.GetsPermanent</compClass>
+                <permanentLabel>horrible scar</permanentLabel>
+            </li>
+            <li Class="HediffCompProperties_Infecter">
+                <infectionChance>0.8</infectionChance>
+            </li>
+        </comps>
+
+        <injuryProps>
+            <painPerSeverity>0.0175</painPerSeverity>
+            <averagePainPerSeverityPermanent>0.0125</averagePainPerSeverityPermanent>
+            <bleedRate>0.1</bleedRate>
+
+            <destroyedLabel>Totally disintegrated</destroyedLabel>
+            <destroyedOutLabel>Totally disintegrated</destroyedOutLabel>
+        </injuryProps>
+
+    </HediffDef>
+
+    <HediffDef>
+        <defName>FOU_Disintegrate_Solid</defName>
+        <label>disintegrate</label>
+        <description>Trauma caused by molecular disintegration via higher-dimensional nanites.</description>
+
+        <hediffClass>Hediff_Injury</hediffClass>
+        <tendable>true</tendable>
+        <displayWound>true</displayWound>
+
+        <labelNounPretty>{0} in the {1}</labelNounPretty>
+
+        <comps>
+            <li Class="HediffCompProperties_TendDuration">
+                <labelTendedWell>set</labelTendedWell>
+                <labelTendedWellInner>set</labelTendedWellInner>
+                <labelSolidTendedWell>set</labelSolidTendedWell>
+            </li>
+            <li Class="HediffCompProperties_GetsPermanent">
+                <compClass>ForeignerOfUniverse.Comps.Hediffs.GetsPermanent</compClass>
+                <permanentLabel>shattered</permanentLabel>
+            </li>
+        </comps>
+
+        <injuryProps>
+            <painPerSeverity>0.0125</painPerSeverity>
+            <averagePainPerSeverityPermanent>0.01</averagePainPerSeverityPermanent>
+
+            <destroyedLabel>Totally disintegrated</destroyedLabel>
+            <destroyedOutLabel>Totally disintegrated</destroyedOutLabel>
+        </injuryProps>
+
+    </HediffDef>
+
+</Defs>

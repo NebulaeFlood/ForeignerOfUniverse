@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+  <FOU.HediffInfo.Name.Tooltip>Name of this health condition.\n\nDisplays DefName when the mod isn't loaded.</FOU.HediffInfo.Name.Tooltip>
+
+  <FOU.HediffInfo.DefName.Label>DefName</FOU.HediffInfo.DefName.Label>
+  <FOU.HediffInfo.DefName.Tooltip>The definition name of this health condition.</FOU.HediffInfo.DefName.Tooltip>
+
+  <FOU.HediffInfo.Description.Label>Description</FOU.HediffInfo.Description.Label>
+  <FOU.HediffInfo.Description.Tooltip>Description text for this health condition.</FOU.HediffInfo.Description.Tooltip>
+
+  <FOU.HediffInfo.IsValid.Label>Activated</FOU.HediffInfo.IsValid.Label>
+  <FOU.HediffInfo.IsValid.Tooltip>This health condition can only be activated when its corresponding mod is loaded.</FOU.HediffInfo.IsValid.Tooltip>
+
+  <FOU.HediffInfo.Delete.Label>Remove</FOU.HediffInfo.Delete.Label>
+  <FOU.HediffInfo.Delete.Tooltip>Remove {0} from immunized items.</FOU.HediffInfo.Delete.Tooltip>
+
+</LanguageData>

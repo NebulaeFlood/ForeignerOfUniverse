@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+	<FOU.Letters.NaniteActivated.Content>The higher dimensional nanites within {PAWN_labelShort} have been activated by critical injuries.\n\n{PAWN_possessive} consciousness will now be contained by the nanites until their body is restored to a state capable of sustaining consciousness.</FOU.Letters.NaniteActivated.Content>
+	<FOU.Letters.NaniteActivated.Label>Nanite Activated</FOU.Letters.NaniteActivated.Label>
+
+	<FOU.Letters.NaniteRevertMutant.Content>Mutant within {TARGET_labelShort} has been reverted by {CASTER_labelShort}'s higher dimensional nanites.{2}</FOU.Letters.NaniteRevertMutant.Content>
+	<FOU.Letters.NaniteRevertMutant.Label>Mutant Reverted</FOU.Letters.NaniteRevertMutant.Label>
+
+	<FOU.Letters.MetalhorrorImplantRemoved.Content>The metalhorror within {TARGET_nameDef} has been excised by {CASTER_nameDef}'s higher dimensional nanites.</FOU.Letters.MetalhorrorImplantRemoved.Content>
+	<FOU.Letters.MetalhorrorImplantRemoved.Label>Metalhorrors Excised</FOU.Letters.MetalhorrorImplantRemoved.Label>
+
+	<FOU.Letters.DiseaseCured.Content>The following conditions in {PAWN_labelShort} have been cured by higher dimensional nanites:\n{1}</FOU.Letters.DiseaseCured.Content>
+	<FOU.Letters.DiseaseCured.Label>Nanite Immunity</FOU.Letters.DiseaseCured.Label>
+
+	<FOU.Letters.ExistenceAnchor.Content>{PAWN_labelShort} has departed the colony.\n\nAuthorization for {1} protocol is confirmed.\n\nActivate recall protocol for immediate retrieval of {PAWN_labelShort}?</FOU.Letters.ExistenceAnchor.Content>
+	<FOU.Letters.ExistenceAnchor.Label>Recall: {PAWN_labelShort}</FOU.Letters.ExistenceAnchor.Label>
+
+</LanguageData>

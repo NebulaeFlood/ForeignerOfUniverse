@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+    <FOU.Settings.Category.Label>Foreigner of Universe</FOU.Settings.Category.Label>
+
+
+	<FOU.Settings.NanitesMaxStorage.Label><![CDATA[<color=#D09B61>higher-dimensional nanites</color>]]> max storage capacity: </FOU.Settings.NanitesMaxStorage.Label>
+	<FOU.Settings.NanitesMaxStorage.Tooltip>Configures the maximum <![CDATA[<color=#D09B61>higher-dimensional nanites</color>]]> storage allocated for <![CDATA[<color=#D09B61>special abilities</color>]]> consumption.</FOU.Settings.NanitesMaxStorage.Tooltip>
+
+	<FOU.Settings.NanitesDailyReplicationAmount.Label>Daily replication rate of nanites: </FOU.Settings.NanitesDailyReplicationAmount.Label>
+	<FOU.Settings.NanitesDailyReplicationAmount.Tooltip>Configures the daily natural regeneration rate of resources consumed by the default <![CDATA[<color=#D09B61>higher-dimensional nanites</color>]]> gene's <![CDATA[<color=#D09B61>special abilities</color>]]>.</FOU.Settings.NanitesDailyReplicationAmount.Tooltip>
+
+	<FOU.Settings.RegenerationPerDay.Label>Daily healing capacity: </FOU.Settings.RegenerationPerDay.Label>
+	<FOU.Settings.RegenerationPerDay.Tooltip>Configures the daily recovery capacity of <![CDATA[<color=#D09B61>higher-dimensional nanites</color>]]> for host's physiological damage.</FOU.Settings.RegenerationPerDay.Tooltip>
+
+	<FOU.Settings.MatterRecoveryCost.Label><![CDATA[<color=#D09B61>Matter Recovery</color>]]> ability consumption: </FOU.Settings.MatterRecoveryCost.Label>
+	<FOU.Settings.MatterRecoveryCost.Tooltip>Configures the <![CDATA[<color=#D09B61>higher-dimensional nanites</color>]]> required to activate <![CDATA[<color=#D09B61>Matter Recovery</color>]]> ability.</FOU.Settings.MatterRecoveryCost.Tooltip>
+
+	<FOU.Settings.IndiscriminateDisintegrationCost.Label><![CDATA[<color=#D09B61>Indiscriminate Disintegration</color>]]> ability consumption: </FOU.Settings.IndiscriminateDisintegrationCost.Label>
+	<FOU.Settings.IndiscriminateDisintegrationCost.Tooltip>Configures the <![CDATA[<color=#D09B61>higher-dimensional nanites</color>]]> required to execute <![CDATA[<color=#D09B61>Indiscriminate Disintegration</color>]]> ability.</FOU.Settings.IndiscriminateDisintegrationCost.Tooltip>
+
+	<FOU.Settings.IndiscriminateDisintegrationDamage.Label><![CDATA[<color=#D09B61>Indiscriminate Disintegration</color>]]> ability damage: </FOU.Settings.IndiscriminateDisintegrationDamage.Label>
+	<FOU.Settings.IndiscriminateDisintegrationDamage.Tooltip>Configures the damage inflicted by the default <![CDATA[<color=#D09B61>Indiscriminate Disintegration</color>]]> ability on targets.</FOU.Settings.IndiscriminateDisintegrationDamage.Tooltip>
+
+	<FOU.Settings.InstantRecoverCooldown.Label><![CDATA[<color=#D09B61>Stimulate Nanites</color>]]> ability cooldown: </FOU.Settings.InstantRecoverCooldown.Label>
+	<FOU.Settings.InstantRecoverCooldown.Tooltip>Configures the cooldown duration of the <![CDATA[<color=#D09B61>Stimulate Nanites</color>]]> ability available to pawns with the <![CDATA[<color=#D09B61>Matter Manipulation</color>]]> gene upon death or downing.\n\nThe unit here is <![CDATA[<color=#D09B61>Tick</color>]]>, and 60,000 <![CDATA[<color=#D09B61>Ticks</color>]]> equal one in-game day.</FOU.Settings.InstantRecoverCooldown.Tooltip>
+	
+	<FOU.Settings.ResetButton.Label>Reset</FOU.Settings.ResetButton.Label>
+	<FOU.Settings.ResetButton.Tooltip>Resets all options to defult.</FOU.Settings.ResetButton.Tooltip>
+
+</LanguageData>

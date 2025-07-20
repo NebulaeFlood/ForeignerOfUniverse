@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <GeneCategoryDef>
+    <defName>FOU_Extra-cosmic</defName>
+    <label>extra-cosmic</label>
+    <displayPriorityInXenotype>1800</displayPriorityInXenotype>
+  </GeneCategoryDef>
+
+</Defs>

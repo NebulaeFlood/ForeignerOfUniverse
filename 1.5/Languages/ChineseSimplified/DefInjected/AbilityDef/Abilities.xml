@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+    <!-- EN: Commands higher-dimensional nanites to restore matter's structural integrity.\nMacroscopically manifests as: repairing item durability; reconstructing and reviving corpses; reversing decay in organic matter; restoring biological organisms to optimal health states.\n\nThis ability bypasses line-of-sight requirements through the higher-dimensional nanites targeting protocols. -->
+    <FOU_MatterRecovery.description>命令高维微械还原物质的结构。\n宏观上，这将表现为物品的耐久被修复，尸体被还原并复活，腐烂的物品返鲜，生物恢复健康等现象。\n\n由于高维微械的辅助，该能力无需视野就能对目标释放。</FOU_MatterRecovery.description>
+
+    <!-- EN: matter Recovery -->
+    <FOU_MatterRecovery.label>物质复原</FOU_MatterRecovery.label>
+
+
+    <!-- EN: Commands higher-dimensional nanites to disassemble items at molecular level and reconstitute them into new nanites.\nThe heavier the item disassembled, the greater the quantity of nanites produced. -->
+    <FOU_MatterDisintegration.description>命令高维微械利用物品中的分子组装新的微械。\n\n分解的物品越重，组装的微械就越多。</FOU_MatterDisintegration.description>
+
+    <!-- EN: matter Disintegration -->
+    <FOU_MatterDisintegration.label>物质分解</FOU_MatterDisintegration.label>
+
+
+    <!-- EN: Commands higher-dimensional nanites to disintegrate matter within a designated area.\n\nUnits hold nanites remain unaffected.\n\nThis ability bypasses line-of-sight requirements through the higher-dimensional nanites targeting protocols. -->
+    <FOU_IndiscriminateDisintegration.description>命令高维微械分解指定区域中的物质。\n\n拥有高维微械的单位不会受到影响。\n\n由于高维微械的辅助，该能力无需视野就能对目标释放。</FOU_IndiscriminateDisintegration.description>
+
+    <!-- EN: indiscriminate Disintegration -->
+    <FOU_IndiscriminateDisintegration.label>无差别分解</FOU_IndiscriminateDisintegration.label>
+
+</LanguageData>

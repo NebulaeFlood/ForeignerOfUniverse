@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+    <FOU.Messages.Settings.Protocols.ComfirmReset.Content>Are you sure you want to reset immunized health conditions for {0} to default?</FOU.Messages.Settings.Protocols.ComfirmReset.Content>
+    <FOU.Messages.Settings.Protocols.Disallowed.Content>Adding {0} to immunized health conditions is not permitted.</FOU.Messages.Settings.Protocols.Disallowed.Content>
+    <FOU.Messages.Settings.Protocols.CannotFindDef.Content>Cannot find health condition with DefName: {0}.</FOU.Messages.Settings.Protocols.CannotFindDef.Content>
+    <FOU.Messages.Settings.Protocols.AlreadyHaveDef.Content>Health condition {0} (DefName={1}) is already immunized by {2}.</FOU.Messages.Settings.Protocols.AlreadyHaveDef.Content>
+    <FOU.Messages.Settings.Protocols.AddSecceed.Content>Health condition {0} (DefName={1}) has been successfully added to {2}'s immunization.</FOU.Messages.Settings.Protocols.AddSecceed.Content>
+    <FOU.Messages.Settings.Protocols.UnknownProtocol.Content>Unknown protocol:「{0}」.</FOU.Messages.Settings.Protocols.UnknownProtocol.Content>
+
+</LanguageData>

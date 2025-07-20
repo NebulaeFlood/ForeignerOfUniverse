@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+    <!-- EN: Trauma caused by molecular disintegration via higher-dimensional nanites. -->
+    <FOU_Disintegrate.description>分子被高维微械分解而形成的伤口。</FOU_Disintegrate.description>
+    <!-- EN: disintegrate -->
+    <FOU_Disintegrate.label>分解创伤</FOU_Disintegrate.label>
+    <!-- EN: bandaged -->
+    <FOU_Disintegrate.comps.0.labelTendedWell>已包扎</FOU_Disintegrate.comps.0.labelTendedWell>
+    <!-- EN: stanched -->
+    <FOU_Disintegrate.comps.0.labelTendedWellInner>已止血</FOU_Disintegrate.comps.0.labelTendedWellInner>
+    <!-- EN: set -->
+    <FOU_Disintegrate.comps.0.labelSolidTendedWell>已处理</FOU_Disintegrate.comps.0.labelSolidTendedWell>
+    <!-- EN: horrible scar -->
+    <FOU_Disintegrate.comps.1.permanentLabel>骇人疤痕</FOU_Disintegrate.comps.1.permanentLabel>
+    <!-- EN: Totally disintegrated -->
+    <FOU_Disintegrate.injuryProps.destroyedLabel>被分解</FOU_Disintegrate.injuryProps.destroyedLabel>
+    <!-- EN: Totally disintegrated -->
+    <FOU_Disintegrate.injuryProps.destroyedOutLabel>被分解</FOU_Disintegrate.injuryProps.destroyedOutLabel>
+    <!-- EN: a disintegrate trauma -->
+    <FOU_Disintegrate.labelNoun>分解创伤</FOU_Disintegrate.labelNoun>
+    <!-- EN: {0} in the {1} -->
+    <FOU_Disintegrate.labelNounPretty>{1}中的{0}</FOU_Disintegrate.labelNounPretty>
+
+
+    <!-- EN: Trauma caused by molecular disintegration via higher-dimensional nanites. -->
+    <FOU_Disintegrate_Solid.description>分子被高维微械分解而形成的创伤。</FOU_Disintegrate_Solid.description>
+    <!-- EN: disintegrate -->
+    <FOU_Disintegrate_Solid.label>分解创伤</FOU_Disintegrate_Solid.label>
+    <!-- EN: set -->
+    <FOU_Disintegrate_Solid.comps.0.labelTendedWell>已包扎</FOU_Disintegrate_Solid.comps.0.labelTendedWell>
+    <!-- EN: set -->
+    <FOU_Disintegrate_Solid.comps.0.labelTendedWellInner>已固定</FOU_Disintegrate_Solid.comps.0.labelTendedWellInner>
+    <!-- EN: set -->
+    <FOU_Disintegrate_Solid.comps.0.labelSolidTendedWell>已固定</FOU_Disintegrate_Solid.comps.0.labelSolidTendedWell>
+    <!-- EN: shattered -->
+    <FOU_Disintegrate_Solid.comps.1.permanentLabel>碎裂</FOU_Disintegrate_Solid.comps.1.permanentLabel>
+    <!-- EN: Totally disintegrated -->
+    <FOU_Disintegrate_Solid.injuryProps.destroyedLabel>被分解</FOU_Disintegrate_Solid.injuryProps.destroyedLabel>
+    <!-- EN: Totally disintegrated -->
+    <FOU_Disintegrate_Solid.injuryProps.destroyedOutLabel>被分解</FOU_Disintegrate_Solid.injuryProps.destroyedOutLabel>
+    <!-- EN: a disintegrate trauma -->
+    <FOU_Disintegrate_Solid.labelNoun>分解创伤</FOU_Disintegrate_Solid.labelNoun>
+    <!-- EN: {0} in the {1} -->
+    <FOU_Disintegrate_Solid.labelNounPretty>{1}中的{0}</FOU_Disintegrate_Solid.labelNounPretty>
+
+
+    <!-- EN: The host is no longer in danger of losing life, and higher-dimensional nanites that have not yet completely lost activity will provide the host with enhanced abilities. -->
+    <FOU_InjuryInducedFinalNanostate.description>宿主已经脱离了生命危险，仍未完全失去活性的高维微械将对宿主提供能力增幅。</FOU_InjuryInducedFinalNanostate.description>
+    <!-- EN: injury-Induced Final Nanostate -->
+    <FOU_InjuryInducedFinalNanostate.label>微械失活</FOU_InjuryInducedFinalNanostate.label>
+
+
+    <!-- EN: The higher-dimensional nanites have been activated by the host's fatal injury. They will induce a coma in the host to protect its consciousness and repair or reconstruct the host's body more quickly.\n\nSince the host's physical information has been recorded, even if the host's body is completely destroyed, the high-dimensional micro-machines can reconstruct it. -->
+    <FOU_InjuryInducedNanostate.description>高维微械被宿主的致命伤激发了，它们将使宿主昏迷以保护其意识。\n与此同时，它们将更快地修复或再造宿主的身体。\n\n由于宿主身体的信息已经被记录，就算宿主身体被完全摧毁，高维微械也能将其重新制造出来。</FOU_InjuryInducedNanostate.description>
+    <!-- EN: injury-Induced Nanostate -->
+    <FOU_InjuryInducedNanostate.label>微械激发</FOU_InjuryInducedNanostate.label>
+
+
+    <!-- EN: Higher-dimensional nanites carry out specialized processes within the host's body through a unique mechanism.\n\nWhen the host falls unconscious or dies, the nanites can be forcibly activated to restore the host's body to functionality. -->
+    <FOU_RecoveryProgram.description>高维微械正在通过一种特殊的方式在宿主体内执行特殊的进程。\n\n当宿主昏迷或死亡时，可以强行激活微械以复原宿主的身体。</FOU_RecoveryProgram.description>
+    <!-- EN: recovery Program -->
+    <FOU_RecoveryProgram.label>复原程序</FOU_RecoveryProgram.label>
+
+
+    <!-- EN: A regenerating body part. -->
+    <FOU_Regenerating.description>一个再生中的身体部位。</FOU_Regenerating.description>
+    <!-- EN: reborn part -->
+    <FOU_Regenerating.label>再生部位</FOU_Regenerating.label>
+
+</LanguageData>

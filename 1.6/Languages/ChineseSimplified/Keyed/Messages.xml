@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+    <!-- EN: Are you sure you want to reset immunized health conditions for {0} to default? -->
+    <FOU.Messages.Settings.Protocols.ComfirmReset.Content>确定要将{0}免疫的健康状态重置到初始状态吗？</FOU.Messages.Settings.Protocols.ComfirmReset.Content>
+    <!-- EN: Adding {0} to immunized health conditions is not permitted. -->
+    <FOU.Messages.Settings.Protocols.Disallowed.Content>不允许将{0}添加到免疫项。</FOU.Messages.Settings.Protocols.Disallowed.Content>
+    <!-- EN: Cannot find health condition with DefName: {0}. -->
+    <FOU.Messages.Settings.Protocols.CannotFindDef.Content>无法找到 DefName 为 {0} 的健康状态。</FOU.Messages.Settings.Protocols.CannotFindDef.Content>
+    <!-- EN: Health condition {0} (DefName={1}) is already immunized by {2}. -->
+    <FOU.Messages.Settings.Protocols.AlreadyHaveDef.Content>名为 {0}（DefName={1}）的健康状态已添加到{2}的免疫项中。</FOU.Messages.Settings.Protocols.AlreadyHaveDef.Content>
+    <!-- EN: Health condition {0} (DefName={1}) has been successfully added to {2}'s immunization. -->
+    <FOU.Messages.Settings.Protocols.AddSecceed.Content>名为 {0}（DefName={1}）的健康状态已成功添加到{2}的免疫项中。</FOU.Messages.Settings.Protocols.AddSecceed.Content>
+    <!-- EN: Unknown protocol:「{0}」. -->
+    <FOU.Messages.Settings.Protocols.UnknownProtocol.Content>未知的协议「{0}」。</FOU.Messages.Settings.Protocols.UnknownProtocol.Content>
+
+</LanguageData>

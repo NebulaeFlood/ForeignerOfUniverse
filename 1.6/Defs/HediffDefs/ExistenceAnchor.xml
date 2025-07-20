@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <HediffDef>
+        <defName>FOU_ExistenceAnchor</defName>
+        <label>existence anchor</label>
+        <description>Higher dimensional nanites anchored the host's existence.</description>
+        <hediffClass>ForeignerOfUniverse.Hediffs.ExistenceAnchor</hediffClass>
+        <everCurableByItem>false</everCurableByItem>
+        <isBad>false</isBad>
+    </HediffDef>
+</Defs>

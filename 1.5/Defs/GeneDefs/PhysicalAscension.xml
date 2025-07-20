@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <GeneDef>
+        <defName>FOU_PhysicalAscension</defName>
+        <label>ascension</label>
+        <description>Higher-dimensional nanites within the carriers of this gene are more active, causing some real-world factors to have a diminished impact on them.</description>
+        <geneClass>ForeignerOfUniverse.Genes.PhysicalAscension</geneClass>
+        <iconPath>UI/Icons/Genes/FOU_PhysicalAscension</iconPath>
+        <selectionWeight>0</selectionWeight>
+        <displayCategory>FOU_Extra-cosmic</displayCategory>
+        <displayOrderInCategory>5</displayOrderInCategory>
+
+        <ignoreDarkness>true</ignoreDarkness>
+        <immuneToToxGasExposure>true</immuneToToxGasExposure>
+        <foodPoisoningChanceFactor>0</foodPoisoningChanceFactor>
+
+        <hediffGiversCannotGive>
+            <li MayRequire="Ludeon.RimWorld.Anomaly">MetalhorrorImplant</li>
+        </hediffGiversCannotGive>
+
+        <statFactors>
+            <FilthRate>0</FilthRate>
+            <Flammability>0</Flammability>
+            <CarryingCapacity>2</CarryingCapacity>
+            <CrawlSpeed>1.2</CrawlSpeed>
+            <MoveSpeed>1.2</MoveSpeed>
+            <ImmunityGainSpeed>5</ImmunityGainSpeed>
+            <IncomingDamageFactor>0.4</IncomingDamageFactor>
+            <MeleeDamageFactor>1.6</MeleeDamageFactor>
+            <StaggerDurationFactor>0</StaggerDurationFactor>
+        </statFactors>
+
+        <statOffsets>
+            <ArmorRating_Sharp>1.9</ArmorRating_Sharp>
+            <ArmorRating_Blunt>0.8</ArmorRating_Blunt>
+            <ArmorRating_Heat>1</ArmorRating_Heat>
+            <ComfyTemperatureMin>-80</ComfyTemperatureMin>
+            <ComfyTemperatureMax>160</ComfyTemperatureMax>
+            <CrawlSpeed>0.4</CrawlSpeed>
+            <MoveSpeed>0.6</MoveSpeed>
+            <ImmunityGainSpeed>1</ImmunityGainSpeed>
+            <RestFallRateFactor>-0.2</RestFallRateFactor>
+            <RestRateMultiplier>0.2</RestRateMultiplier>
+            <ToxicResistance>2</ToxicResistance>
+            <ToxicEnvironmentResistance>2</ToxicEnvironmentResistance>
+        </statOffsets>
+
+        <biologicalAgeTickFactorFromAgeCurve>
+            <points>
+                <li>(13, 1)</li>
+                <li>(18.5, 0)</li>
+            </points>
+        </biologicalAgeTickFactorFromAgeCurve>
+
+        <customEffectDescriptions>
+            <li>Become immortal.</li>
+            <li>Nanites medical care.</li>
+            <li>Possessing defensive capabilities comparable to a cataphract armor.</li>
+        </customEffectDescriptions>
+
+        <modExtensions>
+			<li Class="VanillaGenesExpanded.GeneExtension">
+				<backgroundPathArchite>UI/Icons/Genes/FOU_GeneBackground</backgroundPathArchite>
+			</li>
+		</modExtensions>
+
+        <biostatCpx>8</biostatCpx>
+        <biostatMet>8</biostatMet>
+        <biostatArc>2</biostatArc>
+    </GeneDef>
+
+</Defs>

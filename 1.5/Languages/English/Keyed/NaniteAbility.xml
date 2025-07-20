@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+	<FOU.NaniteAbility.Cost>Nanite cost: {0}</FOU.NaniteAbility.Cost>
+	<FOU.NaniteAbility.NoBasedGene>{PAWN_labelShort} does not have higher-dimensional nanites.</FOU.NaniteAbility.NoBasedGene>
+	<FOU.NaniteAbility.NoEnoughStorage>{PAWN_labelShort} does not have enough nanites.</FOU.NaniteAbility.NoEnoughStorage>
+
+	<FOU.NaniteAbility.TargetPawnDoNotNeedRecover>{PAWN_labelShort} does not require recovery.</FOU.NaniteAbility.TargetPawnDoNotNeedRecover>
+	<FOU.NaniteAbility.TargetHostileToPlayer>Cannot use {ABILITY_label} on resisting units.</FOU.NaniteAbility.TargetHostileToPlayer>
+	<FOU.NaniteAbility.TargetThingIsUnrepairable>Cannot use {ABILITY_label} on unrepairable items or buildings.</FOU.NaniteAbility.TargetThingIsUnrepairable>
+	<FOU.NaniteAbility.TargetThingDoNotNeedRecover>Cannot use {ABILITY_label} on items or buildings requiring no repair.</FOU.NaniteAbility.TargetThingDoNotNeedRecover>
+
+	<FOU.NaniteAbility.CasterStorageFull>{PAWN_labelShort}'s nanites reserves are full.</FOU.NaniteAbility.CasterStorageFull>
+	<FOU.NaniteAbility.TargetThingCostInfo>Will cost <![CDATA[<color=#D09B61>{0}</color>]]> x<![CDATA[<color=#D09B61>{1}</color>]]>.</FOU.NaniteAbility.TargetThingCostInfo>
+
+	<FOU.NaniteAbility.ActivateRecoveryProgram.Label>Stimulate Nanites</FOU.NaniteAbility.ActivateRecoveryProgram.Label>
+	<FOU.NaniteAbility.ActivateRecoveryProgram.Description>Activate higher-dimensional nanites within the subject's body, triggering instantaneous consciousness reintegration and rapid cellular regeneration within seconds.\n\nExcess energy can be utilized to teleport the host to a secured location while vital signs remain stable.</FOU.NaniteAbility.ActivateRecoveryProgram.Description>
+	<FOU.NaniteAbility.ActivateRecoveryProgram.AlreadyStarted>Nanites within the subject's body have been activated.</FOU.NaniteAbility.ActivateRecoveryProgram.AlreadyStarted>
+	
+	<FOU.NaniteAbility.TeleportTo>Teleport {PAWN_labelShort} to this location.</FOU.NaniteAbility.TeleportTo>
+
+</LanguageData>

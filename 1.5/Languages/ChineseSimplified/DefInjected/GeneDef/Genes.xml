@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+	<!-- EN: Carriers of this gene can store a mysterious nanomechanical device. This device can self-replicate without consumption through unknown methods. -->
+	<FOU_HigherDimensionalNanites.description>这种基因的携带者可以储备一种神秘的纳米机械。这种机械能够通过未知方法实现无消耗的自我增殖。\n\n生物拥有高维微械后，其意识不再依赖当前宇宙的物质，即使身体被摧毁，意识也仍然存在，只是一般没有回归当前宇宙的方法。</FOU_HigherDimensionalNanites.description>
+	<!-- EN: nanites -->
+	<FOU_HigherDimensionalNanites.label>高维微械</FOU_HigherDimensionalNanites.label>
+	<!-- EN: Gives nanites supply. -->
+  	<FOU_HigherDimensionalNanites.customEffectDescriptions.0>储备高维微械</FOU_HigherDimensionalNanites.customEffectDescriptions.0>
+	<!-- EN: Perfectly heal the injury. -->
+	<FOU_HigherDimensionalNanites.customEffectDescriptions.1>完美治疗伤势</FOU_HigherDimensionalNanites.customEffectDescriptions.1>
+	<!-- EN: Fatal wounds are no longer fatal. -->
+	<FOU_HigherDimensionalNanites.customEffectDescriptions.2>致命伤不再致命</FOU_HigherDimensionalNanites.customEffectDescriptions.2>
+	<!-- EN: Higher-dimensional nanites are a type of nanomechanical device that is little known, capable of self-replicating without consumption through unknown methods.\n\nThis device possesses a variety of incredible functions, capable of manipulating molecular gravity and temporarily altering physical laws with sufficient reserves. -->
+	<FOU_HigherDimensionalNanites.resourceDescription>高维微械是一种知之甚少的纳米机械，能够通过未知方法实现无消耗的自我增殖。\n\n这种机械拥有各种匪夷所思的功能，通过足量的储备，操纵分子引力，短暂改变物理规则都不在话下。</FOU_HigherDimensionalNanites.resourceDescription>
+	<!-- EN: nanites -->
+	<FOU_HigherDimensionalNanites.resourceLabel>高维微械</FOU_HigherDimensionalNanites.resourceLabel>
+	
+
+	<!-- EN: Higher-dimensional nanites within the carriers of this gene are more active, causing some real-world factors to have a diminished impact on them. -->
+	<FOU_PhysicalAscension.description>这种基因的携带者体内的高维微械更加活跃，使得部分现实因素对他们的影响被减弱了。</FOU_PhysicalAscension.description>
+	<!-- EN: ascension -->
+	<FOU_PhysicalAscension.label>躯体飞升</FOU_PhysicalAscension.label>
+	<!-- EN: Become immortal. -->
+  	<FOU_PhysicalAscension.customEffectDescriptions.0>长生不老。</FOU_PhysicalAscension.customEffectDescriptions.0>
+	<!-- EN: Nanites medical care. -->
+  	<FOU_PhysicalAscension.customEffectDescriptions.1>迅速处理创伤。</FOU_PhysicalAscension.customEffectDescriptions.1>
+	<!-- EN: Possessing defensive capabilities comparable to a cataphract armor. -->
+	<FOU_PhysicalAscension.customEffectDescriptions.2>传奇装甲防护力。</FOU_PhysicalAscension.customEffectDescriptions.2>
+
+
+	<!-- EN: Carriers of this gene experience the activation of higher-dimensional nanites within their bodies, which begin to assist the nervous system. This results in a comprehensive enhancement of cognitive abilities, elevating them to genius-level proficiency across multiple disciplines.\n\nSimultaneously, through partially accessible data repositories of higher-dimensional nanites, these nanodevices augment the carriers' skills across all domains, functioning seamlessly regardless of time or location. -->
+	<FOU_NanoSynapse.description>这种基因的携带者体内的高维微械开始辅助神经系统的工作，使得携带者的认知能力得到全方位的增强，足以成为各项领域的天才。\n\n研究人员发现，高维微械会赋予宿主访问其部分数据库的权限，使得宿主能够直接学习各项技能，无论何时何地。</FOU_NanoSynapse.description>
+	<!-- EN: nano Synapse -->
+	<FOU_NanoSynapse.label>微械智网</FOU_NanoSynapse.label>
+	<!-- EN: Exceptional memory. -->
+	<FOU_NanoSynapse.customEffectDescriptions.0>超凡记忆力</FOU_NanoSynapse.customEffectDescriptions.0>
+	<!-- EN: Skills can be self-enhancing. -->
+  	<FOU_NanoSynapse.customEffectDescriptions.1>技能自我精进</FOU_NanoSynapse.customEffectDescriptions.1>
+
+
+	<!-- EN: Carriers of this gene have higher-dimensional nanites that provide several methods of manipulating fundamental particles.\n\nNanomachine can be forcibly activated to initiate somatic reconstruction protocols when the host enters a terminal state or suffers catastrophic system failure. -->
+	<FOU_MatterManipulation.description>这种基因的携带者体内的高维微械提供了几种操纵基本粒子的方法。\n\n在宿主生命垂危或死亡时，能够强行激活高维微械以修复躯体。</FOU_MatterManipulation.description>
+	<!-- EN: matter Manipulation -->
+	<FOU_MatterManipulation.label>粒子操纵</FOU_MatterManipulation.label>
+
+</LanguageData>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <HediffDef>
+        <defName>FOU_RecoveryProgram</defName>
+        <label>recovery program</label>
+        <description>Emergency protocol allow forcibly activates higher dimensional nanites.</description>
+        <hediffClass>ForeignerOfUniverse.Hediffs.RecoveryProgram</hediffClass>
+        <isBad>false</isBad>
+        <showGizmosOnCorpse>true</showGizmosOnCorpse>
+    </HediffDef>
+</Defs>

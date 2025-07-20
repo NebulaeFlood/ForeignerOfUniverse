@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+	<BackstoryDef>
+		<defName>FOU_UnknownChildhood</defName>
+		<slot>Childhood</slot>
+		<title>unknown</title>
+		<titleShort>unknown</titleShort>
+		<description>[PAWN_nameDef] comes from another universe, [PAWN_possessive] origins are unknown.</description>
+		<shuffleable>false</shuffleable>
+	</BackstoryDef>
+
+	<BackstoryDef>
+		<defName>FOU_UnknownAdulthood</defName>
+		<slot>Adulthood</slot>
+		<title>unknown</title>
+		<titleShort>unknown</titleShort>
+		<description>[PAWN_nameDef] comes from another universe, [PAWN_possessive] origins are unknown.</description>
+		<shuffleable>false</shuffleable>
+	</BackstoryDef>
+
+</Defs>

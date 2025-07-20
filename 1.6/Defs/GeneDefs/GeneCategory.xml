@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <GeneCategoryDef>
+    <defName>FOU_NaniteProtocol</defName>
+    <label>nanite protocol</label>
+    <displayPriorityInXenotype>1800</displayPriorityInXenotype>
+  </GeneCategoryDef>
+
+</Defs>

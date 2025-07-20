@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <DamageDef>
+        <defName>FOU_Disintegration</defName>
+        <label>disintegration</label>
+        <workerClass>DamageWorker_AddInjury</workerClass>
+        <deathMessage>{0} has reduced to quantum foam.</deathMessage>
+
+        <hediff>FOU_Disintegrate</hediff>
+        <hediffSolid>FOU_Disintegrate_Solid</hediffSolid>
+
+        <harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
+
+        <defaultDamage>50</defaultDamage>
+        <defaultStoppingPower>5</defaultStoppingPower>
+
+        <overkillPctToDestroyPart>0</overkillPctToDestroyPart>
+
+        <buildingDamageFactorImpassable>10</buildingDamageFactorImpassable>
+        <buildingDamageFactorPassable>5</buildingDamageFactorPassable>
+        <plantDamageFactor>5</plantDamageFactor>
+        <corpseDamageFactor>0.8</corpseDamageFactor>
+
+        <combatLogRules>FOU_Damage_Disintegration</combatLogRules>
+    </DamageDef>
+
+</Defs>

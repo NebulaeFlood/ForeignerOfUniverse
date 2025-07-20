@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <RulePackDef>
+        <defName>FOU_Damage_Disintegration</defName>
+        <rulePack>
+            <rulesStrings>
+                <li>damaged_past->disintegrated</li>
+
+                <li>destroyed_past->destroyed</li>
+            </rulesStrings>
+        </rulePack>
+    </RulePackDef>
+
+</Defs>

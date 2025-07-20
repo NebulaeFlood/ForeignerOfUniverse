@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <GeneDef>
+        <defName>FOU_MatterManipulation</defName>
+        <label>matter manipulation</label>
+        <description>Carriers of this gene acquire privileged protocol clearance, commanding higher dimensional nanites to reconfigure matter at the elementary level.\n\n - 「WEAVE」</description>
+        <geneClass>ForeignerOfUniverse.Genes.MatterManipulation</geneClass>
+        <iconPath>UI/Icons/Genes/FOU_MatterManipulation</iconPath>
+        <selectionWeight>0</selectionWeight>
+        <displayCategory>FOU_NaniteProtocol</displayCategory>
+        <displayOrderInCategory>15</displayOrderInCategory>
+
+        <abilities>
+            <li>FOU_MatterRecovery</li>
+            <li>FOU_MatterWeave</li>
+            <li>FOU_MatterDisintegration</li>
+            <li>FOU_IndiscriminateDisintegration</li>
+        </abilities>
+        <descriptionHyperlinks>
+            <AbilityDef>FOU_MatterRecovery</AbilityDef>
+            <AbilityDef>FOU_MatterDisintegration</AbilityDef>
+            <AbilityDef>FOU_IndiscriminateDisintegration</AbilityDef>
+        </descriptionHyperlinks>
+
+        <modExtensions>
+            <li MayRequire="OskarPotocki.VanillaFactionsExpanded.Core" Class="VEF.Genes.GeneExtension">
+                <backgroundPathArchite>UI/Icons/Genes/FOU_GeneBackground</backgroundPathArchite>
+            </li>
+        </modExtensions>
+
+        <biostatCpx>8</biostatCpx>
+        <biostatArc>2</biostatArc>
+    </GeneDef>
+
+</Defs>

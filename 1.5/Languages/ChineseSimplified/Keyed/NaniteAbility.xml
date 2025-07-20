@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+	<!-- EN: Nanite cost: {0} -->
+	<FOU.NaniteAbility.Cost>高维微械消耗：{0}</FOU.NaniteAbility.Cost>
+
+	<!-- EN: {PAWN_labelShort} does not have higher-dimensional nanites. -->
+	<FOU.NaniteAbility.NoBasedGene>{PAWN_labelShort} 没有高维微械。</FOU.NaniteAbility.NoBasedGene>
+
+	<!-- EN: {PAWN_labelShort} does not have enough nanites. -->
+	<FOU.NaniteAbility.NoEnoughStorage>{PAWN_labelShort} 没有足够的高维微械。</FOU.NaniteAbility.NoEnoughStorage>
+
+
+	<!-- EN: {PAWN_labelShort} does not require recovery. -->
+	<FOU.NaniteAbility.TargetPawnDoNotNeedRecover>{PAWN_labelShort}不需要进行恢复。</FOU.NaniteAbility.TargetPawnDoNotNeedRecover>
+
+	<!-- EN: Cannot use {ABILITY_label} on resisting units. -->
+	<FOU.NaniteAbility.TargetHostileToPlayer>不能对积极抵抗的单位使用{ABILITY_label}。</FOU.NaniteAbility.TargetHostileToPlayer>
+
+	<!-- EN: Cannot use {ABILITY_label} on unrepairable items or buildings. -->
+	<FOU.NaniteAbility.TargetThingIsUnrepairable>不能对无法修复的对象使用{ABILITY_label}。</FOU.NaniteAbility.TargetThingIsUnrepairable>
+
+	<!-- EN: Cannot use {ABILITY_label} on items or buildings requiring no repair. -->
+	<FOU.NaniteAbility.TargetThingDoNotNeedRecover>不能对无需修复的对象使用{ABILITY_label}。</FOU.NaniteAbility.TargetThingDoNotNeedRecover>
+
+
+	<!-- EN: {PAWN_labelShort}'s nanites reserves are full. -->
+	<FOU.NaniteAbility.CasterStorageFull>{PAWN_labelShort}的高维微械储备已满。</FOU.NaniteAbility.CasterStorageFull>
+
+	<!-- EN: Will cost {0} x{1}. -->
+	<FOU.NaniteAbility.TargetThingCostInfo>将会分解<![CDATA[<color=#D09B61>{0}</color>]]> x<![CDATA[<color=#D09B61>{1}</color>]]>。</FOU.NaniteAbility.TargetThingCostInfo>
+
+
+	<!-- EN: Stimulate Nanites -->
+	<FOU.NaniteAbility.ActivateRecoveryProgram.Label>激发微械</FOU.NaniteAbility.ActivateRecoveryProgram.Label>
+
+	<!-- EN: Activate higher-dimensional nanites within the subject's body, triggering instantaneous consciousness reintegration and rapid cellular regeneration within seconds.\n\nExcess energy can be utilized to teleport the host to a secured location while vital signs remain stable. -->
+	<FOU.NaniteAbility.ActivateRecoveryProgram.Description>激发此人身体中的高维微械，它们将在数秒内复原宿主的身体并使其意识回归。\n\n在宿主未死亡时，可以利用多余的能量将宿主传送至一个更安全的地方。</FOU.NaniteAbility.ActivateRecoveryProgram.Description>
+
+	<!-- EN: Nanites within the subject's body have been activated. -->
+	<FOU.NaniteAbility.ActivateRecoveryProgram.AlreadyStarted>已激发高维微械。</FOU.NaniteAbility.ActivateRecoveryProgram.AlreadyStarted>
+
+
+	<!-- EN: Teleport {PAWN_labelShort} to this location. -->
+	<FOU.NaniteAbility.TeleportTo>将{PAWN_labelShort}传送到此处。</FOU.NaniteAbility.TeleportTo>
+
+</LanguageData>

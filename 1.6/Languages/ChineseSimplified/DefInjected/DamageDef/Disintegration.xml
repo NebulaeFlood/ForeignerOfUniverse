@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+    <!-- EN: {0} has reduced to quantum foam. -->
+    <FOU_Disintegration.deathMessage>{0}被分解成了量子泡沫。</FOU_Disintegration.deathMessage>
+
+    <!-- EN: disintegration -->
+    <FOU_Disintegration.label>分解</FOU_Disintegration.label>
+
+</LanguageData>

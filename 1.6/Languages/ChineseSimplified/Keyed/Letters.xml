@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+	<!-- EN: The higher-dimensional nanites within {PAWN_labelShort} have been activated by critical injuries.\n\n{PAWN_possessive} consciousness will now be contained by the nanites until their body is restored to a state capable of sustaining consciousness. -->
+	<FOU.Letters.NaniteActivated.Content>{PAWN_labelShort}体内的高维微械被致命的伤势激发了。\n\n现在{PAWN_possessive}的意识将被高维微械封闭，直到其身体被修复到能支持其意识为止。</FOU.Letters.NaniteActivated.Content>
+	<!-- EN: Nanite Activated -->
+	<FOU.Letters.NaniteActivated.Label>微械激发</FOU.Letters.NaniteActivated.Label>
+
+	<!-- EN: Mutants within {TARGET_labelShort} has been reverted by {CASTER_labelShort}'s higher-dimensional nanites.{2} -->
+	<FOU.Letters.NaniteRevertMutant.Content>{TARGET_labelShort}的身体突变已经被{CASTER_labelShort}的高维微械还原了。{2}</FOU.Letters.NaniteRevertMutant.Content>
+	<!-- EN: Mutant Reverted -->
+	<FOU.Letters.NaniteRevertMutant.Label>突变还原</FOU.Letters.NaniteRevertMutant.Label>
+
+	<!-- EN: The metalhorror within {TARGET_nameDef} has been excised by {CASTER_nameDef}'s higher dimensional nanites. -->
+	<FOU.Letters.MetalhorrorImplantRemoved.Content>{TARGET_nameDef}体内的金属怪形已经被{CASTER_nameDef}的高维微械移除了。</FOU.Letters.MetalhorrorImplantRemoved.Content>
+	<!-- EN: Metalhorrors Excised -->
+	<FOU.Letters.MetalhorrorImplantRemoved.Label>金属怪形移除</FOU.Letters.MetalhorrorImplantRemoved.Label>
+
+	<!-- EN: {PAWN_labelShort}'s {2} has healed by higher dimensional nanites. -->
+	<FOU.Letters.DiseaseCured.Content>{PAWN_labelShort}的以下状态已被高维微械治愈：\n{1}</FOU.Letters.DiseaseCured.Content>
+	<!-- EN: Metalhorrors Excised -->
+	<FOU.Letters.DiseaseCured.Label>微械免疫</FOU.Letters.DiseaseCured.Label>
+
+	<!-- EN: {PAWN_labelShort} has departed the colony.\n\nAuthorization for {1} protocol is confirmed.\n\nActivate recall protocol for immediate retrieval of {PAWN_labelShort}? -->
+	<FOU.Letters.ExistenceAnchor.Content>{PAWN_labelShort}离开了殖民地。\n\n幸运的是，你拥有{1}的权限。\n\n是否激活协议以使{PAWN_labelShort}立即回归？</FOU.Letters.ExistenceAnchor.Content>
+	<!-- EN: Recall: {PAWN_labelShort} -->
+	<FOU.Letters.ExistenceAnchor.Label>回归: {PAWN_labelShort}</FOU.Letters.ExistenceAnchor.Label>
+
+</LanguageData>

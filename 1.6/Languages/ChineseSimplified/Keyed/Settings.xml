@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+    <!-- EN: Foreigner of Universe -->
+    <FOU.Settings.Category.Label>宇宙异客</FOU.Settings.Category.Label>
+
+
+	<!-- EN: General -->
+	<FOU.Settings.Basic.Label>基础</FOU.Settings.Basic.Label>
+
+
+	<!-- EN: <![CDATA[<color=#D09B61>Nanites</color>]]> max storage capacity:  -->
+	<FOU.Settings.NanitesMaxStorage.Label><![CDATA[<color=#D09B61>高维微械</color>]]>最大储备量：</FOU.Settings.NanitesMaxStorage.Label>
+
+
+	<!-- EN: <![CDATA[<color=#D09B61>Nanites</color>]]> daily replication::  -->
+	<FOU.Settings.NanitesDailyReplication.Label><![CDATA[<color=#D09B61>高维微械</color>]]>每日复制量：</FOU.Settings.NanitesDailyReplication.Label>
+    <!-- EN: Configures the daily replication rate for <![CDATA[<color=#D09B61>higher dimensional nanites</color>]]>. -->
+	<FOU.Settings.NanitesDailyReplication.Tooltip>决定了<![CDATA[<color=#D09B61>高维微械</color>]]>的每日自然恢复量。</FOU.Settings.NanitesDailyReplication.Tooltip>
+
+
+	<!-- EN: <![CDATA[<color=#D09B61>「Phoenix」</color>]]> daily restoration:  -->
+	<FOU.Settings.PhoenixRegenerationPerDay.Label><![CDATA[<color=#D09B61>「溯生协议」</color>]]>每日治疗量：</FOU.Settings.PhoenixRegenerationPerDay.Label>
+    <!-- EN: Configures the daily physiological restoration capacity of <![CDATA[<color=#D09B61>「Phoenix」</color>]]>. -->
+	<FOU.Settings.PhoenixRegenerationPerDay.Tooltip>决定了<![CDATA[<color=#D09B61>「溯生协议」</color>]]>每日治愈的宿主伤势的量。</FOU.Settings.PhoenixRegenerationPerDay.Tooltip>
+
+
+	<!-- EN: <![CDATA[<color=#D09B61>Matter recovery</color>]]> ability consumption:  -->
+	<FOU.Settings.MatterRecoveryCost.Label><![CDATA[<color=#D09B61>物质复原</color>]]>能力消耗量：</FOU.Settings.MatterRecoveryCost.Label>
+	<!-- EN: Configures the <![CDATA[<color=#D09B61>higher dimensional nanites</color>]]> cost for activating <![CDATA[<color=#D09B61>matter recovery</color>]]> ability. -->
+	<FOU.Settings.MatterRecoveryCost.Tooltip>决定了<![CDATA[<color=#D09B61>物质复原</color>]]>能力消耗的高维微械量。</FOU.Settings.MatterRecoveryCost.Tooltip>
+
+	<!-- EN: Nanites per kilogram:  -->
+	<FOU.Settings.NanitesPerKilogram.Label>微械质量：</FOU.Settings.NanitesPerKilogram.Label>
+    <!-- EN: Configures per kilogram of matter yield of <![CDATA[<color=#D09B61>higher dimensional nanites</color>]]> by <![CDATA[<color=#D09B61>matter disintegration</color>]]> ability. -->
+	<FOU.Settings.NanitesPerKilogram.Tooltip>决定了使用<![CDATA[<color=#D09B61>物质分解</color>]]>时，每千克物质生成的高维微械量。</FOU.Settings.NanitesPerKilogram.Tooltip>
+
+	<!-- EN: Kilograms per Nanite:  -->
+	<FOU.Settings.KilogramsPerNanite.Label>微械单位：</FOU.Settings.KilogramsPerNanite.Label>
+    <!-- EN: Configures the <![CDATA[<color=#D09B61>higher dimensional nanites</color>]]> required per kilogram of matter reconstructed for <![CDATA[<color=#D09B61>matter weave</color>]]> ability. -->
+	<FOU.Settings.KilogramsPerNanite.Tooltip>决定了使用<![CDATA[<color=#D09B61>物质编织</color>]]>时，每单位高维微械对应的千克质量。</FOU.Settings.KilogramsPerNanite.Tooltip>
+
+    <!-- EN: <![CDATA[<color=#D09B61>Indiscriminate disintegration</color>]]> ability consumption:  -->
+	<FOU.Settings.IndiscriminateDisintegrationCost.Label><![CDATA[<color=#D09B61>无差别分解</color>]]>能力消耗：</FOU.Settings.IndiscriminateDisintegrationCost.Label>
+    <!-- EN: Configures the <![CDATA[<color=#D09B61>higher dimensional nanites</color>]]> cost for activating <![CDATA[<color=#D09B61>indiscriminate disintegration</color>]]> ability. -->
+	<FOU.Settings.IndiscriminateDisintegrationCost.Tooltip>决定了<![CDATA[<color=#D09B61>无差别分解</color>]]>能力消耗的高维微械量。</FOU.Settings.IndiscriminateDisintegrationCost.Tooltip>
+
+	<!-- EN: <![CDATA[<color=#D09B61>Indiscriminate disintegration</color>]]> ability damage:  -->
+	<FOU.Settings.IndiscriminateDisintegrationDamage.Label><![CDATA[<color=#D09B61>无差别分解</color>]]>能力伤害：</FOU.Settings.IndiscriminateDisintegrationDamage.Label>
+    <!-- EN: Configures the damage per target inflicted by <![CDATA[<color=#D09B61>indiscriminate disintegration</color>]]>. -->
+	<FOU.Settings.IndiscriminateDisintegrationDamage.Tooltip>决定了<![CDATA[<color=#D09B61>无差别分解</color>]]>能力对范围内每个目标造成的伤害。</FOU.Settings.IndiscriminateDisintegrationDamage.Tooltip>
+	
+	<!-- EN: <![CDATA[<color=#D09B61>Indiscriminate disintegration</color>]]> ability radius:  -->
+	<FOU.Settings.IndiscriminateDisintegrationRadius.Label><![CDATA[<color=#D09B61>无差别分解</color>]]>能力范围：</FOU.Settings.IndiscriminateDisintegrationRadius.Label>
+    <!-- EN: Configures the effective radius for <![CDATA[<color=#D09B61>indiscriminate disintegration</color>]]>. -->
+	<FOU.Settings.IndiscriminateDisintegrationRadius.Tooltip>决定了<![CDATA[<color=#D09B61>无差别分解</color>]]>选取范围的半径。</FOU.Settings.IndiscriminateDisintegrationRadius.Tooltip>
+
+	<!-- EN: <![CDATA[<color=#D09B61>Recovery program</color>]]> ability cooldown:  -->
+	<FOU.Settings.RecoveryProgramCooldown.Label><![CDATA[<color=#D09B61>重构程序</color>]]>冷却时间：</FOU.Settings.RecoveryProgramCooldown.Label>
+	<!-- EN: Configures the cooldown for <![CDATA[<color=#D09B61>Recovery program</color>]]> from <![CDATA[<color=#D09B61>「Phoenix」</color>]]>.\n\nThe unit here is <![CDATA[<color=#D09B61>Tick</color>]]>, and 60,000 <![CDATA[<color=#D09B61>Ticks</color>]]> equal one in-game day.  -->
+	<FOU.Settings.RecoveryProgramCooldown.Tooltip><![CDATA[<color=#D09B61>「溯生协议」</color>]]>的<![CDATA[<color=#D09B61>重构程序</color>]]>的冷却时间。/n/n单位为 <![CDATA[<color=#D09B61>Tick</color>]]>，一天等于 60000 <![CDATA[<color=#D09B61>Tick</color>]]>。</FOU.Settings.RecoveryProgramCooldown.Tooltip>
+
+	<!-- EN: Reset -->
+	<FOU.Settings.ResetButton.Label>重置</FOU.Settings.ResetButton.Label>
+    <!-- EN: Resets the above options to defult. -->
+	<FOU.Settings.ResetButton.Tooltip>还原以上选项到默认值。</FOU.Settings.ResetButton.Tooltip>
+
+    <!-- EN: Configure health conditions immunized by {0} protocol. -->
+	<FOU.Settings.Protocols.Tooltip>设置{0}免疫的健康状态。</FOU.Settings.Protocols.Tooltip>
+
+    <!-- EN: Try to add new immunized health condition. -->
+	<FOU.Settings.Protocols.ImmuneDiseases.AddButton.Tooltip>尝试添加到免疫状态。</FOU.Settings.Protocols.ImmuneDiseases.AddButton.Tooltip>
+    <!-- EN: DefName of health condition to add. -->
+	<FOU.Settings.Protocols.ImmuneDiseases.InputBox.Tooltip>要添加的健康状态的 DefName。</FOU.Settings.Protocols.ImmuneDiseases.InputBox.Tooltip>
+    <!-- EN: View all loaded health conditions. -->
+	<FOU.Settings.Protocols.ImmuneDiseases.OverviewButton.Tooltip>查看当前加载的所有健康状态。</FOU.Settings.Protocols.ImmuneDiseases.OverviewButton.Tooltip>
+    <!-- EN: Restore default settings. -->
+	<FOU.Settings.Protocols.ImmuneDiseases.ResetButton.Tooltip>重置到初始状态。</FOU.Settings.Protocols.ImmuneDiseases.ResetButton.Tooltip>
+
+</LanguageData>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+    <!-- EN: Foreigner of Universe -->
+    <FOU.Settings.Category.Label>宇宙异客</FOU.Settings.Category.Label>
+
+
+	<!-- EN: <![CDATA[<color=#D09B61>higher-dimensional nanites</color>]]> max storage capacity:  -->
+	<FOU.Settings.NanitesMaxStorage.Label><![CDATA[<color=#D09B61>高维微械</color>]]>最大储备量：</FOU.Settings.NanitesMaxStorage.Label>
+    <!-- EN: Defines the maximum <![CDATA[<color=#D09B61>higher-dimensional nanites</color>]]> storage allocated for <![CDATA[<color=#D09B61>special abilities</color>]]> consumption. -->
+	<FOU.Settings.NanitesMaxStorage.Tooltip>决定了<![CDATA[<color=#D09B61>高维微械</color>]]>基因的供<![CDATA[默认<color=#D09B61>特殊能力</color>]]>消耗的资源的最大值。</FOU.Settings.NanitesMaxStorage.Tooltip>
+
+	<!-- EN: Daily replication rate of nanites:  -->
+	<FOU.Settings.NanitesDailyReplicationAmount.Label><![CDATA[<color=#D09B61>高维微械</color>]]>每日复制量：</FOU.Settings.NanitesDailyReplicationAmount.Label>
+    <!-- EN: Configures the daily natural regeneration rate of resources consumed by the default <color=#D09B61>hyper-dimensional nanites</color> gene's <color=#D09B61>special abilities</color>. -->
+	<FOU.Settings.NanitesDailyReplicationAmount.Tooltip>决定了<![CDATA[<color=#D09B61>高维微械</color>]]>基因的供<![CDATA[默认<color=#D09B61>特殊能力</color>]]>消耗的资源的每日自然恢复量。</FOU.Settings.NanitesDailyReplicationAmount.Tooltip>
+
+
+	<!-- EN: Daily healing capacity:  -->
+	<FOU.Settings.RegenerationPerDay.Label>每日治疗量：</FOU.Settings.RegenerationPerDay.Label>
+    <!-- EN: Configures the daily recovery capacity of <![CDATA[<color=#D09B61>higher-dimensional nanites</color>]]> for host's physiological damage. -->
+	<FOU.Settings.RegenerationPerDay.Tooltip>决定了<![CDATA[<color=#D09B61>高维微械</color>]]>基因每日治愈的宿主伤势的量。</FOU.Settings.RegenerationPerDay.Tooltip>
+
+
+	<!-- EN: <![CDATA[<color=#D09B61>Matter Recovery</color>]]> ability consumption:  -->
+	<FOU.Settings.MatterRecoveryCost.Label><![CDATA[<color=#D09B61>物质复原</color>]]>能力消耗量：</FOU.Settings.MatterRecoveryCost.Label>
+    <!-- EN: Configures the <![CDATA[<color=#D09B61>higher-dimensional nanites</color>]]> required to activate <![CDATA[<color=#D09B61>Matter Recovery</color>]]> ability. -->
+	<FOU.Settings.MatterRecoveryCost.Tooltip>决定了<![CDATA[<color=#D09B61>物质复原</color>]]>能力消耗的高维微械量。</FOU.Settings.MatterRecoveryCost.Tooltip>
+
+
+    <!-- EN: <![CDATA[<color=#D09B61>Indiscriminate Disintegration</color>]]> ability consumption:  -->
+	<FOU.Settings.IndiscriminateDisintegrationCost.Label><![CDATA[<color=#D09B61>无差别分解</color>]]>能力消耗量：</FOU.Settings.IndiscriminateDisintegrationCost.Label>
+    <!-- EN: Specifies the <![CDATA[<color=#D09B61>higher-dimensional nanites</color>]]> required to execute <![CDATA[<color=#D09B61>Indiscriminate Disintegration</color>]]> ability. -->
+	<FOU.Settings.IndiscriminateDisintegrationCost.Tooltip>决定了<![CDATA[<color=#D09B61>无差别分解</color>]]>能力消耗的高维微械量。</FOU.Settings.IndiscriminateDisintegrationCost.Tooltip>
+
+	<!-- EN: <![CDATA[<color=#D09B61>Indiscriminate Disintegration</color>]]> ability damage:  -->
+	<FOU.Settings.IndiscriminateDisintegrationDamage.Label><![CDATA[<color=#D09B61>无差别分解</color>]]>能力伤害值：</FOU.Settings.IndiscriminateDisintegrationDamage.Label>
+    <!-- EN: Configures the damage inflicted by the default <color=#D09B61>Indiscriminate Disintegration</color> ability on targets. -->
+	<FOU.Settings.IndiscriminateDisintegrationDamage.Tooltip>决定了<![CDATA[<color=#D09B61>无差别分解</color>]]>能力对目标造成的伤害。</FOU.Settings.IndiscriminateDisintegrationDamage.Tooltip>
+
+
+	<!-- EN: <![CDATA[<color=#D09B61>Stimulate Nanites</color>]]> ability cooldown:  -->
+	<FOU.Settings.InstantRecoverCooldown.Label><![CDATA[<color=#D09B61>微械激发</color>]]>冷却时间：</FOU.Settings.InstantRecoverCooldown.Label>
+    <!-- EN: Configures the cooldown duration of the <![CDATA[<color=#D09B61>Stimulate Nanites</color>]]> ability available to pawns with the <![CDATA[<color=#D09B61>Matter Manipulation</color>]]> gene upon death or downing.\n\nThe unit here is <![CDATA[<color=#D09B61>Tick</color>]]>, and 60,000 <![CDATA[<color=#D09B61>Ticks</color>]]> equal one in-game day. -->
+	<FOU.Settings.InstantRecoverCooldown.Tooltip>决定了拥有<![CDATA[<color=#D09B61>物质操纵</color>]]>基因的小人死亡或倒地后可用的能力\n——<![CDATA[<color=#D09B61>微械激发</color>]]>的冷却时间。\n\n此处的单位为<![CDATA[<color=#D09B61>Tick</color>]]>，\n60000 <![CDATA[<color=#D09B61>Tick</color>]]>等于游戏中的一天。</FOU.Settings.InstantRecoverCooldown.Tooltip>
+
+
+	<!-- EN: Reset -->
+	<FOU.Settings.ResetButton.Label>重置</FOU.Settings.ResetButton.Label>
+    <!-- EN: Resets all options to defult. -->
+	<FOU.Settings.ResetButton.Tooltip>还原所有选项到<![CDATA[<color=#D09B61>默认值</color>]]>。</FOU.Settings.ResetButton.Tooltip>
+
+</LanguageData>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <GeneDef>
+        <defName>FOU_NanoSynapse</defName>
+        <label>nano Synapse</label>
+        <description>Carriers of this gene experience the activation of higher-dimensional nanites within their bodies, which begin to assist the nervous system. This results in a comprehensive enhancement of cognitive abilities, elevating them to genius-level proficiency across multiple disciplines.\n\nSimultaneously, through partially accessible data repositories of higher-dimensional nanites, these nanodevices augment the carriers' skills across all domains, functioning seamlessly regardless of time or location.</description>
+        <geneClass>ForeignerOfUniverse.Genes.NanoSynapse</geneClass>
+        <iconPath>UI/Icons/Genes/FOU_NanoSynapse</iconPath>
+        <selectionWeight>0</selectionWeight>
+        <displayCategory>FOU_Extra-cosmic</displayCategory>
+        <displayOrderInCategory>10</displayOrderInCategory>
+
+        <capMods>
+            <li>
+                <capacity>Consciousness</capacity>
+                <offset>0.3</offset>
+            </li>
+            <li>
+                <capacity>Manipulation</capacity>
+                <offset>0.3</offset>
+            </li>
+        </capMods>
+
+        <statFactors>
+            <AimingDelayFactor>0.3</AimingDelayFactor>
+            <MeleeDodgeChance>1.5</MeleeDodgeChance>
+            <MeleeHitChance>1.5</MeleeHitChance>
+            <MortarMissRadiusFactor>0</MortarMissRadiusFactor>
+            <PawnTrapSpringChance>0</PawnTrapSpringChance>
+            <ShootingAccuracyPawn>1.5</ShootingAccuracyPawn>
+            <GlobalLearningFactor>4.5</GlobalLearningFactor>
+            <MentalBreakThreshold>0.25</MentalBreakThreshold>
+            <PsychicEntropyMax>2</PsychicEntropyMax>
+            <PsychicEntropyRecoveryRate>2</PsychicEntropyRecoveryRate>
+            <PsychicSensitivity>1.5</PsychicSensitivity>
+            <ArrestSuccessChance>1.5</ArrestSuccessChance>
+            <NegotiationAbility>2</NegotiationAbility>
+            <SocialImpact>2</SocialImpact>
+            <TradePriceImprovement>1.5</TradePriceImprovement>
+            <TrainAnimalChance>3</TrainAnimalChance>
+        </statFactors>
+
+        <customEffectDescriptions>
+            <li>Exceptional memory.</li>
+            <li>Skills can be self-enhancing.</li>
+        </customEffectDescriptions>
+
+        <modExtensions>
+			<li Class="VanillaGenesExpanded.GeneExtension">
+				<backgroundPathArchite>UI/Icons/Genes/FOU_GeneBackground</backgroundPathArchite>
+			</li>
+		</modExtensions>
+
+        <biostatCpx>8</biostatCpx>
+        <biostatArc>2</biostatArc>
+    </GeneDef>
+
+</Defs>

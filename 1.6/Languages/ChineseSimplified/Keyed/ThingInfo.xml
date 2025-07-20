@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+    
+    <!-- EN: Spawn -->
+    <FOU.ThingInfo.Confirm.Label>生成</FOU.ThingInfo.Confirm.Label>
+    <!-- EN: Spawn this item at the selected location. -->
+    <FOU.ThingInfo.Confirm.Tooltip>在选择的位置生成该物品。</FOU.ThingInfo.Confirm.Tooltip>
+
+    <!-- EN: Remove -->
+    <FOU.ThingInfo.Delete.Label>移除</FOU.ThingInfo.Delete.Label>
+    <!-- EN: Remove {0} from records. -->
+    <FOU.ThingInfo.Delete.Tooltip>将{0}从记录中移除。</FOU.ThingInfo.Delete.Tooltip>
+
+    <!-- EN: Insufficient higher dimensional nanites. -->
+    <FOU.ThingInfo.Disabled.Tooltip>没有足够的高维微械。</FOU.ThingInfo.Disabled.Tooltip>
+
+    <!-- EN: Number of items to spawn. -->
+    <FOU.ThingInfo.Number.Tooltip>要生成的数量。</FOU.ThingInfo.Number.Tooltip>
+
+</LanguageData>

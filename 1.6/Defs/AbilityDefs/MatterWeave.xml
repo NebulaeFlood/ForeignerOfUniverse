@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <AbilityDef>
+        <defName>FOU_MatterWeave</defName>
+        <label>matter weave</label>
+        <description>Commands higher dimensional nanites to restore matter's structural integrity.\n\nThis ability bypasses line-of-sight requirements via the higher dimensional nanites.</description>
+        <iconPath>UI/Icons/Abilities/FOU_MatterWeave</iconPath>
+        <category>FOU_Nanites</category>
+
+        <displayOrder>1</displayOrder>
+
+        <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+        <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+
+        <warmupSound>FOU_NaniteAbilityWarmup</warmupSound>
+
+        <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+        <hostile>false</hostile>
+
+        <verbProperties>
+            <verbClass>ForeignerOfUniverse.Verbs.CastAbilityDirectly</verbClass>
+            <requireLineOfSight>false</requireLineOfSight>
+
+            <range>35</range>
+            <warmupTime>4</warmupTime>
+
+            <targetParams>
+                <canTargetSelf>true</canTargetSelf>
+                <canTargetBuildings>false</canTargetBuildings>
+                <canTargetLocations>true</canTargetLocations>
+            </targetParams>
+        </verbProperties>
+
+        <comps>
+            <li Class="CompProperties_AbilityEffect">
+                <compClass>ForeignerOfUniverse.Comps.AbilityEffects.MatterWeave</compClass>
+            </li>
+        </comps>
+    </AbilityDef>
+
+</Defs>

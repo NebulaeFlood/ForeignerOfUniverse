@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+    <!-- EN: Active Protocols -->
+    <FOU.Protocols.Title>已许可的协议</FOU.Protocols.Title>
+    <!-- EN: Press Left Ctrl to show details. -->
+    <FOU.Protocols.Tip>按下 Left Ctrl 以显示更多信息</FOU.Protocols.Tip>
+    <!-- EN: Press any key to hide details. -->
+    <FOU.Protocols.Hide.Tip>按下任意键以隐藏更多信息</FOU.Protocols.Hide.Tip>
+
+    <!-- EN: 「FOUNDATION」 -->
+    <FOU.Protocols.Foundation.Label>「基准协议」</FOU.Protocols.Foundation.Label>
+    <!-- EN: Higher dimensional nanites will proliferate within this entity's body in an entropy-decreasing pattern. -->
+    <FOU.Protocols.Foundation.Description>高维微械将在此人躯体内以熵减形式增殖。</FOU.Protocols.Foundation.Description>
+
+    <!-- EN: 「ASCENSION」 -->
+    <FOU.Protocols.Ascension.Label>「升格协议」</FOU.Protocols.Ascension.Label>
+    <!-- EN: Higher dimensional nanites will fundamentally alter this entity's physiology, granting perpetual corporeal existence. -->
+    <FOU.Protocols.Ascension.Description>高维微械将彻底改变此人的躯体性质，使其永生不朽。</FOU.Protocols.Ascension.Description>
+
+    <!-- EN: 「NOONET」 -->
+    <FOU.Protocols.NooNet.Label>「智网协议」</FOU.Protocols.NooNet.Label>
+    <!-- EN: Higher dimensional nanites augment neural functions, shield consciousness integrity, and construct virtual domains for cognitive refinement. -->
+    <FOU.Protocols.NooNet.Description>高维微械将辅助神经元工作，保护此人的心灵，并提供虚拟空间以帮助锤炼技艺。</FOU.Protocols.NooNet.Description>
+    <!-- EN: Open or close <![CDATA[<color=#D09B61>psychic shild</color>]]>. -->
+    <FOU.Protocols.NooNet.Tip>开启或关闭<![CDATA[<color=#D09B61>心灵屏障</color>]]>。</FOU.Protocols.NooNet.Tip>
+
+    <!-- EN: 「WEAVE」 -->
+    <FOU.Protocols.Weave.Label>「量塑协议」</FOU.Protocols.Weave.Label>
+    <!-- EN: Higher dimensional nanites enable fundamental particle manipulation akin to weaving primal clay. -->
+    <FOU.Protocols.Weave.Description>高维微械将帮助此人如黏土般编织塑造基本粒子。</FOU.Protocols.Weave.Description>
+
+    <!-- EN: 「PHOENIX」 -->
+    <FOU.Protocols.Phoenix.Label>「溯生协议」</FOU.Protocols.Phoenix.Label>
+    <!-- EN: Higher dimensional nanites perpetually regenerate biological systems. Catastrophic damage triggers radical protection protocols. -->
+    <FOU.Protocols.Phoenix.Description>高维微械将持续修复此人的躯体，以尝试保持其处于最适合生存的状态。当躯体状况极度恶劣时，高维微械将启用极端手段。</FOU.Protocols.Phoenix.Description>
+
+    <!-- EN: 「ANCHOR」 -->
+    <FOU.Protocols.Anchor.Label>「元锚协议」</FOU.Protocols.Anchor.Label>
+    <!-- EN: Higher-dimensional nanites will "anchor" this entity's ontological existence. Upon obtaining authorization from <![CDATA[<color=#D09B61>「████」</color>]]>, they can reconstitute the physical form at any coordinates. -->
+    <FOU.Protocols.Anchor.Description>高维微械将"锚定"此人的存在，在拥有<![CDATA[<color=#D09B61>「████」</color>]]>的许可后，将能够在任意地点重组其躯体。</FOU.Protocols.Anchor.Description>
+
+</LanguageData>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <HediffDef>
+        <defName>FOU_PsychicShild</defName>
+        <label>psychic shild</label>
+        <description>Nanites generate psi-nullification fields through nonlocal entanglement, creating absolute psychic phenomena.</description>
+        <everCurableByItem>false</everCurableByItem>
+        <isBad>false</isBad>
+
+        <stages>
+            <li>
+                <statFactors>
+                    <PsychicSensitivity>0</PsychicSensitivity>
+                </statFactors>
+            </li>
+        </stages>
+
+    </HediffDef>
+
+</Defs>

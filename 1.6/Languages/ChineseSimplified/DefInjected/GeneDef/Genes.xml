@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+	<!-- EN: Carriers of this gene possess a mysterious nanomechanical device capable of self-replication without consumption through unknown means.\n\nWhen equipped with Higher Dimensional Nanites, consciousness becomes independent of physical form - even after bodily destruction, the mind endures.\n\n - 「FOUNDATION」 -->
+	<FOU_HigherDimensionalNanites.description>这种基因的携带者可以储备一种神秘的纳米机械。这种机械能够自我增殖而无需消耗任何已知物质。\n\n生物拥有高维微械后，其意识将超越物理形态的束缚——纵使躯体毁灭，意识仍将在高维空间永续存在。\n\n——「初级协议」</FOU_HigherDimensionalNanites.description>
+	<!-- EN: nanites -->
+	<FOU_HigherDimensionalNanites.label>高维微械</FOU_HigherDimensionalNanites.label>
+	<!-- EN: Provides nanites supply. -->
+  	<FOU_HigherDimensionalNanites.customEffectDescriptions.0>储备高维微械</FOU_HigherDimensionalNanites.customEffectDescriptions.0>
+	<!-- EN: Higher dimensional nanites are a type of nanomechanical device that is little known, capable of self-replicating without consumption through unknown methods.\n\nThis device possesses a variety of incredible functions, capable of manipulating molecular gravity and temporarily altering physical laws with sufficient reserves. -->
+	<FOU_HigherDimensionalNanites.resourceDescription>高维微械是一种知之甚少的纳米机械，其自我增殖过程不消耗任何已知物质。\n\n当权限完备且储备充足时，可操纵分子间引力，局部改写物理规则，实现近乎神迹的奇观。</FOU_HigherDimensionalNanites.resourceDescription>
+	<!-- EN: nanites -->
+	<FOU_HigherDimensionalNanites.resourceLabel>高维微械</FOU_HigherDimensionalNanites.resourceLabel>
+	
+
+	<!-- EN: Carriers of this gene acquire privileged protocol clearance, higher dimensional nanites will grant them quasi-immortality and extreme environmental immunity.\n\n - 「ASCENSION」 -->
+	<FOU_PhysicalAscension.description>这种基因的携带者取得了某种特权级协议许可，高维微械将使携带者的躯体近乎不朽。\n\n——「升格协议」</FOU_PhysicalAscension.description>
+	<!-- EN: ascension -->
+	<FOU_PhysicalAscension.label>躯体飞升</FOU_PhysicalAscension.label>
+	<!-- EN: Environmental immunity. -->
+  	<FOU_PhysicalAscension.customEffectDescriptions.0>环境屏障</FOU_PhysicalAscension.customEffectDescriptions.0>
+	<!-- EN: Bio-armor. -->
+	<FOU_PhysicalAscension.customEffectDescriptions.1>生物装甲</FOU_PhysicalAscension.customEffectDescriptions.1>
+	<!-- EN: Quasi-immortality. -->
+	<FOU_PhysicalAscension.customEffectDescriptions.2>长生不朽</FOU_PhysicalAscension.customEffectDescriptions.2>
+
+
+	<!-- EN: Carriers of this gene acquire privileged protocol clearance, higher dimensional nanites amplify cognitive capacities to genius levels, enabling perpetual skill evolution within virtual realms.\n\n - 「NOONET」 -->
+	<FOU_NanoSynapse.description>这种基因的携带者取得了某种特权级协议许可，高维微械赋予携带者匪夷所思的思维能力，帮助其在虚拟世界中不断演进技艺。\n\n——「智网协议」</FOU_NanoSynapse.description>
+	<!-- EN: nano Synapse -->
+	<FOU_NanoSynapse.label>微械智网</FOU_NanoSynapse.label>
+	<!-- EN: Cognitive surge. -->
+	<FOU_NanoSynapse.customEffectDescriptions.0>思维超限</FOU_NanoSynapse.customEffectDescriptions.0>
+	<!-- EN: Virtual dojo. -->
+  	<FOU_NanoSynapse.customEffectDescriptions.1>虚境演武</FOU_NanoSynapse.customEffectDescriptions.1>
+	<!-- EN: Eidetic memory. -->
+  	<FOU_NanoSynapse.customEffectDescriptions.2>触目成诵</FOU_NanoSynapse.customEffectDescriptions.2>
+
+
+	<!-- EN: Carriers of this gene acquire privileged protocol clearance, commanding higher dimensional nanites to reconfigure matter at the elementary level.\n\n - 「WEAVE」 -->
+	<FOU_MatterManipulation.description>这种基因的携带者取得了某种特权级协议许可，可驱使高维微械操纵基本粒子。\n\n——「量塑协议」</FOU_MatterManipulation.description>
+	<!-- EN: matter Manipulation -->
+	<FOU_MatterManipulation.label>粒子操纵</FOU_MatterManipulation.label>
+
+</LanguageData>

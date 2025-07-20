@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+	<!-- EN: Nanite cost: {0} -->
+	<FOU.NaniteAbility.Cost>高维微械消耗：{0}</FOU.NaniteAbility.Cost>
+	<!-- EN: {0} does not have higher dimensional nanites. -->
+	<FOU.NaniteAbility.NoFoundationProtocol>{PAWN_labelShort}没有高维微械。</FOU.NaniteAbility.NoFoundationProtocol>
+	<!-- EN: {0} does not have enough nanites. -->
+	<FOU.NaniteAbility.NoEnoughStorage>{PAWN_labelShort}没有足够的高维微械。</FOU.NaniteAbility.NoEnoughStorage>
+	<!-- EN: {0} does not have permission. -->
+	<FOU.NaniteAbility.InsufficientPrivileges>{PAWN_labelShort}没有进行此操作的许可。</FOU.NaniteAbility.InsufficientPrivileges>
+
+
+	<!-- EN: {PAWN_labelShort} does not require recovery. -->
+	<FOU.NaniteAbility.TargetPawnDoNotNeedRecover>{PAWN_labelShort}不需要进行恢复。</FOU.NaniteAbility.TargetPawnDoNotNeedRecover>
+	<!-- EN: Cannot use {0} on unrepairable items or buildings. -->
+	<FOU.NaniteAbility.TargetThingIsUnrepairable>不能对无法修复的对象使用{0}。</FOU.NaniteAbility.TargetThingIsUnrepairable>
+	<!-- EN: Cannot use {0} on items or buildings requiring no repair. -->
+	<FOU.NaniteAbility.TargetThingDoNotNeedRecover>不能对无需修复的对象使用{0}。</FOU.NaniteAbility.TargetThingDoNotNeedRecover>
+
+
+	<!-- EN: Will cost {0} x{1}. -->
+	<FOU.NaniteAbility.TargetThingCostInfo>将会分解{0} x{1}。</FOU.NaniteAbility.TargetThingCostInfo>
+	<!-- EN: Assembly yield -->
+	<FOU.NaniteAbility.NanitesPerKilogram>组装量</FOU.NaniteAbility.NanitesPerKilogram>
+
+
+	<!-- EN: {0} has been stored in nanite memory. {0} can now be created via {1}. -->
+	<FOU.NaniteAbility.WeavableThingAdded>{0}已被高维微械记录，现可使用{1}创造{0}。</FOU.NaniteAbility.WeavableThingAdded>
+	<!-- EN: {0} cannot be stored in nanite memory due to unknown reasons. -->
+	<FOU.NaniteAbility.CannotAddWeavableThing>由于未知原因，{0}无法被高维微械记录。</FOU.NaniteAbility.CannotAddWeavableThing>
+	<!-- EN: Weave cost -->
+	<FOU.NaniteAbility.KilogramPerNanites>消耗量</FOU.NaniteAbility.KilogramPerNanites>
+
+
+	<!-- EN: recovery program -->
+	<FOU.NaniteAbility.ActivateRecoveryProgram.Label>重构程序</FOU.NaniteAbility.ActivateRecoveryProgram.Label>
+	<!-- EN: {PAWN_labelShort}'s body has deteriorated beyond critical thresholds. Higher dimensional nanites can now be actively activated to initiate a full-body recovery. -->
+	<FOU.NaniteAbility.ActivateRecoveryProgram.Description>{PAWN_labelShort}身体的糟糕程度已经超过了某种阈值，高维微械现可被主动激活以重构其躯体。</FOU.NaniteAbility.ActivateRecoveryProgram.Description>
+
+
+	<!-- EN: Use {0} on items to store their blueprints here. -->
+	<FOU.NaniteAbility.EmptyTip>对物品使用{0}以将其记录于此。</FOU.NaniteAbility.EmptyTip>
+	<!-- EN: Reconstruct items at this location. -->
+	<FOU.NaniteAbility.SpawnTo>将重构的物品放置到此处。</FOU.NaniteAbility.SpawnTo>
+	<!-- EN: Cannot reconstruct at this location. -->
+	<FOU.NaniteAbility.CannotSpawnTo>无法在此重构物品。</FOU.NaniteAbility.CannotSpawnTo>
+
+	
+	<!-- EN: Cannot teleport {0} to this location. -->
+	<FOU.NaniteAbility.CannotTeleportTo>无法将{PAWN_labelShort}传送到此处。</FOU.NaniteAbility.CannotTeleportTo>
+	<!-- EN: Teleport {0} to this location. -->
+	<FOU.NaniteAbility.TeleportTo>将{PAWN_labelShort}传送到此处。</FOU.NaniteAbility.TeleportTo>
+
+</LanguageData>

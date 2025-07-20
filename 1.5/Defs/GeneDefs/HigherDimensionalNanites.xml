@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <GeneDef>
+        <defName>FOU_HigherDimensionalNanites</defName>
+        <label>nanites</label>
+        <description>Carriers of this gene can store a mysterious nanomechanical device. This device can self-replicate without consumption through unknown methods.
+\nImplants higher-dimensional nanites that decouple consciousness from biological substrate, enabling awareness to persist post-somatic annihilation - though conventional retrieval remains beyond current technology.</description>
+        <geneClass>ForeignerOfUniverse.Genes.HigherDimensionalNanites</geneClass>
+        <resourceGizmoType>ForeignerOfUniverse.Gizmos.ResourceNanites</resourceGizmoType>
+        <resourceLabel>nanites</resourceLabel>
+        <resourceGizmoThresholds />
+        <showGizmoOnWorldView>true</showGizmoOnWorldView>
+        <showGizmoWhenDrafted>true</showGizmoWhenDrafted>
+        <resourceDescription>Higher-dimensional nanites are a type of nanomechanical device that is little known, capable of self-replicating without consumption through unknown methods.\n\nThis device possesses a variety of incredible functions, capable of manipulating molecular gravity and temporarily altering physical laws with sufficient reserves.</resourceDescription>
+        <iconPath>UI/Icons/Genes/FOU_HigherDimensionalNanites</iconPath>
+        <selectionWeight>0</selectionWeight>
+        <displayCategory>FOU_Extra-cosmic</displayCategory>
+        <displayOrderInCategory>0</displayOrderInCategory>
+
+        <customEffectDescriptions>
+            <li>Gives nanites supply.</li>
+            <li>Perfectly heal the injury.</li>
+            <li>Fatal wounds are no longer fatal.</li>
+        </customEffectDescriptions>
+
+        <modExtensions>
+			<li Class="VanillaGenesExpanded.GeneExtension">
+				<backgroundPathArchite>UI/Icons/Genes/FOU_GeneBackground</backgroundPathArchite>
+			</li>
+		</modExtensions>
+
+        <biostatCpx>8</biostatCpx>
+        <biostatMet>4</biostatMet>
+        <biostatArc>2</biostatArc>
+    </GeneDef>
+
+</Defs>

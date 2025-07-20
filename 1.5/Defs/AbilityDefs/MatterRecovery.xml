@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <AbilityDef>
+        <defName>FOU_MatterRecovery</defName>
+        <label>matter Recovery</label>
+        <description>Commands higher-dimensional nanites to restore matter's structural integrity.\nMacroscopically manifests as: repairing item durability; reconstructing and reviving corpses; reversing decay in organic matter; restoring biological organisms to optimal health states.\n\nThis ability bypasses line-of-sight requirements through the higher-dimensional nanites targeting protocols.</description>
+        <iconPath>UI/Icons/Abilities/FOU_MatterRecovery</iconPath>
+        <category>FOU_Nanites</category>
+
+        <displayOrder>0</displayOrder>
+
+        <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+        <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+
+        <warmupMote>Mote_FOU_NanitesFlash</warmupMote>
+        <warmupSound>FOU_NaniteAbilityWarmup</warmupSound>
+
+        <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+        <hostile>false</hostile>
+
+        <verbProperties>
+            <verbClass>ForeignerOfUniverse.Verbs.CastAbilityDirectly</verbClass>
+            <requireLineOfSight>false</requireLineOfSight>
+
+            <range>10</range>
+            <warmupTime>10</warmupTime>
+
+            <soundCast>FOU_MatterRecoveryCasted</soundCast>
+
+            <targetParams>
+                <canTargetSelf>true</canTargetSelf>
+                <canTargetItems>true</canTargetItems>
+                <canTargetCorpses>true</canTargetCorpses>
+                <canTargetPlants>true</canTargetPlants>
+                <mustBeSelectable>true</mustBeSelectable>
+                <mapObjectTargetsMustBeAutoAttackable>false</mapObjectTargetsMustBeAutoAttackable>
+            </targetParams>
+        </verbProperties>
+
+        <comps>
+            <li Class="ForeignerOfUniverse.Comps.AbilityEffects.Properties_NaniteCost">
+                <compClass>ForeignerOfUniverse.Comps.AbilityEffects.MatterRecovery</compClass>
+            </li>
+        </comps>
+    </AbilityDef>
+
+</Defs>

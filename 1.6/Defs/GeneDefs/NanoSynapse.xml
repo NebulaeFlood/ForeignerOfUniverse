@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <GeneDef>
+        <defName>FOU_NanoSynapse</defName>
+        <label>nano synapse</label>
+        <description>Carriers of this gene acquire privileged protocol clearance, higher dimensional nanites amplify cognitive capacities to genius levels, enabling perpetual skill evolution within virtual realms.\n\n - 「NOONET」</description>
+        <geneClass>ForeignerOfUniverse.Genes.NanoSynapse</geneClass>
+        <iconPath>UI/Icons/Genes/FOU_NanoSynapse</iconPath>
+        <selectionWeight>0</selectionWeight>
+        <displayCategory>FOU_NaniteProtocol</displayCategory>
+        <displayOrderInCategory>10</displayOrderInCategory>
+
+        <capMods>
+            <li>
+                <capacity>Consciousness</capacity>
+                <offset>0.3</offset>
+            </li>
+            <li>
+                <capacity>Manipulation</capacity>
+                <offset>0.3</offset>
+            </li>
+        </capMods>
+
+        <statFactors>
+            <MechBandwidth>2</MechBandwidth>
+            <RangedCooldownFactor>0.5</RangedCooldownFactor>
+            <AimingDelayFactor>0</AimingDelayFactor>
+            <ShootingAccuracyFactor_Long>1.5</ShootingAccuracyFactor_Long>
+            <ShootingAccuracyFactor_Medium>1.75</ShootingAccuracyFactor_Medium>
+            <ShootingAccuracyFactor_Short>2</ShootingAccuracyFactor_Short>
+            <ShootingAccuracyFactor_Touch>2.25</ShootingAccuracyFactor_Touch>
+            <ShootingAccuracyPawn>2</ShootingAccuracyPawn>
+            <StaggerDurationFactor>2</StaggerDurationFactor>
+            <MeleeCooldownFactor>0.5</MeleeCooldownFactor>
+            <MeleeDodgeChance>1.5</MeleeDodgeChance>
+            <MeleeHitChance>1.5</MeleeHitChance>
+            <MortarMissRadiusFactor>0</MortarMissRadiusFactor>
+            <PawnTrapSpringChance>0</PawnTrapSpringChance>
+            <ShootingAccuracyPawn>1.5</ShootingAccuracyPawn>
+            <GlobalLearningFactor>4.5</GlobalLearningFactor>
+            <MentalBreakThreshold>0.25</MentalBreakThreshold>
+            <HackingSpeed>2</HackingSpeed>
+            <PsychicEntropyMax>2</PsychicEntropyMax>
+            <PsychicEntropyRecoveryRate>2</PsychicEntropyRecoveryRate>
+            <PsychicSensitivity>1.5</PsychicSensitivity>
+            <ArrestSuccessChance>1.5</ArrestSuccessChance>
+            <NegotiationAbility>2</NegotiationAbility>
+            <SocialImpact>2</SocialImpact>
+            <TradePriceImprovement>1.5</TradePriceImprovement>
+            <TrainAnimalChance>3</TrainAnimalChance>
+        </statFactors>
+
+        <customEffectDescriptions>
+            <li>Cognitive surge.</li>
+            <li>Virtual dojo.</li>
+            <li>Eidetic memory.</li>
+        </customEffectDescriptions>
+
+        <modExtensions>
+            <li MayRequire="OskarPotocki.VanillaFactionsExpanded.Core" Class="VEF.Genes.GeneExtension">
+                <backgroundPathArchite>UI/Icons/Genes/FOU_GeneBackground</backgroundPathArchite>
+            </li>
+        </modExtensions>
+
+        <biostatCpx>8</biostatCpx>
+        <biostatMet>4</biostatMet>
+        <biostatArc>2</biostatArc>
+    </GeneDef>
+
+</Defs>

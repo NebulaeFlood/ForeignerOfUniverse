@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <GeneDef>
+        <defName>FOU_HigherDimensionalNanites</defName>
+        <label>nanites</label>
+        <description>Carriers of this gene possess a mysterious nanomechanical device capable of self-replication through unknown means, requiring no apparent consumption of matter.\n\nWhen equipped with Higher Dimensional Nanites, consciousness becomes independent of physical form - even after bodily destruction, the mind endures.\n\n「FOUNDATION」</description>
+        <geneClass>ForeignerOfUniverse.Genes.HigherDimensionalNanites</geneClass>
+        <resourceGizmoType>ForeignerOfUniverse.Gizmos.ResourceNanites</resourceGizmoType>
+        <resourceLabel>nanites</resourceLabel>
+        <resourceDescription>Higher dimensional nanites are a type of nanomechanical device that is little known, capable of self-replicating without consumption through unknown methods.\n\nThis device possesses a variety of incredible functions, capable of manipulating molecular gravity and temporarily altering physical laws with sufficient reserves.</resourceDescription>
+        <resourceGizmoThresholds />
+        <showGizmoOnWorldView>true</showGizmoOnWorldView>
+        <showGizmoWhenDrafted>true</showGizmoWhenDrafted>
+
+        <iconPath>UI/Icons/Genes/FOU_HigherDimensionalNanites</iconPath>
+        <selectionWeight>0</selectionWeight>
+        <displayCategory>FOU_NaniteProtocol</displayCategory>
+        <displayOrderInCategory>0</displayOrderInCategory>
+
+        <customEffectDescriptions>
+            <li>Provides nanites supply.</li>
+        </customEffectDescriptions>
+
+        <modExtensions>
+			<li MayRequire="OskarPotocki.VanillaFactionsExpanded.Core" Class="VEF.Genes.GeneExtension">
+				<backgroundPathArchite>UI/Icons/Genes/FOU_GeneBackground</backgroundPathArchite>
+			</li>
+		</modExtensions>
+
+        <biostatCpx>8</biostatCpx>
+        <biostatArc>2</biostatArc>
+    </GeneDef>
+
+</Defs>

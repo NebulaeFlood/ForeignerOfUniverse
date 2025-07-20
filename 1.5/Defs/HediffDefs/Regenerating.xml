@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <HediffDef>
+        <defName>FOU_Regenerating</defName>
+        <label>reborn part</label>
+        <description>A regenerating body part.</description>
+        <hediffClass>Hediff_Injury</hediffClass>
+        <tendable>true</tendable>
+        <comps>
+            <li Class="ForeignerOfUniverse.Comps.Hediffs.Properties_AlreadyTended" />
+        </comps>
+        <injuryProps>
+            <painPerSeverity>0</painPerSeverity>
+        </injuryProps>
+    </HediffDef>
+</Defs>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <SoundDef>
+        <defName>FOU_NaniteAbilityWarmup</defName>
+        <sustain>True</sustain>
+        <context>MapOnly</context>
+        <priorityMode>PrioritizeNearest</priorityMode>
+        <sustainFadeoutTime>0.1</sustainFadeoutTime>
+        <subSounds>
+            <li>
+                <grains>
+                    <li Class="AudioGrain_Clip">
+                        <clipPath>FOU_AbilityCastLoop</clipPath>
+                    </li>
+                </grains>
+                <volumeRange>40~50</volumeRange>
+                <pitchRange>0.9~1.1</pitchRange>
+                <muteWhenPaused>True</muteWhenPaused>
+            </li>
+        </subSounds>
+    </SoundDef>
+
+    <SoundDef>
+        <defName>FOU_MatterDisintegrationCasted</defName>
+        <context>MapOnly</context>
+        <maxSimultaneous>5</maxSimultaneous>
+        <priorityMode>PrioritizeNearest</priorityMode>
+        <subSounds>
+            <li>
+                <grains>
+                    <li Class="AudioGrain_Clip">
+                        <clipPath>FOU_AbilityMatterDisintegration</clipPath>
+                    </li>
+                </grains>
+                <volumeRange>40</volumeRange>
+            </li>
+        </subSounds>
+    </SoundDef>
+
+    <SoundDef>
+        <defName>FOU_MatterRecoveryCasted</defName>
+        <context>MapOnly</context>
+        <maxSimultaneous>5</maxSimultaneous>
+        <priorityMode>PrioritizeNearest</priorityMode>
+        <subSounds>
+            <li>
+                <grains>
+                    <li Class="AudioGrain_Clip">
+                        <clipPath>FOU_AbilityMatterRecovery</clipPath>
+                    </li>
+                </grains>
+                <volumeRange>40</volumeRange>
+            </li>
+        </subSounds>
+    </SoundDef>
+
+    <SoundDef>
+        <defName>FOU_TransportExit</defName>
+        <context>MapOnly</context>
+        <subSounds>
+            <li>
+                <grains>
+                    <li Class="AudioGrain_Folder">
+                        <clipFolderPath>Transport/Exit</clipFolderPath>
+                    </li>
+                </grains>
+                <volumeRange>35~35</volumeRange>
+                <pitchRange>0.9~1.1</pitchRange>
+            </li>
+        </subSounds>
+    </SoundDef>
+
+</Defs>

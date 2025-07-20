@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+	<FOU.Letters.NanomachinActivated.Content>The higher-dimensional nanites within {PAWN_nameDef} have been activated by critical injuries.\n\n{PAWN_objective} consciousness will now be contained by the nanites until their body is restored to a state capable of sustaining consciousness.</FOU.Letters.NanomachinActivated.Content>
+	<FOU.Letters.NanomachinActivated.Label>Nanomachin Activated</FOU.Letters.NanomachinActivated.Label>
+
+	<FOU.Letters.MetalhorrorImplantRemoved.Content>The metalhorror within {TARGET_nameDef} has been excised by {CASTER_nameDef}'s higher-dimensional nanites.</FOU.Letters.MetalhorrorImplantRemoved.Content>
+	<FOU.Letters.MetalhorrorImplantRemoved.Label>Metalhorrors Excised</FOU.Letters.MetalhorrorImplantRemoved.Label>
+
+	<FOU.Letters.RecoveryProgram.CorpseDestoryed.Label>Reclamation Protocol: {PAWN_nameDef}</FOU.Letters.RecoveryProgram.CorpseDestoryed.Label>
+	<FOU.Letters.RecoveryProgram.CorpseDestoryed.Content>{PAWN_nameDef}'s physical form in this world has been terminated.\n\nHowever, {PAWN_nameDef} has successfully accessed corporeal reconstruction protocols.\n\nInitiate immediate reclamation sequence?</FOU.Letters.RecoveryProgram.CorpseDestoryed.Content>
+
+</LanguageData>

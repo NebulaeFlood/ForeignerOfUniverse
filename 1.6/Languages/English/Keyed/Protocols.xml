@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+    <FOU.Protocols.Title>Active Protocols</FOU.Protocols.Title>
+    <FOU.Protocols.Tip>Press Left Ctrl to show details.</FOU.Protocols.Tip>
+    <FOU.Protocols.Hide.Tip>Press any key to hide details.</FOU.Protocols.Hide.Tip>
+
+    <FOU.Protocols.Foundation.Label>「FOUNDATION」</FOU.Protocols.Foundation.Label>
+    <FOU.Protocols.Foundation.Description>Higher dimensional nanites will proliferate within this entity's body in an entropy-decreasing pattern.</FOU.Protocols.Foundation.Description>
+
+    <FOU.Protocols.Ascension.Label>「ASCENSION」</FOU.Protocols.Ascension.Label>
+    <FOU.Protocols.Ascension.Description>Higher dimensional nanites will fundamentally alter this entity's physiology, granting perpetual corporeal existence.</FOU.Protocols.Ascension.Description>
+
+    <FOU.Protocols.NooNet.Label>「NOONET」</FOU.Protocols.NooNet.Label>
+    <FOU.Protocols.NooNet.Description>Higher dimensional nanites augment neural functions, shield consciousness integrity, and construct virtual domains for cognitive refinement.</FOU.Protocols.NooNet.Description>
+    <FOU.Protocols.NooNet.Tip>Open or close <![CDATA[<color=#D09B61>psychic shield</color>]]>.</FOU.Protocols.NooNet.Tip>
+
+    <FOU.Protocols.Weave.Label>「WEAVE」</FOU.Protocols.Weave.Label>
+    <FOU.Protocols.Weave.Description>Higher dimensional nanites enable fundamental particle manipulation akin to weaving primal clay.</FOU.Protocols.Weave.Description>
+
+    <FOU.Protocols.Phoenix.Label>「PHOENIX」</FOU.Protocols.Phoenix.Label>
+    <FOU.Protocols.Phoenix.Description>Higher dimensional nanites perpetually regenerate biological systems. Catastrophic damage triggers radical protection protocols.</FOU.Protocols.Phoenix.Description>
+
+    <FOU.Protocols.Anchor.Label>「ANCHOR」</FOU.Protocols.Anchor.Label>
+    <FOU.Protocols.Anchor.Description>Higher-dimensional nanites will "anchor" this entity's ontological existence. Upon obtaining authorization from <![CDATA[<color=#D09B61>「████」</color>]]>, they can reconstitute the physical form at any coordinates.</FOU.Protocols.Anchor.Description>
+
+</LanguageData>
