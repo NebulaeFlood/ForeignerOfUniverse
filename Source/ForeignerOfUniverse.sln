@@ -7,6 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ForeignerOfUniverse", "Fore
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Soluton Items", "Soluton Items", "{FD7127AE-2607-4598-AE62-2BFA190C15CE}"
 	ProjectSection(SolutionItems) = preProject
+		..\.gitignore = ..\.gitignore
 		..\About\About.xml = ..\About\About.xml
 	EndProjectSection
 EndProject
@@ -29,5 +30,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E56A619D-4FBE-4A97-A9B8-50D8B4E55EE2}
 	EndGlobalSection
 EndGlobal
