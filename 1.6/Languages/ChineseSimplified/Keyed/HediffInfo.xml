@@ -15,9 +15,9 @@
     <FOU.HediffInfo.Description.Tooltip>该健康状态的描述。</FOU.HediffInfo.Description.Tooltip>
 
     <!-- EN: Activated -->
-    <FOU.HediffInfo.IsValid.Label>是否激活</FOU.HediffInfo.IsValid.Label>
+    <FOU.HediffInfo.Loaded.Label>是否激活</FOU.HediffInfo.Loaded.Label>
     <!-- EN: This health condition can only be activated when its corresponding mod is loaded. -->
-    <FOU.HediffInfo.IsValid.Tooltip>只有包含该健康状态的 Mod 被加载时，才能成为激活状态。</FOU.HediffInfo.IsValid.Tooltip>
+    <FOU.HediffInfo.Loaded.Tooltip>只有包含该健康状态的 Mod 被加载时，才能成为激活状态。</FOU.HediffInfo.Loaded.Tooltip>
 
     <!-- EN: Remove -->
     <FOU.HediffInfo.Delete.Label>移除</FOU.HediffInfo.Delete.Label>

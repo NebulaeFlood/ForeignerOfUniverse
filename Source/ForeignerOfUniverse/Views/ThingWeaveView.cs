@@ -31,11 +31,11 @@ namespace ForeignerOfUniverse.Views
                 return new ThingView(info, naniteStore, unit);
             }
 
-            _searchBox = new SearchBox { Margin = new Thickness(0f, 6f, 4f, 6f) };
+            _searchBox = new SearchBox { Margin = new Thickness(0f, 6f, 0f, 6f) };
             _searchBox.Search += OnSearch;
 
             _views = comp.weavableThings
-                .Where(ThingInfo.Valid)
+                .Where(ThingInfo.IsLoaded)
                 .OrderBy(ThingInfo.GetMass)
                 .Select(Convert)
                 .ToArray();

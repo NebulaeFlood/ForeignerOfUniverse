@@ -1,4 +1,5 @@
-﻿using Nebulae.RimWorld.UI.Automation.Attributes;
+﻿using Nebulae.RimWorld;
+using Nebulae.RimWorld.UI.Automation.Attributes;
 using RimWorld;
 using System;
 using System.Collections.Generic;
@@ -22,29 +23,107 @@ namespace ForeignerOfUniverse.Models
 
         #region Public Fields
 
-        public string DefName;
-        public ThingDef Def;
-
-        public string MaterialDefName;
-        public ThingDef MaterialDef;
-        
-        public string StyleDefName;
-        public ThingStyleDef StyleDef;
+        public DefInfo<ThingDef> DefInfo;
+        public DefInfo<ThingDef> StuffDefInfo;
+        public DefInfo<ThingStyleDef> StyleDefInfo;
 
         public bool Qualified;
         public QualityCategory Quality;
 
-        public bool IsValid;
+        public bool AnyBladelinkTrait;
+        public List<DefInfo<WeaponTraitDef>> BladelinkTraits;
+
+        public bool AnyUniqueTrait;
+        public List<DefInfo<WeaponTraitDef>> UniqueTraits;
+
+        public bool Loaded;
+
+        #endregion
+
+
+        //------------------------------------------------------
+        //
+        //  Public Properties
+        //
+        //------------------------------------------------------
+
+        #region Public Properties
+
+        public string Description
+        {
+            get
+            {
+                var anyBladelinkTrait = AnyBladelinkTrait && BladelinkTraits.Count > 0;
+                var anyUniqueTrait = AnyUniqueTrait && UniqueTraits.Count > 0;
+                var description = $"{LabelCap.Colorize(ColoredText.TipSectionTitleColor)}\n\n{DefInfo.Def.description}";
+
+                if (anyBladelinkTrait || anyUniqueTrait)
+                {
+                    description += $"\n\n{"WeaponTraits".Translate().Colorize(ColoredText.TipSectionTitleColor)}:\n";
+
+                    if (anyBladelinkTrait)
+                    {
+                        for (int i = 0; i < BladelinkTraits.Count; i++)
+                        {
+                            description += $"\n{BladelinkTraits[i].Def.LabelCap.Colorize(ColoredText.TipSectionTitleColor)}\n{BladelinkTraits[i].Def.description}\n";
+                        }
+                    }
+
+                    if (anyUniqueTrait)
+                    {
+                        for (int i = 0; i < UniqueTraits.Count; i++)
+                        {
+                            description += $"\n{UniqueTraits[i].Def.LabelCap.Colorize(ColoredText.TipSectionTitleColor)}\n{UniqueTraits[i].Def.description}\n";
+                        }
+                    }
+                }
+
+                return description;
+            }
+        }
+
+        public string LabelCap
+        {
+            get
+            {
+                var label = DefInfo.Def.MadeFromStuff
+                    ? "ThingMadeOfStuffLabel".Translate(StuffDefInfo.Def.LabelAsStuff, DefInfo.Def.label)
+                    : DefInfo.Def.LabelCap;
+
+                return Qualified ? $"{label} ({Quality.GetLabel()})" : label.Resolve();
+            }
+        }
 
         #endregion
 
 
         internal ThingInfo(Thing thing)
         {
-            DefName = thing.def.defName;
-            Def = thing.def;
+            DefInfo = new DefInfo<ThingDef>(thing.def);
 
-            _hashCode = DefName.GetHashCode();
+            _hashCode = DefInfo.GetHashCode();
+
+            if (thing.Stuff is null)
+            {
+                StuffDefInfo = DefInfo<ThingDef>.Empty;
+            }
+            else
+            {
+                StuffDefInfo = new DefInfo<ThingDef>(thing.Stuff);
+
+                _hashCode ^= StuffDefInfo.GetHashCode();
+            }
+
+            if (thing.StyleDef is null)
+            {
+                StyleDefInfo = DefInfo<ThingStyleDef>.Empty;
+            }
+            else
+            {
+                StyleDefInfo = new DefInfo<ThingStyleDef>(thing.StyleDef);
+
+                _hashCode ^= StyleDefInfo.GetHashCode();
+            }
 
             Qualified = thing.TryGetQuality(out Quality);
 
@@ -53,33 +132,39 @@ namespace ForeignerOfUniverse.Models
                 _hashCode ^= Quality.GetHashCode();
             }
 
-            if (thing.Stuff is null)
+            if (thing.TryGetComp<CompBladelinkWeapon>(out var bladelinkWeapon))
             {
-                MaterialDef = null;
-                MaterialDefName = string.Empty;
+                AnyBladelinkTrait = true;
+                BladelinkTraits = bladelinkWeapon.TraitsListForReading.Select(AsDefInfo).ToList();
+
+                for (int i = BladelinkTraits.Count - 1; i >= 0; i--)
+                {
+                    _hashCode ^= BladelinkTraits[i].GetHashCode();
+                }
             }
             else
             {
-                MaterialDef = thing.Stuff;
-                MaterialDefName = MaterialDef.defName;
-
-                _hashCode ^= MaterialDefName.GetHashCode();
+                AnyBladelinkTrait = false;
+                BladelinkTraits = null;
             }
 
-            if (thing.StyleDef is null)
+            if (thing.TryGetComp<CompUniqueWeapon>(out var uniqueWeapon))
             {
-                StyleDef = null;
-                StyleDefName = string.Empty;
+                AnyUniqueTrait = true;
+                UniqueTraits = uniqueWeapon.TraitsListForReading.Select(AsDefInfo).ToList();
+
+                for (int i = UniqueTraits.Count - 1; i >= 0; i--)
+                {
+                    _hashCode ^= UniqueTraits[i].GetHashCode();
+                }
             }
             else
             {
-                StyleDef = thing.StyleDef;
-                StyleDefName = StyleDef.defName;
-
-                _hashCode ^= StyleDefName.GetHashCode();
+                AnyUniqueTrait = false;
+                UniqueTraits = null;
             }
 
-            IsValid = true;
+            Loaded = true;
         }
 
 
@@ -94,34 +179,43 @@ namespace ForeignerOfUniverse.Models
         public override bool Equals(object obj)
         {
             return obj is ThingInfo other
-                && DefName.Equals(other.DefName)
-                && MaterialDefName.Equals(other.MaterialDefName)
-                && StyleDefName.Equals(other.StyleDefName);
+                && DefInfo.Equals(other.DefInfo)
+                && StuffDefInfo.Equals(other.StuffDefInfo)
+                && StyleDefInfo.Equals(other.StyleDefInfo)
+                && Quality == other.Quality
+                && (!AnyBladelinkTrait || (other.AnyBladelinkTrait && BladelinkTraits.SequenceEqual(other.BladelinkTraits)))
+                && (!AnyUniqueTrait || (other.AnyUniqueTrait && UniqueTraits.SequenceEqual(other.UniqueTraits)));
         }
 
         public bool Equals(ThingInfo other)
         {
-            return DefName.Equals(other.DefName)
-                && MaterialDefName.Equals(other.MaterialDefName)
-                && StyleDefName.Equals(other.StyleDefName);
+            return DefInfo.Equals(other.DefInfo)
+                && StuffDefInfo.Equals(other.StuffDefInfo)
+                && StyleDefInfo.Equals(other.StyleDefInfo)
+                && Quality == other.Quality
+                && (!AnyBladelinkTrait || (other.AnyBladelinkTrait && BladelinkTraits.SequenceEqual(other.BladelinkTraits)))
+                && (!AnyUniqueTrait || (other.AnyUniqueTrait && UniqueTraits.SequenceEqual(other.UniqueTraits)));
         }
 
         public void ExposeData()
         {
-            Scribe_Values.Look(ref DefName, nameof(DefName), defaultValue: string.Empty);
-            Scribe_Values.Look(ref MaterialDefName, nameof(MaterialDefName), defaultValue: string.Empty);
-            Scribe_Values.Look(ref StyleDefName, nameof(StyleDefName), defaultValue: string.Empty);
+            Scribe_Deep.Look(ref DefInfo, nameof(DefInfo));
+            Scribe_Deep.Look(ref StuffDefInfo, nameof(StuffDefInfo));
+            Scribe_Deep.Look(ref StyleDefInfo, nameof(StyleDefInfo));
 
             Scribe_Values.Look(ref Qualified, nameof(Qualified), defaultValue: false);
             Scribe_Values.Look(ref Quality, nameof(Quality), defaultValue: QualityCategory.Normal);
 
-            Scribe_Values.Look(ref _hashCode, "HashCode", defaultValue: -1);
+            Scribe_Values.Look(ref AnyBladelinkTrait, nameof(AnyBladelinkTrait), defaultValue: false);
+            Scribe_Collections.Look(ref BladelinkTraits, nameof(BladelinkTraits), LookMode.Deep);
+
+            Scribe_Values.Look(ref AnyUniqueTrait, nameof(AnyUniqueTrait), defaultValue: false);
+            Scribe_Collections.Look(ref UniqueTraits, nameof(UniqueTraits), LookMode.Deep);
+
+            Scribe_Values.Look(ref _hashCode, "HashCode", defaultValue: 0);
         }
 
-        public override int GetHashCode()
-        {
-            return _hashCode;
-        }
+        public override int GetHashCode() => _hashCode;
 
         #endregion
 
@@ -136,60 +230,98 @@ namespace ForeignerOfUniverse.Models
 
         internal static float GetMass(ThingInfo info)
         {
-            return info.Def.GetStatValueAbstract(StatDefOf.Mass, info.MaterialDef);
+            return info.DefInfo.Def.GetStatValueAbstract(StatDefOf.Mass, info.StuffDefInfo.Def);
+        }
+
+        internal static bool IsLoaded(ThingInfo info)
+        {
+            return info.Loaded;
         }
 
         internal static ThingInfo Resolve(ThingInfo info)
         {
-            info.Def = DefDatabase<ThingDef>.GetNamedSilentFail(info.DefName);
-
-            if (info.Def is null)
+            if (info.Loaded)
             {
-                info.IsValid = false;
                 return info;
             }
 
-            if (string.IsNullOrEmpty(info.MaterialDefName))
+            info.DefInfo.Resolve();
+
+            if (!info.DefInfo.Loaded)
             {
-                info.IsValid = true;
-            }
-            else
-            {
-                info.MaterialDef = DefDatabase<ThingDef>.GetNamedSilentFail(info.MaterialDefName);
-                info.IsValid = info.MaterialDef != null;
+                return info;
             }
 
-            if (!string.IsNullOrEmpty(info.StyleDefName))
+            if (info.DefInfo.Def.MadeFromStuff)
             {
-                info.StyleDef = DefDatabase<ThingStyleDef>.GetNamedSilentFail(info.StyleDefName);
+                info.StuffDefInfo.Resolve();
+
+                if (!info.StuffDefInfo.Loaded)
+                {
+                    return info;
+                }
             }
 
+            if (!string.IsNullOrEmpty(info.StyleDefInfo.DefName))
+            {
+                info.StyleDefInfo.Resolve();
+
+                if (!info.StyleDefInfo.Loaded)
+                {
+                    return info;
+                }
+            }
+
+            if (info.AnyBladelinkTrait)
+            {
+                if (info.BladelinkTraits is null)
+                {
+                    return info;
+                }
+
+                for (int i = info.BladelinkTraits.Count - 1; i >= 0; i--)
+                {
+                    var trait = info.BladelinkTraits[i].Resolve();
+
+                    if (!trait.Loaded)
+                    {
+                        return info;
+                    }
+
+                    info.BladelinkTraits[i] = trait;
+                }
+            }
+
+            if (info.AnyUniqueTrait)
+            {
+                if (info.UniqueTraits is null)
+                {
+                    return info;
+                }
+
+                for (int i = info.UniqueTraits.Count - 1; i >= 0; i--)
+                {
+                    var trait = info.UniqueTraits[i].Resolve();
+
+                    if (!trait.Loaded)
+                    {
+                        return info;
+                    }
+
+                    info.UniqueTraits[i] = trait;
+                }
+            }
+
+            info.Loaded = true;
             return info;
-        }
-
-        internal static bool Valid(ThingInfo info)
-        {
-            return info.IsValid;
         }
 
         #endregion
 
 
-        internal string LabelCap
+        private static DefInfo<WeaponTraitDef> AsDefInfo(WeaponTraitDef trait)
         {
-            get
-            {
-                var label = Def.MadeFromStuff
-                    ? "ThingMadeOfStuffLabel".Translate(MaterialDef.LabelAsStuff, Def.label)
-                    : Def.LabelCap;
-
-                if (!Qualified)
-                {
-                    return label;
-                }
-
-                return $"{label} ({Quality.GetLabel()})";
-            }
+            return new DefInfo<WeaponTraitDef>(trait);
         }
 
 

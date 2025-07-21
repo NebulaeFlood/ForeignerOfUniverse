@@ -125,7 +125,7 @@ namespace ForeignerOfUniverse.Views
         {
             var info = HediffInfo.From(_textBox.Text);
 
-            if (!info.IsValid)
+            if (!info.Loaded)
             {
                 Messages.Message("FOU.Messages.Settings.Protocols.CannotFindDef.Content".Translate(info.DefName.Colorize(ColoredText.NameColor)).Resolve(), 
                     MessageTypeDefOf.RejectInput, historical: false);

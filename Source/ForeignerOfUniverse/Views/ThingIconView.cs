@@ -23,7 +23,7 @@ namespace ForeignerOfUniverse.Views
 
         protected override void DrawCore(ControlState states)
         {
-            Widgets.ThingIcon(DesiredRect, Model.Def, Model.MaterialDef, Model.StyleDef);
+            Widgets.ThingIcon(DesiredRect, Model.DefInfo.Def, Model.StuffDefInfo.Def, Model.StyleDefInfo.Def);
         }
     }
 }

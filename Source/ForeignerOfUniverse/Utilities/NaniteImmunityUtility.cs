@@ -112,17 +112,17 @@ namespace ForeignerOfUniverse.Utilities
 
             AscensionImmunizedHediffDefs
                 .UnionWith(AscensionDefaultImmunizd.Concat(settings.AscensionImmutableHediffs)
-                    .Where(HediffInfo.Valid)
+                    .Where(HediffInfo.IsLoaded)
                     .Select(HediffInfo.GetDef));
 
             NooNetImmunizedHediffDefs
                 .UnionWith(NooNetDefaultImmunizd.Concat(settings.NooNetImmutableHediffs)
-                    .Where(HediffInfo.Valid)
+                    .Where(HediffInfo.IsLoaded)
                     .Select(HediffInfo.GetDef));
 
             PhoenixImmunizedHediffDefs
                 .UnionWith(PhoenixDefaultImmunizd.Concat(settings.PhoenixImmutableHediffs)
-                    .Where(HediffInfo.Valid)
+                    .Where(HediffInfo.IsLoaded)
                     .Select(HediffInfo.GetDef));
         }
 
@@ -135,7 +135,7 @@ namespace ForeignerOfUniverse.Utilities
                 case ProtocolType.Ascension:
                     settings.AscensionImmutableHediffs.Remove(info);
 
-                    if (info.IsValid)
+                    if (info.Loaded)
                     {
                         AscensionImmunizedHediffDefs.Remove(info.Def);
                     }
@@ -143,7 +143,7 @@ namespace ForeignerOfUniverse.Utilities
                 case ProtocolType.NooNet:
                     settings.NooNetImmutableHediffs.Remove(info);
 
-                    if (info.IsValid)
+                    if (info.Loaded)
                     {
                         NooNetImmunizedHediffDefs.Remove(info.Def);
                     }
@@ -151,7 +151,7 @@ namespace ForeignerOfUniverse.Utilities
                 case ProtocolType.Phoenix:
                     settings.PhoenixImmutableHediffs.Remove(info);
 
-                    if (info.IsValid)
+                    if (info.Loaded)
                     {
                         PhoenixImmunizedHediffDefs.Remove(info.Def);
                     }
@@ -173,7 +173,7 @@ namespace ForeignerOfUniverse.Utilities
                     AscensionImmunizedHediffDefs.Clear();
                     AscensionImmunizedHediffDefs
                         .UnionWith(AscensionDefaultImmunizd
-                            .Where(HediffInfo.Valid)
+                            .Where(HediffInfo.IsLoaded)
                             .Select(HediffInfo.GetDef));
                     settings.AscensionImmutableHediffs.Clear();
                     settings.AscensionImmutableHediffs.UnionWith(AscensionDefaultImmunizd);
@@ -183,7 +183,7 @@ namespace ForeignerOfUniverse.Utilities
                     NooNetImmunizedHediffDefs.Clear();
                     NooNetImmunizedHediffDefs
                         .UnionWith(NooNetDefaultImmunizd
-                            .Where(HediffInfo.Valid)
+                            .Where(HediffInfo.IsLoaded)
                             .Select(HediffInfo.GetDef));
                     settings.NooNetImmutableHediffs.Clear();
                     settings.NooNetImmutableHediffs.UnionWith(NooNetDefaultImmunizd);
@@ -193,7 +193,7 @@ namespace ForeignerOfUniverse.Utilities
                     PhoenixImmunizedHediffDefs.Clear();
                     PhoenixImmunizedHediffDefs
                         .UnionWith(PhoenixDefaultImmunizd
-                            .Where(HediffInfo.Valid)
+                            .Where(HediffInfo.IsLoaded)
                             .Select(HediffInfo.GetDef));
                     settings.PhoenixImmutableHediffs.Clear();
                     settings.PhoenixImmutableHediffs.UnionWith(PhoenixDefaultImmunizd);
@@ -280,6 +280,7 @@ namespace ForeignerOfUniverse.Utilities
                 yield return HediffInfo.From("FleshmassStomach");
                 yield return HediffInfo.From("FleshWhip");
                 yield return HediffInfo.From("Flu");
+                yield return HediffInfo.From("Frail");
                 yield return HediffInfo.From("GoJuiceAddiction");
                 yield return HediffInfo.From("GutWorms");
                 yield return HediffInfo.From("HearingLoss");

@@ -32,7 +32,7 @@ namespace ForeignerOfUniverse.Comps.AbilityEffects
 
         public override void Apply(LocalTargetInfo target, LocalTargetInfo dest)
         {
-            if (!weavingThing.IsValid || weavingThingCount < 1 || !parent.pawn.TryGetNanites(out var nanites))
+            if (!weavingThing.Loaded || weavingThingCount < 1 || !parent.pawn.TryGetNanites(out var nanites))
             {
                 return;
             }
@@ -142,62 +142,20 @@ namespace ForeignerOfUniverse.Comps.AbilityEffects
         #endregion
 
 
-        //------------------------------------------------------
-        //
-        //  Private Static Methods
-        //
-        //------------------------------------------------------
-
-        #region Private Static Methods
-
-        private static Thing MakeThing(ThingInfo info, int count)
-        {
-            int spawnCount = Mathf.Min(count, info.Def.stackLimit);
-            var thing = ThingMaker.MakeThing(info.Def, info.MaterialDef);
-            thing.StyleDef = info.StyleDef;
-            thing.stackCount = spawnCount;
-
-            return thing;
-        }
-
-        private static void SetQuality(Thing thing, QualityCategory category)
-        {
-            if (thing.TryGetComp<CompQuality>(out var comp))
-            {
-                comp.SetQuality(category, ArtGenerationContext.Outsider);
-            }
-        }
-
-        #endregion
-
-
         private void WeaveThings(LocalTargetInfo target)
         {
             var map = parent.pawn.Map;
             var pos = target.Cell;
 
-            if (weavingThing.Quality is QualityCategory.Normal)
-            {
-                for (var i = weavingThingCount; i > 0; i -= weavingThing.Def.stackLimit)
-                {
-                    var thing = MakeThing(weavingThing, i);
+            var weaveInfo = new ThingWeaveInfo(weavingThing);
 
-                    GenSpawn.Spawn(thing, pos, map, WipeMode.VanishOrMoveAside);
-                    map.effecterMaintainer.AddEffecterToMaintain(EffecterDefOf.Skip_ExitNoDelay.Spawn(thing, map), thing.Position, 60);
-                    FOUDefOf.FOU_TransportExit.PlayOneShot(new TargetInfo(thing));
-                }
-            }
-            else
+            for (var i = weavingThingCount; i > 0; i -= weavingThing.DefInfo.Def.stackLimit)
             {
-                for (var i = weavingThingCount; i > 0; i -= weavingThing.Def.stackLimit)
-                {
-                    var thing = MakeThing(weavingThing, i);
-                    SetQuality(thing, weavingThing.Quality);
+                var thing = weaveInfo.Weave(i);
 
-                    GenSpawn.Spawn(thing, pos, map, WipeMode.VanishOrMoveAside);
-                    map.effecterMaintainer.AddEffecterToMaintain(EffecterDefOf.Skip_ExitNoDelay.Spawn(thing, map), thing.Position, 60);
-                    FOUDefOf.FOU_TransportExit.PlayOneShot(new TargetInfo(thing));
-                }
+                GenSpawn.Spawn(thing, pos, map, WipeMode.VanishOrMoveAside);
+                map.effecterMaintainer.AddEffecterToMaintain(EffecterDefOf.Skip_ExitNoDelay.Spawn(thing, map), thing.Position, 60);
+                FOUDefOf.FOU_TransportExit.PlayOneShot(new TargetInfo(thing));
             }
         }
 

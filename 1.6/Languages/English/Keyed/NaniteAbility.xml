@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <LanguageData>
 
-<FOU.NaniteAbility.Cost>Nanite cost: {0}</FOU.NaniteAbility.Cost>
+<FOU.NaniteAbility.Cost>Nanite cost</FOU.NaniteAbility.Cost>
 <FOU.NaniteAbility.NoFoundationProtocol>{PAWN_labelShort} does not have higher dimensional nanites.</FOU.NaniteAbility.NoFoundationProtocol>
 <FOU.NaniteAbility.NoEnoughStorage>{PAWN_labelShort} does not have enough nanites.</FOU.NaniteAbility.NoEnoughStorage>
 <FOU.NaniteAbility.InsufficientPrivileges>{PAWN_labelShort} does not have permission.</FOU.NaniteAbility.InsufficientPrivileges>
@@ -15,7 +15,7 @@
 
 <FOU.NaniteAbility.WeavableThingAdded>{0} has been stored in nanite memory. {0} can now be created via {1}.</FOU.NaniteAbility.WeavableThingAdded>
 <FOU.NaniteAbility.CannotAddWeavableThing>{0} cannot be stored in nanite memory due to unknown reasons.</FOU.NaniteAbility.CannotAddWeavableThing>
-<FOU.NaniteAbility.KilogramPerNanites>Weave cost</FOU.NaniteAbility.KilogramPerNanites>
+<FOU.NaniteAbility.KilogramsPerNanite>Weave cost</FOU.NaniteAbility.KilogramsPerNanite>
 
 <FOU.NaniteAbility.ActivateRecoveryProgram.Label>recovery program</FOU.NaniteAbility.ActivateRecoveryProgram.Label>
 <FOU.NaniteAbility.ActivateRecoveryProgram.Description>{PAWN_labelShort}'s body has deteriorated beyond critical thresholds. Higher dimensional nanites can now be actively activated to initiate a full-body recovery.</FOU.NaniteAbility.ActivateRecoveryProgram.Description>

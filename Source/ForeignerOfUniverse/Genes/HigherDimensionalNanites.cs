@@ -101,6 +101,11 @@ namespace ForeignerOfUniverse.Genes
                 var settings = FOU.Settings;
                 settings.Saved += OnSettingsSaved;
 
+                float maxValue = settings.NanitesMaxStorage * 0.01f;
+
+                cur = (cur / max) * maxValue;
+                max = maxValue;
+
                 _healAmount = settings.PhoenixRegenerationPerDay * 0.0005f;
                 _replicationAmount = settings.NanitesDailyReplication * 0.000005f;
             }

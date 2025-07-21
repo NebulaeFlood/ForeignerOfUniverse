@@ -21,7 +21,7 @@ namespace ForeignerOfUniverse.Models
         public string Description;
 
         [BooleanEntry(ReadOnly = true)]
-        public bool IsValid;
+        public bool Loaded;
 
 
         //------------------------------------------------------
@@ -38,9 +38,9 @@ namespace ForeignerOfUniverse.Models
 
             Def = def;
 
-            IsValid = Def != null;
+            Loaded = Def != null;
 
-            Description = IsValid ? Def.description : string.Empty;
+            Description = Loaded ? Def.description : string.Empty;
 
             _hashCode = DefName.GetHashCode();
         }
@@ -49,9 +49,9 @@ namespace ForeignerOfUniverse.Models
         {
             DefName = def.defName;
 
-            this.Def = def;
+            Def = def;
             Description = def.Description;
-            IsValid = true;
+            Loaded = true;
 
             _hashCode = DefName.GetHashCode();
         }
@@ -115,17 +115,17 @@ namespace ForeignerOfUniverse.Models
             return info.Def;
         }
 
+        internal static bool IsLoaded(HediffInfo info)
+        {
+            return info.Loaded;
+        }
+
         internal static HediffInfo Resolve(HediffInfo info)
         {
             info.Def = DefDatabase<HediffDef>.GetNamedSilentFail(info.DefName);
-            info.IsValid = info.Def != null;
-            info.Description = info.IsValid ? info.Def.Description : string.Empty;
+            info.Loaded = info.Def != null;
+            info.Description = info.Loaded ? info.Def.Description : string.Empty;
             return info;
-        }
-
-        internal static bool Valid(HediffInfo info)
-        {
-            return info.IsValid;
         }
 
         #endregion

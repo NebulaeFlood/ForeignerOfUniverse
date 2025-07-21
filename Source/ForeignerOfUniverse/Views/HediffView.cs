@@ -44,7 +44,7 @@ namespace ForeignerOfUniverse.Views
 
         protected override Control CreateContent()
         {
-            var displayName = Model.IsValid ? Model.Def.LabelCap.ToString() : Model.DefName;
+            var displayName = Model.Loaded ? Model.Def.LabelCap.ToString() : Model.DefName;
 
             Name = displayName;
 

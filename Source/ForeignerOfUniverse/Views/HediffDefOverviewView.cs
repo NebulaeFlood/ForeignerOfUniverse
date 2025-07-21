@@ -25,7 +25,7 @@ namespace ForeignerOfUniverse.Views
     {
         public HediffDefOverviewView()
         {
-            _searchBox = new SearchBox { Margin = new Thickness(0f, 6f, 4f, 6f) };
+            _searchBox = new SearchBox { Margin = new Thickness(0f, 6f, 0f, 6f) };
             _searchBox.Search += OnSearch;
 
             _infos = new StackPanel { Margin = 4f, Filter = Filter, VerticalAlignment = VerticalAlignment.Top }

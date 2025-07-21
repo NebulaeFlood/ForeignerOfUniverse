@@ -38,21 +38,7 @@ namespace ForeignerOfUniverse.Comps.AbilityEffects
                 }
 
                 parent.pawn.OffsetNaniteStore(cost * unitsPerMaterial * 0.01f);
-
-                if (thing is Corpse || !TryAddWeavableThing(thing, out var exist))
-                {
-                    Messages.Message("FOU.NaniteAbility.CannotAddWeavableThing".Translate(thing.LabelShortCap.Colorize(ColoredText.NameColor)).Resolve(),
-                        MessageTypeDefOf.NegativeEvent, historical: false);
-                }
-                else
-                {
-                    if (!exist)
-                    {
-                        Messages.Message("FOU.NaniteAbility.WeavableThingAdded".Translate(thing.LabelShortCap.Colorize(ColoredText.NameColor), FOUDefOf.FOU_MatterWeave.LabelCap.Colorize(ColoredText.NameColor)).Resolve(),
-                            MessageTypeDefOf.PositiveEvent, historical: false);
-                    }
-                }
-
+                RecordWeavableThing(thing);
                 base.Apply(target, dest);
             }
         }
@@ -110,32 +96,41 @@ namespace ForeignerOfUniverse.Comps.AbilityEffects
                 : 1;
         }
 
-        private bool TryAddWeavableThing(Thing thing, out bool exist)
+        private void RecordWeavableThing(Thing thing)
         {
             if (parent.pawn.abilities is null)
             {
-                exist = false;
-                return false;
+                return;
             }
 
             var ability = parent.pawn.abilities.GetAbility(FOUDefOf.FOU_MatterWeave);
 
             if (ability is null)
             {
-                exist = false;
-                return false;
+                return ;
             }
 
             var comp = ability.CompOfType<MatterWeave>();
 
             if (comp is null)
             {
-                exist = false;
-                return false;
+                return;
             }
 
-            exist = !comp.weavableThings.Add(new ThingInfo(thing));
-            return true;
+            var info = new ThingInfo(thing);
+
+            if (thing is Corpse)
+            {
+                Messages.Message("FOU.NaniteAbility.CannotAddWeavableThing".Translate(info.LabelCap.Colorize(ColoredText.NameColor)).Resolve(),
+                    MessageTypeDefOf.NegativeEvent, historical: false);
+                return;
+            }
+
+            if (comp.weavableThings.Add(info))
+            {
+                Messages.Message("FOU.NaniteAbility.WeavableThingAdded".Translate(info.LabelCap.Colorize(ColoredText.NameColor), FOUDefOf.FOU_MatterWeave.LabelCap.Colorize(ColoredText.NameColor)).Resolve(),
+                    MessageTypeDefOf.PositiveEvent, historical: false);
+            }
         }
 
         #endregion

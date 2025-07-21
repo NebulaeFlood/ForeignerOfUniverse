@@ -51,6 +51,7 @@ namespace ForeignerOfUniverse
             Scribe_Values.Look(ref MatterRecoveryCost, nameof(MatterRecoveryCost), defaultValue: 140f);
             Scribe_Values.Look(ref NanitesPerKilogram, nameof(NanitesPerKilogram), defaultValue: 2f);
             Scribe_Values.Look(ref KilogramsPerNanite, nameof(KilogramsPerNanite), defaultValue: 2f);
+
             Scribe_Values.Look(ref IndiscriminateDisintegrationCost, nameof(IndiscriminateDisintegrationCost), defaultValue: 200f);
             Scribe_Values.Look(ref IndiscriminateDisintegrationDamage, nameof(IndiscriminateDisintegrationDamage), defaultValue: 50f);
             Scribe_Values.Look(ref IndiscriminateDisintegrationRadius, nameof(IndiscriminateDisintegrationRadius), defaultValue: 4f);

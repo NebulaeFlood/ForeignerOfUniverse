@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <LanguageData>
 
-	<!-- EN: Nanite cost: {0} -->
-	<FOU.NaniteAbility.Cost>高维微械消耗：{0}</FOU.NaniteAbility.Cost>
+	<!-- EN: Nanite cost -->
+	<FOU.NaniteAbility.Cost>微械消耗</FOU.NaniteAbility.Cost>
 	<!-- EN: {0} does not have higher dimensional nanites. -->
 	<FOU.NaniteAbility.NoFoundationProtocol>{PAWN_labelShort}没有高维微械。</FOU.NaniteAbility.NoFoundationProtocol>
 	<!-- EN: {0} does not have enough nanites. -->
@@ -22,7 +22,7 @@
 	<!-- EN: Will cost {0} x{1}. -->
 	<FOU.NaniteAbility.TargetThingCostInfo>将会分解{0} x{1}。</FOU.NaniteAbility.TargetThingCostInfo>
 	<!-- EN: Assembly yield -->
-	<FOU.NaniteAbility.NanitesPerKilogram>组装量</FOU.NaniteAbility.NanitesPerKilogram>
+	<FOU.NaniteAbility.NanitesPerKilogram>微械组装</FOU.NaniteAbility.NanitesPerKilogram>
 
 
 	<!-- EN: {0} has been stored in nanite memory. {0} can now be created via {1}. -->
@@ -30,7 +30,7 @@
 	<!-- EN: {0} cannot be stored in nanite memory due to unknown reasons. -->
 	<FOU.NaniteAbility.CannotAddWeavableThing>由于未知原因，{0}无法被高维微械记录。</FOU.NaniteAbility.CannotAddWeavableThing>
 	<!-- EN: Weave cost -->
-	<FOU.NaniteAbility.KilogramPerNanites>消耗量</FOU.NaniteAbility.KilogramPerNanites>
+	<FOU.NaniteAbility.KilogramsPerNanite>微械消耗</FOU.NaniteAbility.KilogramsPerNanite>
 
 
 	<!-- EN: recovery program -->

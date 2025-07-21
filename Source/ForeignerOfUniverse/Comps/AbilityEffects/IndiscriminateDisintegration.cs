@@ -27,6 +27,8 @@ namespace ForeignerOfUniverse.Comps.AbilityEffects
             var damageInfo = new DamageInfo(FOUDefOf.FOU_Disintegration, totalDamageAmount, instigator: parent.pawn);
             var targets = GenRadial.RadialDistinctThingsAround(target.Cell, parent.pawn.Map, FOU.Settings.IndiscriminateDisintegrationRadius, true).ToArray();
 
+            damageInfo.SetIgnoreArmor(true);
+
             for (int i = targets.Length - 1; i >= 0; i--)
             {
                 var item = targets[i];

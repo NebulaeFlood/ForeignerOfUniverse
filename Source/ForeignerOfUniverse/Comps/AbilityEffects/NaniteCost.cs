@@ -142,7 +142,7 @@ namespace ForeignerOfUniverse.Comps.AbilityEffects
 
         public override IEnumerable<string> ExtraStatSummary()
         {
-            yield return "FOU.NaniteAbility.Cost".Translate(nanitesCost * 100f);
+            yield return $"{"FOU.NaniteAbility.Cost".Translate().Colorize(ColoredText.TipSectionTitleColor)}: {nanitesCost * 100f:F0}";
         }
     }
 }

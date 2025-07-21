@@ -37,7 +37,8 @@ namespace ForeignerOfUniverse.Views
             _maxCount = Mathf.FloorToInt(naniteStore / (ThingInfo.GetMass(model) * unit));
 
             Model = model;
-            Name = model.Def.LabelCap;
+            Name = model.LabelCap;
+            Tooltip = model.Description;
 
             _background = new Border
             {
