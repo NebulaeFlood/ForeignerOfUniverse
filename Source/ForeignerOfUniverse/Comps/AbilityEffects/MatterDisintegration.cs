@@ -107,7 +107,7 @@ namespace ForeignerOfUniverse.Comps.AbilityEffects
 
             if (ability is null)
             {
-                return ;
+                return;
             }
 
             var comp = ability.CompOfType<MatterWeave>();
