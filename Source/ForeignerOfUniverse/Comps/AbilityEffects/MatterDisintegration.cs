@@ -119,7 +119,7 @@ namespace ForeignerOfUniverse.Comps.AbilityEffects
 
             var info = new ThingInfo(thing);
 
-            if (thing is Corpse)
+            if (thing is MinifiedThing || thing is MinifiedTree || thing is Corpse)
             {
                 Messages.Message("FOU.NaniteAbility.CannotAddWeavableThing".Translate(info.LabelCap.Colorize(ColoredText.NameColor)).Resolve(),
                     MessageTypeDefOf.NegativeEvent, historical: false);
