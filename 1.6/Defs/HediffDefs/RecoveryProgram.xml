@@ -7,10 +7,5 @@
         <hediffClass>ForeignerOfUniverse.Hediffs.RecoveryProgram</hediffClass>
         <isBad>false</isBad>
         <showGizmosOnCorpse>true</showGizmosOnCorpse>
-        <stages>
-            <li>
-                <totalBleedFactor>0</totalBleedFactor>
-            </li>
-        </stages>
     </HediffDef>
 </Defs>
