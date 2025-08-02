@@ -9,6 +9,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Soluton Items", "Soluton It
 	ProjectSection(SolutionItems) = preProject
 		..\.gitignore = ..\.gitignore
 		..\About\About.xml = ..\About\About.xml
+		..\README.md = ..\README.md
+		SAVEFIXEN.md = SAVEFIXEN.md
+		SAVEFIXZH.md = SAVEFIXZH.md
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ForeignerOfUniverse.Vehicles", "ForeignerOfUniverse.Vehicles\ForeignerOfUniverse.Vehicles.csproj", "{855812E1-4547-44AB-A91E-282C456CFB10}"
