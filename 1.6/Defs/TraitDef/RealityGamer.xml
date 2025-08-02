@@ -7,9 +7,9 @@
 		<degreeDatas>
 			<li>
 				<label>reality gamer</label>
-				<description>Everything here is nothing but a game to {PAWN_nameDef}.</description>
+				<description>Everything here is nothing but a game to {PAWN_nameDef}.\n\n{PAWN_nameDef} will never have any forms of mental breaks.</description>
 				<statFactors>
-					<MentalBreakThreshold>0.01</MentalBreakThreshold>
+					<MentalBreakThreshold>0</MentalBreakThreshold>
 				</statFactors>
 			</li>
 		</degreeDatas>

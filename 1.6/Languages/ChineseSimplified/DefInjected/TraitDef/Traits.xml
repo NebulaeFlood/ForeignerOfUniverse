@@ -3,7 +3,7 @@
 
     <!-- EN: reality gamer -->
     <FOU_RealityGamer.degreeDatas.reality_gamer.label>游戏人生</FOU_RealityGamer.degreeDatas.reality_gamer.label>
-    <!-- EN: Everything here is nothing but a game to {PAWN_nameDef}. -->
-    <FOU_RealityGamer.degreeDatas.reality_gamer.description>这里的一切对{PAWN_nameDef}来说不过是一场游戏。</FOU_RealityGamer.degreeDatas.reality_gamer.description>
+    <!-- EN: Everything here is nothing but a game to {PAWN_nameDef}.\n\n{PAWN_nameDef} will never have any forms of mental breaks. -->
+    <FOU_RealityGamer.degreeDatas.reality_gamer.description>这里的一切对{PAWN_nameDef}来说不过是一场游戏。\n\n{PAWN_nameDef}不会因任何原因崩溃。</FOU_RealityGamer.degreeDatas.reality_gamer.description>
 
 </LanguageData>

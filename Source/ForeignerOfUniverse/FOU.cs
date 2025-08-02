@@ -16,7 +16,7 @@ using Grid = Nebulae.RimWorld.UI.Controls.Panels.Grid;
 
 namespace ForeignerOfUniverse
 {
-    public class FOU : NebulaeMod<FOUSettings>
+    public sealed class FOU : NebulaeMod<FOUSettings>
     {
         public const string DebugLabel = "ForeignerOfUniverse";
 

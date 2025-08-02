@@ -27,6 +27,8 @@ namespace ForeignerOfUniverse
 
         public static readonly SoundDef FOU_TransportExit;
 
+        public static readonly TraitDef FOU_RealityGamer;
+
         public static readonly ThingDef Mote_FOU_MatterFloatAway;
         public static readonly ThingDef Mote_FOU_NanitesFlash;
 

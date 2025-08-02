@@ -68,6 +68,7 @@
     <Compile Include="Models\ThingWeavePolicy.cs" />
     <Compile Include="Patches\AnomalyUtility_Patch.cs" />
     <Compile Include="Patches\CompDrug_Patch.cs" />
+    <Compile Include="Patches\MentalStateHandler_Patch.cs" />
     <Compile Include="Patches\Pawn_GeneTracker_Patch.cs" />
     <Compile Include="Patches\Pawn_HealthTracker_Patch.cs" />
     <Compile Include="Patches\SkillRecord_Patch.cs" />
