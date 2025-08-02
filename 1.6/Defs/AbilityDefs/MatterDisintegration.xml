@@ -4,7 +4,7 @@
     <AbilityDef>
         <defName>FOU_MatterDisintegration</defName>
         <label>matter disintegration</label>
-        <description>Commands higher dimensional nanites to disassemble items at elementary level and reconstitute them into new nanites.\nThe heavier the item disassembled, the greater the amount of nanites produced.</description>
+        <description>Commands higher dimensional nanites to disassemble items at elementary level and reconstitute them into new nanites.\nThe heavier the item disassembled, the greater the amount of nanites produced.\n\nThis ability bypasses line-of-sight requirements via the higher dimensional nanites.</description>
         <iconPath>UI/Icons/Abilities/FOU_MatterDisintegration</iconPath>
         <category>FOU_Nanites</category>
 
@@ -24,10 +24,10 @@
         <hostile>false</hostile>
 
         <verbProperties>
-            <verbClass>Verb_CastAbilityTouch</verbClass>
+            <verbClass>ForeignerOfUniverse.Verbs.CastAbilityDirectly</verbClass>
             <requireLineOfSight>false</requireLineOfSight>
 
-            <range>-1</range>
+            <range>6</range>
             <warmupTime>4</warmupTime>
 
             <soundCast>FOU_MatterDisintegrationCasted</soundCast>
