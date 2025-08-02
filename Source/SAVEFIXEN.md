@@ -1,4 +1,4 @@
-# How to fix a old save.
+# How to fix an old save.
 
 ## 1. Open the file of the save which you want to fix.
 ## 2. Search **FOU_MatterDisintegration**.
