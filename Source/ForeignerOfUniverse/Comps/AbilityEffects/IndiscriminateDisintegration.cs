@@ -1,12 +1,10 @@
 ﻿using ForeignerOfUniverse.Utilities;
-using Nebulae.RimWorld.UI;
 using RimWorld;
 using RimWorld.Planet;
 using System;
 using System.Linq;
 using UnityEngine;
 using Verse;
-using static Verse.DamageWorker;
 
 namespace ForeignerOfUniverse.Comps.AbilityEffects
 {

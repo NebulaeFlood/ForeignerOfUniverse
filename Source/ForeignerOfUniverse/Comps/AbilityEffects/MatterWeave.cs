@@ -3,17 +3,12 @@ using ForeignerOfUniverse.Utilities;
 using ForeignerOfUniverse.Views;
 using ForeignerOfUniverse.Windows;
 using Nebulae.RimWorld.UI.Utilities;
-using Nebulae.RimWorld.UI.Windows;
 using RimWorld;
 using RimWorld.Planet;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using UnityEngine;
 using Verse;
-using Verse.AI;
 using Verse.Sound;
 
 namespace ForeignerOfUniverse.Comps.AbilityEffects
@@ -169,7 +164,8 @@ namespace ForeignerOfUniverse.Comps.AbilityEffects
                 || target.Cell.Impassable(map) || !target.Cell.WalkableBy(map, parent.pawn))
             {
                 return "FOU.NaniteAbility.CannotSpawnTo".Translate();
-            };
+            }
+            ;
 
             return "FOU.NaniteAbility.SpawnTo".Translate();
         }

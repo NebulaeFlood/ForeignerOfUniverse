@@ -1,7 +1,4 @@
-﻿using ForeignerOfUniverse.Models;
-using ForeignerOfUniverse.Utilities;
-using RimWorld;
-using System.Collections.Generic;
+﻿using ForeignerOfUniverse.Utilities;
 using Verse;
 
 namespace ForeignerOfUniverse.Genes

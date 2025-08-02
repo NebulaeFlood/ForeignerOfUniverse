@@ -1,5 +1,6 @@
 ﻿using ForeignerOfUniverse.Models;
-using Mono.Security.Cryptography;
+using ForeignerOfUniverse.Utilities;
+using ForeignerOfUniverse.Windows;
 using Nebulae.RimWorld.UI.Controls;
 using Nebulae.RimWorld.UI.Controls.Basic;
 using Nebulae.RimWorld.UI.Controls.Composites;
@@ -7,19 +8,10 @@ using Nebulae.RimWorld.UI.Controls.Panels;
 using Nebulae.RimWorld.UI.Core.Events;
 using Nebulae.RimWorld.UI.Utilities;
 using RimWorld;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using UnityEngine;
-using Verse;
 using RimWorld.Planet;
+using System.Linq;
+using Verse;
 using Grid = Nebulae.RimWorld.UI.Controls.Panels.Grid;
-using ForeignerOfUniverse.Genes;
-using ForeignerOfUniverse.Utilities;
-using Nebulae.RimWorld.UI.Windows;
-using ForeignerOfUniverse.Windows;
 
 namespace ForeignerOfUniverse.Views
 {
@@ -127,7 +119,7 @@ namespace ForeignerOfUniverse.Views
 
             if (!info.Loaded)
             {
-                Messages.Message("FOU.Messages.Settings.Protocols.CannotFindDef.Content".Translate(info.DefName.Colorize(ColoredText.NameColor)).Resolve(), 
+                Messages.Message("FOU.Messages.Settings.Protocols.CannotFindDef.Content".Translate(info.DefName.Colorize(ColoredText.NameColor)).Resolve(),
                     MessageTypeDefOf.RejectInput, historical: false);
                 return;
             }

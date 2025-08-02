@@ -1,23 +1,12 @@
-﻿using ForeignerOfUniverse.Models;
-using Mono.Security.Cryptography;
-using Nebulae.RimWorld.UI.Controls;
+﻿using Nebulae.RimWorld.UI.Controls;
 using Nebulae.RimWorld.UI.Controls.Basic;
 using Nebulae.RimWorld.UI.Controls.Composites;
 using Nebulae.RimWorld.UI.Controls.Panels;
-using Nebulae.RimWorld.UI.Core.Events;
 using Nebulae.RimWorld.UI.Utilities;
-using RimWorld;
 using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using UnityEngine;
 using Verse;
-using RimWorld.Planet;
 using Grid = Nebulae.RimWorld.UI.Controls.Panels.Grid;
-using ForeignerOfUniverse.Genes;
-using ForeignerOfUniverse.Utilities;
 
 namespace ForeignerOfUniverse.Views
 {

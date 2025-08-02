@@ -1,6 +1,4 @@
-﻿using ForeignerOfUniverse.Genes;
-using ForeignerOfUniverse.Models;
-using ForeignerOfUniverse.Patches;
+﻿using ForeignerOfUniverse.Models;
 using ForeignerOfUniverse.Utilities;
 using ForeignerOfUniverse.Views;
 using HarmonyLib;
@@ -13,7 +11,6 @@ using RimWorld;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
-using System.Runtime.Remoting.Messaging;
 using Verse;
 using Grid = Nebulae.RimWorld.UI.Controls.Panels.Grid;
 

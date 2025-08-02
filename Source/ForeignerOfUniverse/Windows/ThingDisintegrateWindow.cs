@@ -4,10 +4,6 @@ using Nebulae.RimWorld.UI.Windows;
 using RimWorld;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using UnityEngine;
 using Verse;
 
 namespace ForeignerOfUniverse.Windows
@@ -18,7 +14,7 @@ namespace ForeignerOfUniverse.Windows
         public readonly MatterDisintegration Comp;
 
 
-        internal ThingDisintegrateWindow(MatterDisintegration comp,IEnumerable<Thing> things, string targetLabel, Action confirmAction)
+        internal ThingDisintegrateWindow(MatterDisintegration comp, IEnumerable<Thing> things, string targetLabel, Action confirmAction)
         {
             _confirmAction = confirmAction;
 

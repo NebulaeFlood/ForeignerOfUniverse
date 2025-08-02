@@ -1,10 +1,5 @@
 ﻿using ForeignerOfUniverse.Views;
 using Nebulae.RimWorld.UI.Windows;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ForeignerOfUniverse.Windows
 {

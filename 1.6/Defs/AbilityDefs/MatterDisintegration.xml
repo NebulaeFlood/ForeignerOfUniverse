@@ -17,18 +17,16 @@
 
         <gizmoClass>ForeignerOfUniverse.Gizmos.MatterWeaveAbility</gizmoClass>
 
-        <jobDef>CastAbilityOnThingMelee</jobDef>
         <warmupSound>FOU_NaniteAbilityWarmup</warmupSound>
 
         <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
-        <hostile>false</hostile>
 
         <verbProperties>
             <verbClass>ForeignerOfUniverse.Verbs.CastAbilityDirectly</verbClass>
             <requireLineOfSight>false</requireLineOfSight>
 
             <range>6</range>
-            <warmupTime>4</warmupTime>
+            <warmupTime>6</warmupTime>
 
             <soundCast>FOU_MatterDisintegrationCasted</soundCast>
 

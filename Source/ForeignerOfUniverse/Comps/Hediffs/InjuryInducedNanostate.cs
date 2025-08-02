@@ -1,5 +1,4 @@
 ﻿using ForeignerOfUniverse.Utilities;
-using RimWorld;
 using Verse;
 
 namespace ForeignerOfUniverse.Comps.Hediffs

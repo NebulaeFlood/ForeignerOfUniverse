@@ -1,23 +1,16 @@
-﻿using ForeignerOfUniverse.Comps.AbilityEffects;
-using ForeignerOfUniverse.Genes;
-using ForeignerOfUniverse.Models;
-using Nebulae.RimWorld.UI.Controls.Basic;
+﻿using ForeignerOfUniverse.Windows;
 using Nebulae.RimWorld.UI.Controls;
+using Nebulae.RimWorld.UI.Controls.Basic;
 using Nebulae.RimWorld.UI.Controls.Composites;
 using Nebulae.RimWorld.UI.Controls.Panels;
+using Nebulae.RimWorld.UI.Core.Events;
 using Nebulae.RimWorld.UI.Utilities;
+using RimWorld;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Verse;
-using RimWorld;
-using RimWorld.Planet;
 using TextBlock = Nebulae.RimWorld.UI.Controls.Basic.TextBlock;
-using Nebulae.RimWorld.UI.Core.Events;
-using ForeignerOfUniverse.Windows;
-using static Unity.Burst.Intrinsics.X86.Avx;
 
 namespace ForeignerOfUniverse.Views
 {

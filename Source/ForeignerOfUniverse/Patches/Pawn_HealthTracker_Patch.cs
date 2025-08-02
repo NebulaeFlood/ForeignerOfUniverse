@@ -1,15 +1,11 @@
 ﻿using ForeignerOfUniverse.Utilities;
 using HarmonyLib;
 using Nebulae.RimWorld.UI;
-using Nebulae.RimWorld.Utilities;
 using RimWorld;
-using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 using System.Reflection.Emit;
-using System.Text;
-using System.Threading.Tasks;
 using Verse;
 
 namespace ForeignerOfUniverse.Patches

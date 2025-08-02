@@ -1,11 +1,7 @@
-﻿using ForeignerOfUniverse.Comps.AbilityEffects;
-using ForeignerOfUniverse.Models;
+﻿using ForeignerOfUniverse.Models;
 using ForeignerOfUniverse.Views;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Verse;
 
 namespace ForeignerOfUniverse.Windows

@@ -1,6 +1,5 @@
 ﻿using ForeignerOfUniverse.Comps.AbilityEffects;
 using ForeignerOfUniverse.Genes;
-using ForeignerOfUniverse.Models;
 using Nebulae.RimWorld.UI.Utilities;
 using RimWorld;
 using System.Collections.Generic;

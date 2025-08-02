@@ -1,12 +1,7 @@
-﻿using ForeignerOfUniverse.Genes;
-using ForeignerOfUniverse.Models;
+﻿using ForeignerOfUniverse.Models;
 using RimWorld;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using UnityEngine.Analytics;
 using Verse;
 
 namespace ForeignerOfUniverse.Utilities

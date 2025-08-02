@@ -4,11 +4,9 @@ using ForeignerOfUniverse.Utilities;
 using Nebulae.RimWorld.Utilities;
 using RimWorld;
 using RimWorld.Planet;
-using System;
 using System.Collections.Generic;
 using System.Linq;
 using Verse;
-using Verse.Noise;
 using Verse.Sound;
 
 namespace ForeignerOfUniverse.Letters
@@ -126,7 +124,7 @@ namespace ForeignerOfUniverse.Letters
             GenSpawn.Spawn(pawn, targetPos, _targetMap);
             NaniteRecoverUtility.Recover(pawn, pawn);
             pawn.Notify_Teleported();
-            
+
             if (pawn.health.hediffSet.GetFirstHediffOfDef(FOUDefOf.FOU_ExistenceAnchor) is ExistenceAnchor anchor)
             {
                 anchor.letter = null;

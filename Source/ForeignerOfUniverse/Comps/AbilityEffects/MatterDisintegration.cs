@@ -1,6 +1,4 @@
-﻿using ForeignerOfUniverse.Genes;
-using ForeignerOfUniverse.Models;
-using ForeignerOfUniverse.Utilities;
+﻿using ForeignerOfUniverse.Utilities;
 using ForeignerOfUniverse.Views;
 using ForeignerOfUniverse.Windows;
 using RimWorld;
@@ -8,11 +6,7 @@ using RimWorld.Planet;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Security.Cryptography;
-using UnityEngine;
 using Verse;
-using Verse.AI;
-using Verse.Noise;
 
 namespace ForeignerOfUniverse.Comps.AbilityEffects
 {
@@ -146,6 +140,8 @@ namespace ForeignerOfUniverse.Comps.AbilityEffects
             }
         }
 
+        public override string ExtraTooltipPart() => $"{"FOU.NaniteAbility.NanitesPerKilogram".Translate().Resolve().Colorize(ColoredText.TipSectionTitleColor)}: {FOU.Settings.NanitesPerKilogram}/kg";
+
         public override bool GizmoDisabled(out string reason)
         {
             if (!parent.pawn.OwnNanites())
@@ -161,8 +157,6 @@ namespace ForeignerOfUniverse.Comps.AbilityEffects
         public override bool Valid(LocalTargetInfo target, bool throwMessages = false) => true;
 
         public override bool Valid(GlobalTargetInfo target, bool throwMessages = false) => true;
-
-        public override string ExtraTooltipPart() => $"{"FOU.NaniteAbility.NanitesPerKilogram".Translate().Resolve().Colorize(ColoredText.TipSectionTitleColor)}: {FOU.Settings.NanitesPerKilogram}/kg";
 
         #endregion
 

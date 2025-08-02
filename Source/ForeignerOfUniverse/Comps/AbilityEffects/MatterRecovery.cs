@@ -1,9 +1,7 @@
 ﻿using ForeignerOfUniverse.Utilities;
-using Nebulae.RimWorld.UI;
 using RimWorld;
 using RimWorld.Planet;
 using System;
-using System.Linq;
 using Verse;
 
 namespace ForeignerOfUniverse.Comps.AbilityEffects

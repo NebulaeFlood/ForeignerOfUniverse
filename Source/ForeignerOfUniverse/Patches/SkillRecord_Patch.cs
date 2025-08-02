@@ -1,5 +1,4 @@
-﻿using ForeignerOfUniverse.Genes;
-using ForeignerOfUniverse.Utilities;
+﻿using ForeignerOfUniverse.Utilities;
 using HarmonyLib;
 using RimWorld;
 using Verse;

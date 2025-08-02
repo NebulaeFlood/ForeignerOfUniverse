@@ -1,15 +1,8 @@
-﻿using ForeignerOfUniverse.Gizmos;
-using ForeignerOfUniverse.Letters;
+﻿using ForeignerOfUniverse.Letters;
 using ForeignerOfUniverse.Utilities;
-using Nebulae.RimWorld.UI;
-using Nebulae.RimWorld.Utilities;
 using RimWorld;
-using System;
-using System.Collections.Generic;
 using System.Diagnostics;
-using UnityEngine;
 using Verse;
-using Verse.Sound;
 
 namespace ForeignerOfUniverse.Hediffs
 {

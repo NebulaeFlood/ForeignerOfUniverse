@@ -1,16 +1,10 @@
 ﻿using ForeignerOfUniverse.Comps.AbilityEffects;
 using ForeignerOfUniverse.Models;
 using RimWorld;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using RimWorld.Planet;
 using UnityEngine;
 using Verse;
-using static UnityEngine.GraphicsBuffer;
 using Verse.Sound;
-using RimWorld.Planet;
 
 namespace ForeignerOfUniverse.Utilities
 {

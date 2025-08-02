@@ -1,18 +1,13 @@
 ﻿using ForeignerOfUniverse.Comps.Things;
 using ForeignerOfUniverse.Gizmos;
 using ForeignerOfUniverse.Models;
-using ForeignerOfUniverse.Utilities;
-using Nebulae.RimWorld.UI;
-using Nebulae.RimWorld.Utilities;
 using RimWorld;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Numerics;
 using UnityEngine;
 using Verse;
 using Verse.Sound;
-using static UnityEngine.GraphicsBuffer;
 
 namespace ForeignerOfUniverse.Genes
 {
@@ -298,7 +293,7 @@ namespace ForeignerOfUniverse.Genes
                         break;
                 }
 
-                Regenerate(_checkUp, healAmount, shouldNotify);
+                Regenerate(healAmount, shouldNotify);
                 OffsetStore(replicationAmount);
             }
             else
@@ -394,7 +389,7 @@ namespace ForeignerOfUniverse.Genes
             _replicationAmount = sender.NanitesDailyReplication * 0.000005f;
         }
 
-        private void Regenerate(NaniteCheckUp checkUp, float amount, bool shouldNotify)
+        private void Regenerate(float amount, bool shouldNotify)
         {
             if (pawn.mutant != null && pawn.mutant.HasTurned)
             {
@@ -414,7 +409,7 @@ namespace ForeignerOfUniverse.Genes
 
             float cost;
 
-            foreach (var injury in checkUp.Injuries)
+            foreach (var injury in _checkUp.Injuries)
             {
                 cost = Mathf.Min(amount, injury.Severity);
                 amount -= cost;
@@ -427,7 +422,7 @@ namespace ForeignerOfUniverse.Genes
                 }
             }
 
-            foreach (var missingPart in checkUp.MissingParts)
+            foreach (var missingPart in _checkUp.MissingParts)
             {
                 var part = missingPart.Part;
                 float partMaxHealth = part.def.GetMaxHealth(hediffSet.pawn);
@@ -452,14 +447,14 @@ namespace ForeignerOfUniverse.Genes
                 }
             }
 
-            if (checkUp.AnyBloodLoss)
+            if (_checkUp.AnyBloodLoss)
             {
-                checkUp.BloodLoss.Heal(amount * 0.01f);
+                _checkUp.BloodLoss.Heal(amount * 0.01f);
             }
 
-            if (checkUp.AnyToxic)
+            if (_checkUp.AnyToxic)
             {
-                checkUp.ToxicBuildup.Heal(amount * 0.1f);
+                _checkUp.ToxicBuildup.Heal(amount * 0.1f);
             }
         }
 

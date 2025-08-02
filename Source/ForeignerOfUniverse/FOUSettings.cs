@@ -1,8 +1,6 @@
 ﻿using ForeignerOfUniverse.Models;
 using Nebulae.RimWorld.UI;
-using Nebulae.RimWorld.UI.Automation;
 using Nebulae.RimWorld.UI.Automation.Attributes;
-using RimWorld;
 using System.Collections.Generic;
 using Verse;
 

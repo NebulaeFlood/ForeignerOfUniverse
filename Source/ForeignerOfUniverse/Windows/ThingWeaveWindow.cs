@@ -1,17 +1,8 @@
 ﻿using ForeignerOfUniverse.Comps.AbilityEffects;
-using ForeignerOfUniverse.Genes;
-using ForeignerOfUniverse.Models;
 using ForeignerOfUniverse.Views;
-using Nebulae.RimWorld.UI.Controls.Basic;
 using Nebulae.RimWorld.UI.Windows;
 using RimWorld;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.Remoting.Messaging;
-using System.Text;
-using System.Threading.Tasks;
-using UnityEngine;
 using Verse;
 
 namespace ForeignerOfUniverse.Windows

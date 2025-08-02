@@ -22,7 +22,7 @@
             <requireLineOfSight>false</requireLineOfSight>
 
             <range>35</range>
-            <warmupTime>4</warmupTime>
+            <warmupTime>6</warmupTime>
 
             <soundCast>FOU_MatterDisintegrationCasted</soundCast>
 

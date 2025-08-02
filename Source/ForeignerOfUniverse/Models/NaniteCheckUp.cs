@@ -1,11 +1,7 @@
 ﻿using ForeignerOfUniverse.Utilities;
 using RimWorld;
-using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Verse;
 
 namespace ForeignerOfUniverse.Models
@@ -99,37 +95,47 @@ namespace ForeignerOfUniverse.Models
 
                 if (!protocol.Phoenix)
                 {
+                    if (!ShouldEnforceAnchor && !ShouldEnforcePsychicShild)
+                    {
+                        break;
+                    }
+
                     continue;
                 }
 
                 if (hediff is Hediff_AddedPart addedPart)
                 {
                     addedParts.Add(addedPart.Part);
+                    continue;
                 }
                 else if (hediff is Hediff_Injury injury)
                 {
                     injuries.AddFirst(injury);
+                    continue;
                 }
                 else if (hediff is Hediff_MissingPart missingPart)
                 {
                     missingParts.AddFirst(missingPart);
+                    continue;
                 }
                 else if (!AnyBloodLoss && hediff.def == HediffDefOf.BloodLoss)
                 {
                     AnyBloodLoss = true;
                     BloodLoss = hediff;
+                    continue;
                 }
                 else if (!AnyToxic && hediff.def == HediffDefOf.ToxicBuildup)
                 {
                     AnyToxic = true;
                     ToxicBuildup = hediff;
-                }
-                else if (anyActivateNanite)
-                {
                     continue;
                 }
 
-                if (hediff.def == FOUDefOf.FOU_InjuryInducedNanostate)
+                if (anyActivateNanite)
+                {
+                    continue;
+                }
+                else if (hediff.def == FOUDefOf.FOU_InjuryInducedNanostate)
                 {
                     anyActivateNanite = true;
                     NaniteState = NaniteState.Activate;
@@ -148,7 +154,7 @@ namespace ForeignerOfUniverse.Models
             }
 
             Injuries = injuries.Count > 0 ? injuries.OrderBy(GetOrder) : Enumerable.Empty<Hediff_Injury>();
-            MissingParts = injuries.Count > 0 ? missingParts.Where(Renewable).OrderBy(GetOrder) : Enumerable.Empty<Hediff_MissingPart>();
+            MissingParts = missingParts.Count > 0 ? missingParts.Where(Renewable).OrderBy(GetOrder) : Enumerable.Empty<Hediff_MissingPart>();
         }
 
 

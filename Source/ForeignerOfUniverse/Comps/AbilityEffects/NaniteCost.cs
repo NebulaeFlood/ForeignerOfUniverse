@@ -1,5 +1,4 @@
-﻿using ForeignerOfUniverse.Genes;
-using ForeignerOfUniverse.Utilities;
+﻿using ForeignerOfUniverse.Utilities;
 using HarmonyLib;
 using Nebulae.RimWorld.Utilities;
 using RimWorld;
@@ -7,7 +6,6 @@ using System.Collections.Generic;
 using System.Reflection;
 using Verse;
 using Verse.AI;
-using Verse.Noise;
 
 namespace ForeignerOfUniverse.Comps.AbilityEffects
 {
