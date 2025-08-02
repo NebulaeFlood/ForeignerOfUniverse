@@ -43,8 +43,9 @@
     <Compile Include="Comps\AbilityEffects\MatterWeave.cs" />
     <Compile Include="Comps\AbilityEffects\NaniteCost.cs" />
     <Compile Include="Comps\Hediffs\AlreadyTended.cs" />
-    <Compile Include="Comps\Hediffs\DisappearsAfterLethalInjuriesDisappeared.cs" />
+    <Compile Include="Comps\Hediffs\InjuryInducedNanostate.cs" />
     <Compile Include="Comps\Hediffs\GetsPermanent.cs" />
+    <Compile Include="Comps\Things\WhileApplyDamage.cs" />
     <Compile Include="FOU.cs" />
     <Compile Include="FOUDefOf.cs" />
     <Compile Include="FOUSettings.cs" />
@@ -52,6 +53,7 @@
     <Compile Include="Genes\MatterManipulation.cs" />
     <Compile Include="Genes\NanoSynapse.cs" />
     <Compile Include="Genes\PhysicalAscension.cs" />
+    <Compile Include="Gizmos\MatterWeaveAbility.cs" />
     <Compile Include="Gizmos\RecoveryProgramAbility.cs" />
     <Compile Include="Gizmos\ResourceNanites.cs" />
     <Compile Include="Graphics\Silhouette.cs" />
@@ -63,12 +65,14 @@
     <Compile Include="Models\NaniteCheckUp.cs" />
     <Compile Include="Models\ThingInfo.cs" />
     <Compile Include="Models\ThingWeaveInfo.cs" />
+    <Compile Include="Models\ThingWeavePolicy.cs" />
     <Compile Include="Patches\AnomalyUtility_Patch.cs" />
     <Compile Include="Patches\CompDrug_Patch.cs" />
     <Compile Include="Patches\Pawn_GeneTracker_Patch.cs" />
     <Compile Include="Patches\Pawn_HealthTracker_Patch.cs" />
     <Compile Include="Patches\SkillRecord_Patch.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utilities\MatterManipulateUtility.cs" />
     <Compile Include="Utilities\NaniteGeneUtility.cs" />
     <Compile Include="Utilities\NaniteImmunityUtility.cs" />
     <Compile Include="Utilities\NeedUtility.cs" />
@@ -78,18 +82,23 @@
     <Compile Include="Views\HediffView.cs" />
     <Compile Include="Views\ImmuneDiseasesView.cs" />
     <Compile Include="Views\ReadonlyHediffView.cs" />
+    <Compile Include="Views\ThingDisintegratableView.cs" />
+    <Compile Include="Views\ThingDisintegrateView.cs" />
     <Compile Include="Views\ThingIconView.cs" />
-    <Compile Include="Views\ThingView.cs" />
+    <Compile Include="Views\ThingWeavePolicyView.cs" />
+    <Compile Include="Views\ThingWeavableView.cs" />
     <Compile Include="Views\ThingWeaveView.cs" />
     <Compile Include="Windows\HediffDefOverviewWindow.cs" />
+    <Compile Include="Windows\ThingDisintegrateWindow.cs" />
+    <Compile Include="Windows\ThingWeavePolicyRenameWindow.cs" />
     <Compile Include="Windows\ThingWeaveWindow.cs" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Nebulae.RimWorld">
-      <Version>1.5.3</Version>
+      <Version>1.5.4</Version>
     </PackageReference>
     <PackageReference Include="Nebulae.RimWorld.UI">
-      <Version>1.10.3</Version>
+      <Version>1.10.4</Version>
     </PackageReference>
   </ItemGroup>
   <ItemGroup />

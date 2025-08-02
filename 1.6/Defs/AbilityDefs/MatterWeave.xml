@@ -13,6 +13,10 @@
         <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
         <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
 
+        <showGizmoOnWorldView>true</showGizmoOnWorldView>
+
+        <gizmoClass>ForeignerOfUniverse.Gizmos.MatterWeaveAbility</gizmoClass>
+
         <warmupSound>FOU_NaniteAbilityWarmup</warmupSound>
 
         <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>

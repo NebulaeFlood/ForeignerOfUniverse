@@ -1,8 +1,14 @@
 ﻿using ForeignerOfUniverse.Genes;
 using ForeignerOfUniverse.Models;
 using ForeignerOfUniverse.Utilities;
+using ForeignerOfUniverse.Views;
+using ForeignerOfUniverse.Windows;
 using RimWorld;
 using RimWorld.Planet;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Security.Cryptography;
 using UnityEngine;
 using Verse;
 using Verse.AI;
@@ -12,6 +18,9 @@ namespace ForeignerOfUniverse.Comps.AbilityEffects
 {
     public sealed class MatterDisintegration : CompAbilityEffect
     {
+        public override bool ShouldHideGizmo => FOU.Settings.HideGizmoWhenMultiSelected && Find.Selector.SelectedPawns.Count != 1;
+
+
         //------------------------------------------------------
         //
         //  Public Methods
@@ -22,36 +31,114 @@ namespace ForeignerOfUniverse.Comps.AbilityEffects
 
         public override bool AICanTargetNow(LocalTargetInfo target) => false;
 
-        public override void Apply(LocalTargetInfo target, LocalTargetInfo dest)
+        public override void Apply(GlobalTargetInfo target)
         {
-            if (target.Thing is Thing thing)
+            if (disintegrateQueue is null)
             {
-                int cost = CalculateMaterialCost(thing, out var unitsPerMaterial);
+                return;
+            }
 
-                if (cost < thing.stackCount)
-                {
-                    thing.stackCount -= cost;
-                }
-                else
-                {
-                    thing.Kill(new DamageInfo(FOUDefOf.FOU_Disintegration, float.PositiveInfinity));
-                }
+            var caravan = parent.pawn.GetCaravan();
+
+            if (caravan is null)
+            {
+                disintegrateQueue = null;
+                return;
+            }
+
+            var node = disintegrateQueue.First;
+
+            while (node != null)
+            {
+                var thing = node.Value.Model;
+                int cost = node.Value.Count;
+                var unitsPerMaterial = thing.CalculateNanitePerMaterial();
 
                 parent.pawn.OffsetNaniteStore(cost * unitsPerMaterial * 0.01f);
-                RecordWeavableThing(thing);
+                parent.pawn.RecordWeavableThing(thing);
+                thing.Disintegrate(cost);
+
+                node = node.Next;
+            }
+
+            disintegrateQueue = null;
+
+            Messages.Message("FOU.NaniteAbility.DisintegratedInventory".Translate(parent.pawn.Named("PAWN"), caravan.LabelCap.Colorize(ColoredText.NameColor)).Resolve(),
+                MessageTypeDefOf.NeutralEvent, historical: false);
+            caravan.RecacheInventory();
+            base.Apply(target);
+        }
+
+        public override void Apply(LocalTargetInfo target, LocalTargetInfo dest)
+        {
+            if (target.Thing is Pawn pawn)
+            {
+                if (disintegrateQueue is null)
+                {
+                    return;
+                }
+
+                var node = disintegrateQueue.First;
+
+                while (node != null)
+                {
+                    var thing = node.Value.Model;
+                    int cost = node.Value.Count;
+                    var unitsPerMaterial = thing.CalculateNanitePerMaterial();
+
+                    parent.pawn.OffsetNaniteStore(cost * unitsPerMaterial * 0.01f);
+                    parent.pawn.RecordWeavableThing(thing);
+                    thing.Disintegrate(cost);
+                    base.Apply(target, dest);
+
+                    node = node.Next;
+                }
+
+                Messages.Message("FOU.NaniteAbility.DisintegratedInventory".Translate(parent.pawn.Named("PAWN"), pawn.LabelShortCap.Colorize(ColoredText.NameColor)).Resolve(),
+                    MessageTypeDefOf.NeutralEvent, historical: false);
+                disintegrateQueue = null;
+            }
+            else
+            {
+                var thing = target.Thing;
+                int cost = parent.pawn.CalculateMaterialCostByReplication(thing, out var unitsPerMaterial);
+
+                parent.pawn.OffsetNaniteStore(cost * unitsPerMaterial * 0.01f);
+                parent.pawn.RecordWeavableThing(thing);
+                thing.Disintegrate(cost);
                 base.Apply(target, dest);
             }
         }
 
-        public override bool CanApplyOn(GlobalTargetInfo target) => false;
+        public override bool CanApplyOn(GlobalTargetInfo target) => true;
 
         public override bool CanApplyOn(LocalTargetInfo target, LocalTargetInfo dest) => true;
 
+        public override Window ConfirmationDialog(GlobalTargetInfo target, Action confirmAction)
+        {
+            var caravan = parent.pawn.GetCaravan();
+            return new ThingDisintegrateWindow(this, caravan.AllThings.Where(MatterManipulateUtility.AllowDisintegrate), caravan.LabelCap, confirmAction);
+        }
+
+        public override Window ConfirmationDialog(LocalTargetInfo target, Action confirmAction)
+        {
+            if (target.TryGetPawn(out var pawn))
+            {
+                return new ThingDisintegrateWindow(this, pawn.EquippedWornOrInventoryThings.Where(MatterManipulateUtility.AllowDisintegrate), pawn.LabelShortCap, confirmAction);
+            }
+
+            return null;
+        }
+
         public override string ExtraLabelMouseAttachment(LocalTargetInfo target)
         {
-            if (target.Thing is Thing thing)
+            if (target.Thing is Pawn pawn)
             {
-                return "FOU.NaniteAbility.TargetThingCostInfo".Translate(thing.LabelShort.Colorize(ColoredText.NameColor), CalculateMaterialCost(thing, out _).ToString().Colorize(ColoredText.NameColor)).Resolve();
+                return "FOU.NaniteAbility.DisintegratePawnInventory".Translate(pawn.Named("PAWN")).Resolve();
+            }
+            else if (target.Thing is Thing thing)
+            {
+                return "FOU.NaniteAbility.TargetThingCostInfo".Translate(thing.LabelShort.Colorize(ColoredText.NameColor), parent.pawn.CalculateMaterialCostByReplication(thing, out _).ToString().Colorize(ColoredText.NameColor)).Resolve();
             }
             else
             {
@@ -73,66 +160,13 @@ namespace ForeignerOfUniverse.Comps.AbilityEffects
 
         public override bool Valid(LocalTargetInfo target, bool throwMessages = false) => true;
 
-        public override bool Valid(GlobalTargetInfo target, bool throwMessages = false) => false;
+        public override bool Valid(GlobalTargetInfo target, bool throwMessages = false) => true;
 
         public override string ExtraTooltipPart() => $"{"FOU.NaniteAbility.NanitesPerKilogram".Translate().Resolve().Colorize(ColoredText.TipSectionTitleColor)}: {FOU.Settings.NanitesPerKilogram}/kg";
 
         #endregion
 
 
-        //------------------------------------------------------
-        //
-        //  Private Methods
-        //
-        //------------------------------------------------------
-
-        #region Private Methods
-
-        private int CalculateMaterialCost(Thing material, out float unitsPerMaterial)
-        {
-            unitsPerMaterial = 0f;
-            return parent.pawn.TryGetNanites(out var nanites)
-                ? Mathf.Clamp(nanites.CalculateDismantleForMaxGrowth(material, out unitsPerMaterial), 1, material.stackCount)
-                : 1;
-        }
-
-        private void RecordWeavableThing(Thing thing)
-        {
-            if (parent.pawn.abilities is null)
-            {
-                return;
-            }
-
-            var ability = parent.pawn.abilities.GetAbility(FOUDefOf.FOU_MatterWeave);
-
-            if (ability is null)
-            {
-                return;
-            }
-
-            var comp = ability.CompOfType<MatterWeave>();
-
-            if (comp is null)
-            {
-                return;
-            }
-
-            var info = new ThingInfo(thing);
-
-            if (thing is MinifiedThing || thing is MinifiedTree || thing is Corpse)
-            {
-                Messages.Message("FOU.NaniteAbility.CannotAddWeavableThing".Translate(info.LabelCap.Colorize(ColoredText.NameColor)).Resolve(),
-                    MessageTypeDefOf.NegativeEvent, historical: false);
-                return;
-            }
-
-            if (comp.weavableThings.Add(info))
-            {
-                Messages.Message("FOU.NaniteAbility.WeavableThingAdded".Translate(info.LabelCap.Colorize(ColoredText.NameColor), FOUDefOf.FOU_MatterWeave.LabelCap.Colorize(ColoredText.NameColor)).Resolve(),
-                    MessageTypeDefOf.PositiveEvent, historical: false);
-            }
-        }
-
-        #endregion
+        internal LinkedList<ThingDisintegratableView> disintegrateQueue;
     }
 }

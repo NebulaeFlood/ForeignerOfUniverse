@@ -12,18 +12,29 @@ namespace ForeignerOfUniverse.Views
 {
     internal sealed class ThingIconView : Control
     {
-        public readonly ThingInfo Model;
-
-
         public ThingIconView(ThingInfo model)
         {
-            Model = model;
+            _def = model.DefInfo.Def;
+            _stuffDef = model.StuffDefInfo.Def;
+            _styleDef = model.StyleDefInfo.Def;
+        }
+
+        public ThingIconView(Thing thing)
+        {
+            _def = thing.def;
+            _stuffDef = thing.Stuff;
+            _styleDef = thing.StyleDef;
         }
 
 
         protected override void DrawCore(ControlState states)
         {
-            Widgets.ThingIcon(DesiredRect, Model.DefInfo.Def, Model.StuffDefInfo.Def, Model.StyleDefInfo.Def);
+            Widgets.ThingIcon(DesiredRect, _def, _stuffDef, _styleDef);
         }
+
+
+        private readonly ThingDef _def;
+        private readonly ThingDef _stuffDef;
+        private readonly ThingStyleDef _styleDef;
     }
 }

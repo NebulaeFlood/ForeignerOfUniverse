@@ -22,6 +22,9 @@
 	<FOU.Settings.KilogramsPerNanite.Label>Kilograms per nanite:</FOU.Settings.KilogramsPerNanite.Label>
 	<FOU.Settings.KilogramsPerNanite.Tooltip>Configures the <![CDATA[<color=#D09B61>higher dimensional nanites</color>]]> required per kilogram of matter reconstructed for <![CDATA[<color=#D09B61>matter weave</color>]]> ability.</FOU.Settings.KilogramsPerNanite.Tooltip>
 
+	<FOU.Settings.NanitesPerDamage.Label>Damage absorption rate:</FOU.Settings.NanitesPerDamage.Label>
+	<FOU.Settings.NanitesPerDamage.Tooltip>Configures the <![CDATA[<color=#D09B61>higher dimensional nanites</color>]]> consumed per damage point absorbed by the <![CDATA[<color=#D09B61>contravention barrier</color>]]>.</FOU.Settings.NanitesPerDamage.Tooltip>
+
     <FOU.Settings.IndiscriminateDisintegrationCost.Label><![CDATA[<color=#D09B61>Indiscriminate disintegration</color>]]> ability consumption: </FOU.Settings.IndiscriminateDisintegrationCost.Label>
     <FOU.Settings.IndiscriminateDisintegrationCost.Tooltip>Configures the <![CDATA[<color=#D09B61>higher dimensional nanites</color>]]> cost for activating <![CDATA[<color=#D09B61>indiscriminate disintegration</color>]]> ability.</FOU.Settings.IndiscriminateDisintegrationCost.Tooltip>
 
@@ -33,6 +36,9 @@
 
     <FOU.Settings.RecoveryProgramCooldown.Label><![CDATA[<color=#D09B61>Recovery program</color>]]> ability cooldown: </FOU.Settings.RecoveryProgramCooldown.Label>
     <FOU.Settings.RecoveryProgramCooldown.Tooltip>Configures the cooldown for <![CDATA[<color=#D09B61>Recovery program</color>]]> from <![CDATA[<color=#D09B61>「Phoenix」</color>]]>.\n\nThe unit here is <![CDATA[<color=#D09B61>Tick</color>]]>, and 60,000 <![CDATA[<color=#D09B61>Ticks</color>]]> equal one in-game day.</FOU.Settings.RecoveryProgramCooldown.Tooltip>
+
+	<FOU.Settings.HideGizmoWhenMultiSelected.Label>Auto hide ability's gizmo</FOU.Settings.HideGizmoWhenMultiSelected.Label>
+	<FOU.Settings.HideGizmoWhenMultiSelected.Tooltip>Whether to hifr ability when characters multi selected.</FOU.Settings.HideGizmoWhenMultiSelected.Tooltip>
 
     <FOU.Settings.ResetButton.Label>Reset</FOU.Settings.ResetButton.Label>
     <FOU.Settings.ResetButton.Tooltip>Resets the above options to default.</FOU.Settings.ResetButton.Tooltip>

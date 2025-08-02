@@ -1,4 +1,5 @@
-﻿using ForeignerOfUniverse.Gizmos;
+﻿using ForeignerOfUniverse.Comps.Things;
+using ForeignerOfUniverse.Gizmos;
 using ForeignerOfUniverse.Models;
 using ForeignerOfUniverse.Utilities;
 using Nebulae.RimWorld.UI;
@@ -7,8 +8,10 @@ using RimWorld;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Numerics;
 using UnityEngine;
 using Verse;
+using Verse.Sound;
 using static UnityEngine.GraphicsBuffer;
 
 namespace ForeignerOfUniverse.Genes
@@ -51,7 +54,21 @@ namespace ForeignerOfUniverse.Genes
 
         public Gene_Resource Resource => this;
 
-        public float ResourceLossPerDay => FOU.Settings.NanitesDailyReplication * -0.01f;
+        public float ResourceLossPerDay
+        {
+            get
+            {
+                switch (_checkUp.NaniteState)
+                {
+                    case NaniteState.Subside:
+                        return -(FOU.Settings.NanitesDailyReplication * 0.02f);
+                    case NaniteState.Activate:
+                        return -(FOU.Settings.NanitesDailyReplication * 0.04f);
+                    default:
+                        return -(FOU.Settings.NanitesDailyReplication * 0.01f);
+                }
+            }
+        }
 
         #endregion
 
@@ -108,6 +125,23 @@ namespace ForeignerOfUniverse.Genes
 
                 _healAmount = settings.PhoenixRegenerationPerDay * 0.0005f;
                 _replicationAmount = settings.NanitesDailyReplication * 0.000005f;
+
+                if (pawn.GetComp<WhileApplyDamage>() is null)
+                {
+                    pawn.AllComps.Add(new WhileApplyDamage
+                    {
+                        nanites = this,
+                        parent = pawn
+                    });
+                }
+
+                protocol = new NaniteProtocol(protocol, pawn);
+
+                if (protocol.CheckUp)
+                {
+                    _checkUp = new NaniteCheckUp(protocol, pawn.health.hediffSet.hediffs);
+                    _checkUp.Purge();
+                }
             }
         }
 
@@ -118,7 +152,7 @@ namespace ForeignerOfUniverse.Genes
                 yield break;
             }
 
-            if (Find.Selector.SelectedPawns.Count == 1)
+            if (Find.Selector.SelectedPawns.Count == 1 || pawn.MapHeld is null)
             {
                 if (gizmo is null)
                 {
@@ -171,6 +205,11 @@ namespace ForeignerOfUniverse.Genes
         public override void PostAdd()
         {
             base.PostAdd();
+            pawn.AllComps.Add(new WhileApplyDamage
+            {
+                nanites = this,
+                parent = pawn
+            });
             protocol = new NaniteProtocol(pawn);
         }
 
@@ -188,7 +227,17 @@ namespace ForeignerOfUniverse.Genes
             return Mathf.FloorToInt(value * 100f);
         }
 
-        public void ShildClose()
+        public override void PostRemove()
+        {
+            base.PostRemove();
+
+            if (pawn.TryGetComp<WhileApplyDamage>(out var comp))
+            {
+                pawn.AllComps.Remove(comp);
+            }
+        }
+
+        public void PsychicShildClose()
         {
             if (!protocol.PsychicShildOpen)
             {
@@ -201,7 +250,7 @@ namespace ForeignerOfUniverse.Genes
             protocol.PsychicShild = null;
         }
 
-        public void ShildOpen()
+        public void PsychicShildOpen()
         {
             if (protocol.PsychicShildOpen)
             {
@@ -219,8 +268,108 @@ namespace ForeignerOfUniverse.Genes
                 return;
             }
 
-            OffsetStore(_replicationAmount);
-            EnforceProtocol();
+            if (!protocol.CheckUp)
+            {
+                OffsetStore(_replicationAmount);
+                return;
+            }
+
+            bool shouldNotify = pawn.Faction == Faction.OfPlayer || pawn.HostFaction == Faction.OfPlayer;
+            _checkUp = new NaniteCheckUp(protocol, pawn.health.hediffSet.hediffs);
+
+            RemoveDiseases(_checkUp, shouldNotify);
+
+            if (protocol.Phoenix)
+            {
+                float healAmount = _healAmount;
+                float replicationAmount = _replicationAmount;
+
+                switch (_checkUp.NaniteState)
+                {
+                    case NaniteState.Subside:
+                        healAmount *= 2f;
+                        replicationAmount *= 2f;
+                        break;
+                    case NaniteState.Activate:
+                        healAmount *= 4f;
+                        replicationAmount *= 4f;
+                        break;
+                    default:
+                        break;
+                }
+
+                Regenerate(_checkUp, healAmount, shouldNotify);
+                OffsetStore(replicationAmount);
+            }
+            else
+            {
+                OffsetStore(_replicationAmount);
+            }
+
+            if (_checkUp.ShouldEnforceAnchor)
+            {
+                protocol.Anchor = pawn.health.AddHediff(FOUDefOf.FOU_ExistenceAnchor);
+            }
+
+            if (_checkUp.ShouldEnforcePhoenix)
+            {
+                protocol.RecoveryProgram = pawn.health.AddHediff(FOUDefOf.FOU_RecoveryProgram);
+            }
+
+            if (_checkUp.ShouldEnforcePsychicShild)
+            {
+                protocol.PsychicShild = pawn.health.AddHediff(FOUDefOf.FOU_PsychicShild);
+            }
+
+            _checkUp.Purge();
+        }
+
+        #endregion
+
+
+        //------------------------------------------------------
+        //
+        //  Internal Methods
+        //
+        //------------------------------------------------------
+
+        #region Internal Methods
+
+        internal void PreApplyDamage(ref DamageInfo dinfo, out bool absorbed)
+        {
+            if (protocol.Contravention && protocol.ContraventionBarrierOpen)
+            {
+                if (cur >= 0.01f)
+                {
+                    var amount = dinfo.Amount;
+                    var factor = FOU.Settings.NanitesPerDamage;
+
+                    cur = Mathf.Clamp(cur - amount * factor * 0.01f, 0f, max);
+                    absorbed = true;
+
+                    var impactAngleVect = Vector3Utility.HorizontalVectorFromAngle(dinfo.Angle);
+                    var pos = pawn.TrueCenter() + impactAngleVect.RotatedBy(180f) * 0.5f;
+
+                    SoundDefOf.EnergyShield_AbsorbDamage.PlayOneShot(pawn);
+                    FleckMaker.Static(pos, pawn.Map, FleckDefOf.ExplosionFlash, Mathf.Min(10f, 2f + amount * 0.1f));
+                }
+                else
+                {
+                    absorbed = false;
+                }
+            }
+            else
+            {
+                absorbed = false;
+            }
+        }
+
+        internal void PostApplyDamage(DamageInfo dinfo)
+        {
+            if (protocol.Ascension && dinfo.Def.causeStun)
+            {
+                pawn.stances.stunner.StopStun();
+            }
         }
 
         #endregion
@@ -234,41 +383,6 @@ namespace ForeignerOfUniverse.Genes
 
         #region Private Methods
 
-        private void EnforceProtocol()
-        {
-            if (!protocol.CheckUp)
-            {
-                return;
-            }
-
-            bool shouldNotify = pawn.Faction == Faction.OfPlayer || pawn.HostFaction == Faction.OfPlayer;
-            var checkUp = new NaniteCheckUp(protocol, pawn.health.hediffSet.hediffs);
-
-            RemoveDiseases(checkUp, shouldNotify);
-
-            if (protocol.Phoenix)
-            {
-                Regenerate(checkUp, shouldNotify);
-            }
-
-            if (checkUp.ShouldEnforceAnchor)
-            {
-                protocol.Anchor = pawn.health.AddHediff(FOUDefOf.FOU_ExistenceAnchor);
-            }
-
-            if (checkUp.ShouldEnforcePhoenix)
-            {
-                protocol.RecoveryProgram = pawn.health.AddHediff(FOUDefOf.FOU_RecoveryProgram);
-            }
-
-            if (checkUp.ShouldEnforcePsychicShild)
-            {
-                protocol.PsychicShild = pawn.health.AddHediff(FOUDefOf.FOU_PsychicShild);
-            }
-
-            checkUp.Clear();
-        }
-
         private void OnSettingsSaved(FOUSettings sender, EventArgs args)
         {
             float maxValue = sender.NanitesMaxStorage * 0.01f;
@@ -280,7 +394,7 @@ namespace ForeignerOfUniverse.Genes
             _replicationAmount = sender.NanitesDailyReplication * 0.000005f;
         }
 
-        private void Regenerate(NaniteCheckUp checkUp, bool shouldNotify)
+        private void Regenerate(NaniteCheckUp checkUp, float amount, bool shouldNotify)
         {
             if (pawn.mutant != null && pawn.mutant.HasTurned)
             {
@@ -295,21 +409,8 @@ namespace ForeignerOfUniverse.Genes
                 }
             }
 
-            var amount = _healAmount;
             var health = pawn.health;
             var hediffSet = health.hediffSet;
-
-            switch (checkUp.NaniteState)
-            {
-                case NaniteState.Subside:
-                    amount *= 2f;
-                    break;
-                case NaniteState.Activate:
-                    amount *= 4f;
-                    break;
-                default:
-                    break;
-            }
 
             float cost;
 
@@ -409,6 +510,7 @@ namespace ForeignerOfUniverse.Genes
 
         #region Private Fields
 
+        private NaniteCheckUp _checkUp;
         private float _healAmount;
         private float _replicationAmount;
 

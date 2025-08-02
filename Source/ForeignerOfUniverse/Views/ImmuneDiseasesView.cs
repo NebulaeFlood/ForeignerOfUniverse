@@ -87,7 +87,7 @@ namespace ForeignerOfUniverse.Views
             var infoPanel = new Border
             {
                 Background = BrushUtility.WindowBackground,
-                BorderBrush = BrushUtility.Grey,
+                BorderBrush = BrushUtility.LightGrey,
                 BorderThickness = 1f,
                 Content = new ScrollViewer { Content = _infos, HorizontalScrollBarVisibility = ScrollBarVisibility.Hidden },
                 Padding = 8f
@@ -101,7 +101,7 @@ namespace ForeignerOfUniverse.Views
             var joinPanelBorder = new Border
             {
                 Background = BrushUtility.WindowBackground,
-                BorderBrush = BrushUtility.Grey,
+                BorderBrush = BrushUtility.LightGrey,
                 BorderThickness = 1f,
                 Content = joinPanel,
                 Margin = new Thickness(0f, 4f, 0f, 0f)

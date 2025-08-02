@@ -1,20 +1,41 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <LanguageData>
     
-    <!-- EN: Spawn -->
-    <FOU.ThingInfo.Confirm.Label>生成</FOU.ThingInfo.Confirm.Label>
-    <!-- EN: Spawn this item at the selected location. -->
-    <FOU.ThingInfo.Confirm.Tooltip>在选择的位置生成该物品。</FOU.ThingInfo.Confirm.Tooltip>
+    <!-- EN: Reconstruct -->
+    <FOU.ThingInfo.Weave.Confirm.Label>重构</FOU.ThingInfo.Weave.Confirm.Label>
+    <!-- EN: Reconstruct selected items at the selected location. -->
+    <FOU.ThingInfo.Weave.Confirm.Tooltip>在目标位置重构选定的物品。</FOU.ThingInfo.Weave.Confirm.Tooltip>
+    <!-- EN: Reconstruct selected items onto current caracan. -->
+    <FOU.ThingInfo.Weave.ConfirmInCaravan.Tooltip>在当前所在的远行队重构选定的物品。</FOU.ThingInfo.Weave.ConfirmInCaravan.Tooltip>
+
+    <!-- EN: As policy -->
+    <FOU.ThingInfo.Weave.AsPolicy.Label>预设</FOU.ThingInfo.Weave.AsPolicy.Label>
+    <!-- EN: Add selected records to construction policy. -->
+    <FOU.ThingInfo.Weave.AsPolicy.Tooltip>将选中的记录添加到重构预设方案。</FOU.ThingInfo.Weave.AsPolicy.Tooltip>
 
     <!-- EN: Remove -->
-    <FOU.ThingInfo.Delete.Label>移除</FOU.ThingInfo.Delete.Label>
+    <FOU.ThingInfo.Weave.Delete.Label>移除</FOU.ThingInfo.Weave.Delete.Label>
     <!-- EN: Remove {0} from records. -->
-    <FOU.ThingInfo.Delete.Tooltip>将{0}从记录中移除。</FOU.ThingInfo.Delete.Tooltip>
+    <FOU.ThingInfo.Weave.Delete.Tooltip>将{0}从记录中移除。</FOU.ThingInfo.Weave.Delete.Tooltip>
 
     <!-- EN: Insufficient higher dimensional nanites. -->
-    <FOU.ThingInfo.Disabled.Tooltip>没有足够的高维微械。</FOU.ThingInfo.Disabled.Tooltip>
+    <FOU.ThingInfo.Weave.Disabled.Tooltip>没有足够的高维微械。</FOU.ThingInfo.Weave.Disabled.Tooltip>
 
     <!-- EN: Number of items to spawn. -->
-    <FOU.ThingInfo.Number.Tooltip>要生成的数量。</FOU.ThingInfo.Number.Tooltip>
+    <FOU.ThingInfo.Weave.Number.Tooltip>要生成的数量。</FOU.ThingInfo.Weave.Number.Tooltip>
+
+
+    <!-- EN: Disintegrate -->
+    <FOU.ThingInfo.Disintegrate.Confirm.Label>分解</FOU.ThingInfo.Disintegrate.Confirm.Label>
+    <!-- EN: Disintegrate selected items. -->
+    <FOU.ThingInfo.Disintegrate.Confirm.Tooltip>分解选定的物品。</FOU.ThingInfo.Disintegrate.Confirm.Tooltip>
+
+    <!-- EN: Disintegrate all -->
+    <FOU.ThingInfo.Disintegrate.Confirm.All.Label>分解全部</FOU.ThingInfo.Disintegrate.Confirm.All.Label>
+    <!-- EN: Disintegrate all items of {0}. -->
+    <FOU.ThingInfo.Disintegrate.Confirm.All.Tooltip>分解{0}全部的物品。</FOU.ThingInfo.Disintegrate.Confirm.All.Tooltip>
+
+    <!-- EN: Number of items to disintegrate. -->
+    <FOU.ThingInfo.Disintegrate.Number.Tooltip>要分解的数量。</FOU.ThingInfo.Disintegrate.Number.Tooltip>
 
 </LanguageData>

@@ -219,14 +219,31 @@ namespace ForeignerOfUniverse.Utilities
         {
             get
             {
-                yield return HediffInfo.From("DirtInEyes");
+                yield return HediffInfo.From("AlcoholAddiction");
+                yield return HediffInfo.From("Alzheimers");
+                yield return HediffInfo.From("AmbrosiaAddiction");
+                yield return HediffInfo.From("Asthma");
+                yield return HediffInfo.From("BadBack");
+                yield return HediffInfo.From("BrainShock");
+                yield return HediffInfo.From("Cataract");
+                yield return HediffInfo.From("Cirrhosis");
+                yield return HediffInfo.From("DeathRefusalSickness");
+                yield return HediffInfo.From("Dementia");
+                yield return HediffInfo.From("DrugOverdose");
                 yield return HediffInfo.From("FoodPoisoning");
-                yield return HediffInfo.From("GravelInEyes");
+                yield return HediffInfo.From("Frail");
+                yield return HediffInfo.From("GoJuiceAddiction");
                 yield return HediffInfo.From("GravNausea");
+                yield return HediffInfo.From("HearingLoss");
+                yield return HediffInfo.From("HeartArteryBlockage");
                 yield return HediffInfo.From("LuciferiumHigh");
-                yield return HediffInfo.From("MudInEyes");
-                yield return HediffInfo.From("PorcupineQuill");
-                yield return HediffInfo.From("SandInEyes");
+                yield return HediffInfo.From("MorningSickness");
+                yield return HediffInfo.From("PostpartumExhaustion");
+                yield return HediffInfo.From("PsychiteAddiction");
+                yield return HediffInfo.From("ResurrectionPsychosis");
+                yield return HediffInfo.From("ResurrectionSickness");
+                yield return HediffInfo.From("SmokeleafAddiction");
+                yield return HediffInfo.From("WakeUpAddiction");
             }
         }
 
@@ -235,6 +252,7 @@ namespace ForeignerOfUniverse.Utilities
             get
             {
                 yield return HediffInfo.From("AgonyPulse");
+                yield return HediffInfo.From("BrainwipeComa");
                 yield return HediffInfo.From("CubeComa");
                 yield return HediffInfo.From("CubeInterest");
                 yield return HediffInfo.From("CubeRage");
@@ -256,54 +274,35 @@ namespace ForeignerOfUniverse.Utilities
         {
             get
             {
-                yield return HediffInfo.From("AlcoholAddiction");
-                yield return HediffInfo.From("Alzheimers");
-                yield return HediffInfo.From("AmbrosiaAddiction");
-                yield return HediffInfo.From("Asthma");
-                yield return HediffInfo.From("BadBack");
                 yield return HediffInfo.From("BiosculptingSickness");
-                yield return HediffInfo.From("BioStarvation");
                 yield return HediffInfo.From("BlissLobotomy");
                 yield return HediffInfo.From("BloodRot");
-                yield return HediffInfo.From("BrainShock");
-                yield return HediffInfo.From("BrainwipeComa");
                 yield return HediffInfo.From("Carcinoma");
-                yield return HediffInfo.From("Cataract");
-                yield return HediffInfo.From("Cirrhosis");
                 yield return HediffInfo.From("CryptosleepSickness");
-                yield return HediffInfo.From("DeathRefusalSickness");
                 yield return HediffInfo.From("Decayed");
-                yield return HediffInfo.From("Dementia");
-                yield return HediffInfo.From("DrugOverdose");
+                yield return HediffInfo.From("DirtInEyes");
                 yield return HediffInfo.From("FibrousMechanites");
                 yield return HediffInfo.From("FleshmassLung");
                 yield return HediffInfo.From("FleshmassStomach");
                 yield return HediffInfo.From("FleshWhip");
                 yield return HediffInfo.From("Flu");
-                yield return HediffInfo.From("Frail");
-                yield return HediffInfo.From("GoJuiceAddiction");
+                yield return HediffInfo.From("GravelInEyes");
                 yield return HediffInfo.From("GutWorms");
-                yield return HediffInfo.From("HearingLoss");
-                yield return HediffInfo.From("HeartArteryBlockage");
                 yield return HediffInfo.From("HeartAttack");
                 yield return HediffInfo.From("LungRot");
                 yield return HediffInfo.From("Malaria");
                 yield return HediffInfo.From("MetalhorrorImplant");
-                yield return HediffInfo.From("MorningSickness");
+                yield return HediffInfo.From("MudInEyes");
                 yield return HediffInfo.From("MuscleParasites");
                 yield return HediffInfo.From("OrganDecay");
                 yield return HediffInfo.From("Plague");
-                yield return HediffInfo.From("PostpartumExhaustion");
-                yield return HediffInfo.From("PsychiteAddiction");
-                yield return HediffInfo.From("ResurrectionPsychosis");
-                yield return HediffInfo.From("ResurrectionSickness");
+                yield return HediffInfo.From("PorcupineQuill");
+                yield return HediffInfo.From("SandInEyes");
                 yield return HediffInfo.From("Scaria");
                 yield return HediffInfo.From("ScariaInfection");
                 yield return HediffInfo.From("SensoryMechanites");
                 yield return HediffInfo.From("SleepingSickness");
-                yield return HediffInfo.From("SmokeleafAddiction");
                 yield return HediffInfo.From("TraumaSavant");
-                yield return HediffInfo.From("WakeUpAddiction");
                 yield return HediffInfo.From("WoundInfection");
             }
         }

@@ -1,30 +1,37 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
 
-<FOU.NaniteAbility.Cost>Nanite cost</FOU.NaniteAbility.Cost>
-<FOU.NaniteAbility.NoFoundationProtocol>{PAWN_labelShort} does not have higher dimensional nanites.</FOU.NaniteAbility.NoFoundationProtocol>
-<FOU.NaniteAbility.NoEnoughStorage>{PAWN_labelShort} does not have enough nanites.</FOU.NaniteAbility.NoEnoughStorage>
-<FOU.NaniteAbility.InsufficientPrivileges>{PAWN_labelShort} does not have permission.</FOU.NaniteAbility.InsufficientPrivileges>
+    <FOU.NaniteAbility.Cost>Nanite cost</FOU.NaniteAbility.Cost>
+    <FOU.NaniteAbility.NoFoundationProtocol>{PAWN_labelShort} does not have higher dimensional nanites.</FOU.NaniteAbility.NoFoundationProtocol>
+    <FOU.NaniteAbility.NoEnoughStorage>{PAWN_labelShort} does not have enough nanites.</FOU.NaniteAbility.NoEnoughStorage>
+    <FOU.NaniteAbility.InsufficientPrivileges>{PAWN_labelShort} does not have permission.</FOU.NaniteAbility.InsufficientPrivileges>
 
-<FOU.NaniteAbility.TargetPawnDoNotNeedRecover>{PAWN_labelShort} does not require recovery.</FOU.NaniteAbility.TargetPawnDoNotNeedRecover>
-<FOU.NaniteAbility.TargetThingIsUnrepairable>Cannot use {0} on unrepairable items or buildings.</FOU.NaniteAbility.TargetThingIsUnrepairable>
-<FOU.NaniteAbility.TargetThingDoNotNeedRecover>Cannot use {0} on items or buildings requiring no repair.</FOU.NaniteAbility.TargetThingDoNotNeedRecover>
+    <FOU.NaniteAbility.TargetPawnDoNotNeedRecover>{PAWN_labelShort} does not require recovery.</FOU.NaniteAbility.TargetPawnDoNotNeedRecover>
+    <FOU.NaniteAbility.TargetThingIsUnrepairable>Cannot use {0} on unrepairable items or buildings.</FOU.NaniteAbility.TargetThingIsUnrepairable>
+    <FOU.NaniteAbility.TargetThingDoNotNeedRecover>Cannot use {0} on items or buildings requiring no repair.</FOU.NaniteAbility.TargetThingDoNotNeedRecover>
 
-<FOU.NaniteAbility.TargetThingCostInfo>Will cost {0} x{1}.</FOU.NaniteAbility.TargetThingCostInfo>
-<FOU.NaniteAbility.NanitesPerKilogram>Assembly yield</FOU.NaniteAbility.NanitesPerKilogram>
+    <FOU.NaniteAbility.EmptyInventoryTip>{0} has no items to disintegrate.</FOU.NaniteAbility.EmptyInventoryTip>
+    <FOU.NaniteAbility.DisintegrateTargetIsNull>Must select at least one item to disintegrate.</FOU.NaniteAbility.DisintegrateTargetIsNull>
+    <FOU.NaniteAbility.DisintegratePawnInventory>Disintegrate selected items from {PAWN_labelShort}'s inventory.</FOU.NaniteAbility.DisintegratePawnInventory>
+    <FOU.NaniteAbility.DisintegratedInventory>{PAWN_labelShort} disintegrated the items from {1}.</FOU.NaniteAbility.DisintegratedInventory>
+    <FOU.NaniteAbility.TargetThingCostInfo>Will cost {0} x{1}.</FOU.NaniteAbility.TargetThingCostInfo>
+    <FOU.NaniteAbility.NanitesPerKilogram>Assembly yield</FOU.NaniteAbility.NanitesPerKilogram>
 
-<FOU.NaniteAbility.WeavableThingAdded>{0} has been stored in nanite memory. {0} can now be created via {1}.</FOU.NaniteAbility.WeavableThingAdded>
-<FOU.NaniteAbility.CannotAddWeavableThing>{0} cannot be stored in nanite memory due to unknown reasons.</FOU.NaniteAbility.CannotAddWeavableThing>
-<FOU.NaniteAbility.KilogramsPerNanite>Weave cost</FOU.NaniteAbility.KilogramsPerNanite>
+    <FOU.NaniteAbility.WeavableThingAdded>{0} has been stored in nanite memory. {0} can now be created via {1}.</FOU.NaniteAbility.WeavableThingAdded>
+    <FOU.NaniteAbility.CannotAddWeavableThing>{0} cannot be stored in nanite memory due to unknown reasons.</FOU.NaniteAbility.CannotAddWeavableThing>
+    <FOU.NaniteAbility.KilogramsPerNanite>Weave cost</FOU.NaniteAbility.KilogramsPerNanite>
 
-<FOU.NaniteAbility.ActivateRecoveryProgram.Label>recovery program</FOU.NaniteAbility.ActivateRecoveryProgram.Label>
-<FOU.NaniteAbility.ActivateRecoveryProgram.Description>{PAWN_labelShort}'s body has deteriorated beyond critical thresholds. Higher dimensional nanites can now be actively activated to initiate a full-body recovery.</FOU.NaniteAbility.ActivateRecoveryProgram.Description>
+    <FOU.NaniteAbility.ActivateRecoveryProgram.Label>recovery program</FOU.NaniteAbility.ActivateRecoveryProgram.Label>
+    <FOU.NaniteAbility.ActivateRecoveryProgram.Description>{PAWN_labelShort}'s body has deteriorated beyond critical thresholds. Higher dimensional nanites can now be actively activated to initiate a full-body recovery.</FOU.NaniteAbility.ActivateRecoveryProgram.Description>
 
-<FOU.NaniteAbility.EmptyTip>Use {0} on items to store their blueprints here.</FOU.NaniteAbility.EmptyTip>
-<FOU.NaniteAbility.SpawnTo>Reconstruct items at this location.</FOU.NaniteAbility.SpawnTo>
-<FOU.NaniteAbility.CannotSpawnTo>Cannot reconstruct at this location.</FOU.NaniteAbility.CannotSpawnTo>
+	<FOU.NaniteAbility.EmptyRecordTip>Use {0} on items to store their blueprints here.</FOU.NaniteAbility.EmptyRecordTip>
+	<FOU.NaniteAbility.WeaveTargetIsNull>Must select at least one item to reconstruct.</FOU.NaniteAbility.WeaveTargetIsNull>
+	<FOU.NaniteAbility.CannotSpawnTo>Cannot reconstruct at this location.</FOU.NaniteAbility.CannotSpawnTo>
+	<FOU.NaniteAbility.SpawnTo>Reconstruct items at this location.</FOU.NaniteAbility.SpawnTo>
+	<FOU.NaniteAbility.SpawnToPawn>Reconstruct items onto {PAWN_labelShort}.</FOU.NaniteAbility.SpawnToPawn>
+	<FOU.NaniteAbility.SpawnedToCaravan>Reconstructed items added to {0}.</FOU.NaniteAbility.SpawnedToCaravan>
 
-<FOU.NaniteAbility.CannotTeleportTo>Cannot teleport {0} to this location.</FOU.NaniteAbility.CannotTeleportTo>
-<FOU.NaniteAbility.TeleportTo>Teleport {0} to this location.</FOU.NaniteAbility.TeleportTo>
+    <FOU.NaniteAbility.CannotTeleportTo>Cannot teleport {0} to this location.</FOU.NaniteAbility.CannotTeleportTo>
+    <FOU.NaniteAbility.TeleportTo>Teleport {0} to this location.</FOU.NaniteAbility.TeleportTo>
 
 </LanguageData>

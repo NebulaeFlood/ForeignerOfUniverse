@@ -89,37 +89,16 @@ namespace ForeignerOfUniverse.Gizmos
 
         protected override void DrawHeader(Rect headerRect, ref bool mouseOverElement)
         {
+            if (_nanites.protocol.Contravention)
+            {
+                headerRect.xMax -= 24f;
+                DrawContraventionBarrier(headerRect, ref mouseOverElement);
+            }
+
             if (_nanites.protocol.NooNet)
             {
                 headerRect.xMax -= 24f;
-                var iconRect = new Rect(headerRect.xMax + 2f, headerRect.y + 2f, 20f, 20f);
-
-                GUI.DrawTexture(iconRect, ShildIcon, ScaleMode.ScaleToFit);
-                GUI.DrawTexture(
-                    new Rect(iconRect.center.x, iconRect.y, iconRect.width / 2f, iconRect.height / 2f),
-                    _nanites.protocol.PsychicShildOpen ? Widgets.CheckboxOnTex : Widgets.CheckboxOffTex);
-
-                if (Widgets.ButtonInvisible(iconRect))
-                {
-                    if (_nanites.protocol.PsychicShildOpen)
-                    {
-                        _nanites.ShildClose();
-                        SoundDefOf.Tick_Low.PlayOneShotOnCamera();
-                    }
-                    else
-                    {
-                        _nanites.ShildOpen();
-                        SoundDefOf.Tick_High.PlayOneShotOnCamera();
-                    }
-                }
-
-                if (iconRect.Contains(Event.current.mousePosition))
-                {
-                    Widgets.DrawHighlight(new Rect(headerRect.xMax, headerRect.y, 24f, 24f));
-                    mouseOverElement = true;
-                }
-
-                TooltipHandler.TipRegion(iconRect, "FOU.Protocols.NooNet.Tip".Translate());
+                DrawPsychicShild(headerRect, ref mouseOverElement);
             }
 
             base.DrawHeader(headerRect, ref mouseOverElement);
@@ -127,7 +106,7 @@ namespace ForeignerOfUniverse.Gizmos
 
         protected override string GetTooltip()
         {
-            string text = string.Format("{0}: {1} / {2}\n",
+            string text = string.Format("{0}: {1} / {2}",
                 gene.ResourceLabel.CapitalizeFirst().Colorize(ColoredText.TipSectionTitleColor),
                 gene.ValueForDisplay,
                 gene.MaxForDisplay);
@@ -152,7 +131,7 @@ namespace ForeignerOfUniverse.Gizmos
                     text = string.Concat(new string[]
                     {
                         text,
-                        "\n",
+                        "\n\n",
                         (totalDrainPerDay < 0f) ? "RegenerationRate".Translate().Resolve() : "DrainRate".Translate().Resolve(),
                         ": ",
                         "PerDay".Translate(Mathf.Abs(totalDrainPerDay * 100f)).Resolve()
@@ -160,14 +139,17 @@ namespace ForeignerOfUniverse.Gizmos
 
                     foreach (var pair in cachedDrainGenes)
                     {
-                        text = string.Concat(new string[]
+                        if (pair.Value != 0f)
                         {
+                            text = string.Concat(new string[]
+                            {
                             text,
                             "\n  - ",
                             pair.Gene.DisplayLabel.CapitalizeFirst(),
                             ": ",
                             "PerDay".Translate(gene.PostProcessValue(-pair.Value).ToStringWithSign()).Resolve()
-                        });
+                            });
+                        }
                     }
                 }
             }
@@ -215,6 +197,16 @@ namespace ForeignerOfUniverse.Gizmos
                 }
             }
 
+            if (_nanites.protocol.Contravention)
+            {
+                text += "\n - " + "FOU.Protocols.Contravention.Label".Translate().Resolve().Colorize(ColoredText.NameColor);
+
+                if (_showDescription)
+                {
+                    text += "\n" + "FOU.Protocols.Contravention.Description".Translate().Resolve() + "\n";
+                }
+            }
+
             if (_nanites.protocol.Phoenix)
             {
                 text += "\n - " + "FOU.Protocols.Phoenix.Label".Translate().Resolve().Colorize(ColoredText.NameColor);
@@ -234,10 +226,85 @@ namespace ForeignerOfUniverse.Gizmos
             }
             else
             {
-                text += "\n\n<color=grey>"+ "FOU.Protocols.Tip".Translate().Resolve() + "</color>";
+                text += "\n\n<color=grey>" + "FOU.Protocols.Tip".Translate().Resolve() + "</color>";
             }
 
             return text;
+        }
+
+        #endregion
+
+
+        //------------------------------------------------------
+        //
+        //  Private Methods
+        //
+        //------------------------------------------------------
+
+        #region Private Methods
+
+        private void DrawContraventionBarrier(Rect layoutRect, ref bool mouseOverElement)
+        {
+            var iconRect = new Rect(layoutRect.xMax + 2f, layoutRect.y + 2f, 20f, 20f);
+
+            GUI.DrawTexture(iconRect, ContraventionBarrierIcon, ScaleMode.ScaleToFit);
+            GUI.DrawTexture(
+                new Rect(iconRect.center.x, iconRect.y, 10f, 10f),
+                _nanites.protocol.ContraventionBarrierOpen ? Widgets.CheckboxOnTex : Widgets.CheckboxOffTex);
+
+            if (Widgets.ButtonInvisible(iconRect))
+            {
+                if (_nanites.protocol.ContraventionBarrierOpen)
+                {
+                    _nanites.protocol.ContraventionBarrierOpen = false;
+                    SoundDefOf.Tick_Low.PlayOneShotOnCamera();
+                }
+                else
+                {
+                    _nanites.protocol.ContraventionBarrierOpen = true;
+                    SoundDefOf.Tick_High.PlayOneShotOnCamera();
+                }
+            }
+
+            if (iconRect.Contains(Event.current.mousePosition))
+            {
+                Widgets.DrawHighlight(new Rect(layoutRect.xMax, layoutRect.y, 24f, 24f));
+                mouseOverElement = true;
+            }
+
+            TooltipHandler.TipRegion(iconRect, "FOU.Protocols.Contravention.Tip".Translate());
+        }
+
+        private void DrawPsychicShild(Rect layoutRect, ref bool mouseOverElement)
+        {
+            var iconRect = new Rect(layoutRect.xMax + 2f, layoutRect.y + 2f, 20f, 20f);
+
+            GUI.DrawTexture(iconRect, PsychicShildIcon, ScaleMode.ScaleToFit);
+            GUI.DrawTexture(
+                new Rect(iconRect.center.x, iconRect.y, 10f, 10f),
+                _nanites.protocol.PsychicShildOpen ? Widgets.CheckboxOnTex : Widgets.CheckboxOffTex);
+
+            if (Widgets.ButtonInvisible(iconRect))
+            {
+                if (_nanites.protocol.PsychicShildOpen)
+                {
+                    _nanites.PsychicShildClose();
+                    SoundDefOf.Tick_Low.PlayOneShotOnCamera();
+                }
+                else
+                {
+                    _nanites.PsychicShildOpen();
+                    SoundDefOf.Tick_High.PlayOneShotOnCamera();
+                }
+            }
+
+            if (iconRect.Contains(Event.current.mousePosition))
+            {
+                Widgets.DrawHighlight(new Rect(layoutRect.xMax, layoutRect.y, 24f, 24f));
+                mouseOverElement = true;
+            }
+
+            TooltipHandler.TipRegion(iconRect, "FOU.Protocols.NooNet.Tip".Translate());
         }
 
         #endregion
@@ -265,7 +332,8 @@ namespace ForeignerOfUniverse.Gizmos
 
         #region Private Static Fields
 
-        private static readonly Texture2D ShildIcon = ContentFinder<Texture2D>.Get("UI/Icons/Abilities/FOU_Shild");
+        private static readonly Texture2D ContraventionBarrierIcon = ContentFinder<Texture2D>.Get("UI/Icons/Abilities/FOU_ContraventionBarrier");
+        private static readonly Texture2D PsychicShildIcon = ContentFinder<Texture2D>.Get("UI/Icons/Abilities/FOU_PsychicShild");
         private static readonly Texture2D ValueBarHighlight = SolidColorMaterials.NewSolidColorTexture(new Color(0.78f, 0.72f, 0.66f));
 
         #endregion

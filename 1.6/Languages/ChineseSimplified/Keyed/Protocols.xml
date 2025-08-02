@@ -22,13 +22,20 @@
     <FOU.Protocols.NooNet.Label>「智网协议」</FOU.Protocols.NooNet.Label>
     <!-- EN: Higher dimensional nanites augment neural functions, shield consciousness integrity, and construct virtual domains for cognitive refinement. -->
     <FOU.Protocols.NooNet.Description>高维微械将辅助神经元工作，保护此人的心灵，并提供虚拟空间以帮助锤炼技艺。</FOU.Protocols.NooNet.Description>
-    <!-- EN: Open or close <![CDATA[<color=#D09B61>psychic shild</color>]]>. -->
+    <!-- EN: Toggle <![CDATA[<color=#D09B61>psychic shild</color>]]>. -->
     <FOU.Protocols.NooNet.Tip>开启或关闭<![CDATA[<color=#D09B61>心灵屏障</color>]]>。</FOU.Protocols.NooNet.Tip>
 
     <!-- EN: 「WEAVE」 -->
     <FOU.Protocols.Weave.Label>「量塑协议」</FOU.Protocols.Weave.Label>
     <!-- EN: Higher dimensional nanites enable fundamental particle manipulation akin to weaving primal clay. -->
     <FOU.Protocols.Weave.Description>高维微械将帮助此人如黏土般编织塑造基本粒子。</FOU.Protocols.Weave.Description>
+
+    <!-- EN: 「CONTRAVENTION」 -->
+    <FOU.Protocols.Contravention.Label>「逆理协议」</FOU.Protocols.Contravention.Label>
+    <!-- EN: Higher dimensional nanites will distort reality's laws to intercept conventional assaults. -->
+    <FOU.Protocols.Contravention.Description>高维微械将扭曲现实法则，以阻挡任何常规攻击。</FOU.Protocols.Contravention.Description>
+    <!-- EN: Toggle <![CDATA[<color=#D09B61>contravention barrier</color>]]>. -->
+    <FOU.Protocols.Contravention.Tip>开启或关闭<![CDATA[<color=#D09B61>逆理屏障</color>]]>。</FOU.Protocols.Contravention.Tip>
 
     <!-- EN: 「PHOENIX」 -->
     <FOU.Protocols.Phoenix.Label>「溯生协议」</FOU.Protocols.Phoenix.Label>

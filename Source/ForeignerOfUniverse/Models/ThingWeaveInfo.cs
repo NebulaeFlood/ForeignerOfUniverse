@@ -12,18 +12,18 @@ namespace ForeignerOfUniverse.Models
 {
     internal readonly struct ThingWeaveInfo
     {
-        public static ThingDef Def;
-        public static ThingDef StuffDef;
-        public static ThingStyleDef StyleDef;
+        public readonly ThingDef Def;
+        public readonly ThingDef StuffDef;
+        public readonly ThingStyleDef StyleDef;
 
-        public static bool Qualified;
-        public static QualityCategory Quality;
+        public readonly bool Qualified;
+        public readonly QualityCategory Quality;
 
-        public static bool AnyBladelinkTrait;
-        public static WeaponTraitDef[] BladelinkTraits;
+        public readonly bool AnyBladelinkTrait;
+        public readonly WeaponTraitDef[] BladelinkTraits;
 
-        public static bool AnyUniqueTrait;
-        public static WeaponTraitDef[] UniqueTraits;
+        public readonly bool AnyUniqueTrait;
+        public readonly WeaponTraitDef[] UniqueTraits;
 
 
         internal ThingWeaveInfo(ThingInfo info)
@@ -61,11 +61,10 @@ namespace ForeignerOfUniverse.Models
 
         public Thing Weave(int count)
         {
-            int spawnCount = Mathf.Min(count, Def.stackLimit);
+            int spawnCount = count;
             var thing = ThingMaker.MakeThing(Def, StuffDef);
 
             thing.StyleDef = StyleDef;
-            thing.stackCount = spawnCount;
 
             if (Qualified && thing.TryGetComp<CompQuality>(out var quality))
             {
@@ -84,6 +83,12 @@ namespace ForeignerOfUniverse.Models
                 uniqueWeapon.TraitsListForReading.AddRange(UniqueTraits);
             }
 
+            if (Def.minifiedDef != null)
+            {
+                thing = MinifyUtility.MakeMinified(thing);
+            }
+
+            thing.stackCount = spawnCount;
             return thing;
         }
     }

@@ -1,14 +1,28 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <LanguageData>
     
-    <FOU.ThingInfo.Confirm.Label>Spawn</FOU.ThingInfo.Confirm.Label>
-    <FOU.ThingInfo.Confirm.Tooltip>Spawn this item at the selected location.</FOU.ThingInfo.Confirm.Tooltip>
+    <FOU.ThingInfo.Weave.Confirm.Label>Reconstruct</FOU.ThingInfo.Weave.Confirm.Label>
+    <FOU.ThingInfo.Weave.Confirm.Tooltip>Reconstruct selected items at the selected location.</FOU.ThingInfo.Weave.Confirm.Tooltip>
+    <FOU.ThingInfo.Weave.ConfirmInCaravan.Tooltip>Reconstruct selected items onto current caracan.</FOU.ThingInfo.Weave.ConfirmInCaravan.Tooltip>
 
-    <FOU.ThingInfo.Delete.Label>Remove</FOU.ThingInfo.Delete.Label>
-    <FOU.ThingInfo.Delete.Tooltip>Remove {0} from records.</FOU.ThingInfo.Delete.Tooltip>
+    <FOU.ThingInfo.Weave.AsPolicy.Label>As policy</FOU.ThingInfo.Weave.AsPolicy.Label>
+    <FOU.ThingInfo.Weave.AsPolicy.Tooltip>Add selected records to construction policy.</FOU.ThingInfo.Weave.AsPolicy.Tooltip>
 
-    <FOU.ThingInfo.Disabled.Tooltip>Insufficient higher dimensional nanites.</FOU.ThingInfo.Disabled.Tooltip>
+    <FOU.ThingInfo.Weave.Delete.Label>Remove</FOU.ThingInfo.Weave.Delete.Label>
+    <FOU.ThingInfo.Weave.Delete.Tooltip>Remove {0} from records.</FOU.ThingInfo.Weave.Delete.Tooltip>
 
-    <FOU.ThingInfo.Number.Tooltip>Number of items to spawn.</FOU.ThingInfo.Number.Tooltip>
+    <FOU.ThingInfo.Weave.Disabled.Tooltip>Insufficient higher dimensional nanites.</FOU.ThingInfo.Weave.Disabled.Tooltip>
+
+    <FOU.ThingInfo.Weave.Number.Tooltip>Number of items to spawn.</FOU.ThingInfo.Weave.Number.Tooltip>
+
+
+    <FOU.ThingInfo.Disintegrate.Confirm.Label>Disintegrate</FOU.ThingInfo.Disintegrate.Confirm.Label>
+    <FOU.ThingInfo.Disintegrate.Confirm.Tooltip>Disintegrate selected items.</FOU.ThingInfo.Disintegrate.Confirm.Tooltip>
+
+    <FOU.ThingInfo.Disintegrate.Confirm.All.Label>Disintegrate all</FOU.ThingInfo.Disintegrate.Confirm.All.Label>
+    <FOU.ThingInfo.Disintegrate.Confirm.All.Tooltip>Disintegrate all items of {0}.</FOU.ThingInfo.Disintegrate.Confirm.All.Tooltip>
+
+    <FOU.ThingInfo.Disintegrate.Number.Tooltip>Number of items to disintegrate.</FOU.ThingInfo.Disintegrate.Number.Tooltip>
+
 
 </LanguageData>

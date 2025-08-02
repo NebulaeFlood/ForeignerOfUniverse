@@ -13,6 +13,10 @@
         <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
         <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
 
+        <showGizmoOnWorldView>true</showGizmoOnWorldView>
+
+        <gizmoClass>ForeignerOfUniverse.Gizmos.MatterWeaveAbility</gizmoClass>
+
         <jobDef>CastAbilityOnThingMelee</jobDef>
         <warmupSound>FOU_NaniteAbilityWarmup</warmupSound>
 
@@ -29,7 +33,8 @@
             <soundCast>FOU_MatterDisintegrationCasted</soundCast>
 
             <targetParams>
-                <canTargetPawns>false</canTargetPawns>
+                <canTargetSelf>true</canTargetSelf>
+                <canTargetPawns>true</canTargetPawns>
                 <canTargetBuildings>false</canTargetBuildings>
                 <canTargetItems>true</canTargetItems>
                 <mapObjectTargetsMustBeAutoAttackable>false</mapObjectTargetsMustBeAutoAttackable>

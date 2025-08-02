@@ -13,11 +13,15 @@
 
     <FOU.Protocols.NooNet.Label>「NOONET」</FOU.Protocols.NooNet.Label>
     <FOU.Protocols.NooNet.Description>Higher dimensional nanites augment neural functions, shield consciousness integrity, and construct virtual domains for cognitive refinement.</FOU.Protocols.NooNet.Description>
-    <FOU.Protocols.NooNet.Tip>Open or close <![CDATA[<color=#D09B61>psychic shield</color>]]>.</FOU.Protocols.NooNet.Tip>
+    <FOU.Protocols.NooNet.Tip>Toggle <![CDATA[<color=#D09B61>psychic shield</color>]]>.</FOU.Protocols.NooNet.Tip>
 
     <FOU.Protocols.Weave.Label>「WEAVE」</FOU.Protocols.Weave.Label>
     <FOU.Protocols.Weave.Description>Higher dimensional nanites enable fundamental particle manipulation akin to weaving primal clay.</FOU.Protocols.Weave.Description>
 
+    <FOU.Protocols.Contravention.Label>「CONTRAVENTION」</FOU.Protocols.Contravention.Label>
+    <FOU.Protocols.Contravention.Description>Higher dimensional nanites will distort reality's laws to intercept conventional assaults.</FOU.Protocols.Contravention.Description>
+    <FOU.Protocols.Contravention.Tip>Toggle <![CDATA[<color=#D09B61>contravention barrier</color>]]>.</FOU.Protocols.Contravention.Tip>
+    
     <FOU.Protocols.Phoenix.Label>「PHOENIX」</FOU.Protocols.Phoenix.Label>
     <FOU.Protocols.Phoenix.Description>Higher dimensional nanites perpetually regenerate biological systems. Catastrophic damage triggers radical protection protocols.</FOU.Protocols.Phoenix.Description>
 

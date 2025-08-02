@@ -152,7 +152,7 @@ namespace ForeignerOfUniverse.Models
         }
 
 
-        public void Clear()
+        public void Purge()
         {
             InjuryList.Clear();
             MissingPartList.Clear();

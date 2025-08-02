@@ -16,7 +16,11 @@ namespace ForeignerOfUniverse.Comps.Hediffs
                 {
                     var hediff = hediffs[i];
 
-                    if (hediff is Hediff_MissingPart)
+                    if (hediff.CauseDeathNow())
+                    {
+                        return false;
+                    }
+                    else if (hediff is Hediff_MissingPart)
                     {
                         var part = hediff.Part;
 
@@ -33,8 +37,14 @@ namespace ForeignerOfUniverse.Comps.Hediffs
                     }
                 }
 
-                return !parent.pawn.health.ShouldBeDeadFromLethalDamageThreshold() 
-                    && parent.pawn.health.ShouldBeDeadFromRequiredCapacity() is null;
+                if (parent.pawn.health.ShouldBeDeadFromRequiredCapacity() != null)
+                {
+                    return false;
+                }
+
+                return parent.pawn.health.ShouldBeDeadFromRequiredCapacity() is null
+                    && PawnCapacityUtility.CalculatePartEfficiency(parent.pawn.health.hediffSet, parent.pawn.RaceProps.body.corePart) > 0.5f
+                    && !parent.pawn.health.ShouldBeDeadFromLethalDamageThreshold();
             }
         }
 

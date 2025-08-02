@@ -32,12 +32,15 @@ namespace ForeignerOfUniverse.Models
         public bool Ascension;
         public bool NooNet;
         public bool Weave;
+        public bool Contravention;
         public bool Phoenix;
 
         public Hediff Anchor;
 
         public bool PsychicShildOpen;
         public Hediff PsychicShild;
+
+        public bool ContraventionBarrierOpen;
 
         public Hediff RecoveryProgram;
 
@@ -95,6 +98,7 @@ namespace ForeignerOfUniverse.Models
             Ascension = physicalAscensionExist;
             NooNet = nanoSynapseExist;
             Weave = matterManipulationExist;
+            Contravention = nanoSynapseExist && matterManipulationExist;
             Phoenix = physicalAscensionExist && matterManipulationExist;
 
             CheckUp = physicalAscensionExist || nanoSynapseExist || matterManipulationExist;
@@ -120,6 +124,11 @@ namespace ForeignerOfUniverse.Models
                 }
             }
 
+            if (protocol.Contravention && Contravention)
+            {
+                ContraventionBarrierOpen = protocol.ContraventionBarrierOpen;
+            }
+
             if (Phoenix)
             {
                 RecoveryProgram = protocol.RecoveryProgram;
@@ -136,9 +145,11 @@ namespace ForeignerOfUniverse.Models
             Scribe_Values.Look(ref Ascension, nameof(Ascension));
             Scribe_Values.Look(ref NooNet, nameof(NooNet));
             Scribe_Values.Look(ref Weave, nameof(Weave));
+            Scribe_Values.Look(ref Contravention, nameof(Contravention));
             Scribe_Values.Look(ref Phoenix, nameof(Phoenix));
 
             Scribe_Values.Look(ref PsychicShildOpen, nameof(PsychicShildOpen));
+            Scribe_Values.Look(ref ContraventionBarrierOpen, nameof(ContraventionBarrierOpen));
 
             Scribe_References.Look(ref Anchor, nameof(Anchor));
             Scribe_References.Look(ref PsychicShild, nameof(PsychicShild));

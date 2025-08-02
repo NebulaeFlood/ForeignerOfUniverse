@@ -1,14 +1,10 @@
 ﻿using ForeignerOfUniverse.Comps.AbilityEffects;
-using ForeignerOfUniverse.Genes;
-using ForeignerOfUniverse.Models;
 using ForeignerOfUniverse.Views;
-using Nebulae.RimWorld.UI.Controls.Basic;
 using Nebulae.RimWorld.UI.Windows;
 using RimWorld;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Runtime.Remoting.Messaging;
 using System.Text;
 using System.Threading.Tasks;
 using UnityEngine;
@@ -17,17 +13,14 @@ using Verse;
 namespace ForeignerOfUniverse.Windows
 {
     [StaticConstructorOnStartup]
-    internal sealed class ThingWeaveWindow : ControlWindow
+    internal sealed class ThingDisintegrateWindow : ControlWindow
     {
-        public readonly MatterWeave Comp;
+        public readonly MatterDisintegration Comp;
 
 
-        internal ThingWeaveWindow(MatterWeave comp, Action confirmAction)
+        internal ThingDisintegrateWindow(MatterDisintegration comp,IEnumerable<Thing> things, string targetLabel, Action confirmAction)
         {
-            Comp = comp;
-
             _confirmAction = confirmAction;
-            _view = new ThingWeaveView(comp);
 
             absorbInputAroundWindow = true;
             closeOnClickedOutside = true;
@@ -36,7 +29,8 @@ namespace ForeignerOfUniverse.Windows
             forcePause = true;
             preventCameraMotion = true;
 
-            Content = _view;
+            Comp = comp;
+            Content = new ThingDisintegrateView(things, targetLabel);
         }
 
 
@@ -50,20 +44,20 @@ namespace ForeignerOfUniverse.Windows
 
         public override void OnAcceptKeyPressed()
         {
-            if (_view.selectedViews.Count > 0)
+            if (selectedViews.Count > 0)
             {
                 _confirmed = true;
                 Close();
             }
             else
             {
-                Messages.Message("FOU.NaniteAbility.WeaveTargetIsNull".Translate(), MessageTypeDefOf.RejectInput, historical: false);
+                Messages.Message("FOU.NaniteAbility.DisintegrateTargetIsNull".Translate(), MessageTypeDefOf.RejectInput, historical: false);
             }
         }
 
         public override void OnCancelKeyPressed()
         {
-            _view.selectedViews.Clear();
+            selectedViews.Clear();
             base.OnCancelKeyPressed();
         }
 
@@ -71,12 +65,15 @@ namespace ForeignerOfUniverse.Windows
         {
             if (_confirmed)
             {
-                Comp.weaveQueue = _view.selectedViews;
+                Comp.disintegrateQueue = selectedViews;
                 _confirmAction();
             }
         }
 
         #endregion
+
+
+        internal readonly LinkedList<ThingDisintegratableView> selectedViews = new LinkedList<ThingDisintegratableView>();
 
 
         //------------------------------------------------------
@@ -89,8 +86,6 @@ namespace ForeignerOfUniverse.Windows
 
         private readonly Action _confirmAction;
         private bool _confirmed;
-
-        private readonly ThingWeaveView _view;
 
         #endregion
     }

@@ -18,8 +18,11 @@ using Verse.Sound;
 
 namespace ForeignerOfUniverse.Comps.AbilityEffects
 {
-    internal sealed class MatterWeave : CompAbilityEffect
+    public sealed class MatterWeave : CompAbilityEffect
     {
+        public override bool ShouldHideGizmo => FOU.Settings.HideGizmoWhenMultiSelected && Find.Selector.SelectedPawns.Count != 1;
+
+
         //------------------------------------------------------
         //
         //  Public Methods
@@ -30,26 +33,117 @@ namespace ForeignerOfUniverse.Comps.AbilityEffects
 
         public override bool AICanTargetNow(LocalTargetInfo target) => false;
 
-        public override void Apply(LocalTargetInfo target, LocalTargetInfo dest)
+        public override void Apply(GlobalTargetInfo target)
         {
-            if (!weavingThing.Loaded || weavingThingCount < 1 || !parent.pawn.TryGetNanites(out var nanites))
+            if (weaveQueue is null)
             {
                 return;
             }
 
-            WeaveThings(target);
+            if (!parent.pawn.TryGetNanites(out var nanites))
+            {
+                weaveQueue = null;
+                return;
+            }
 
-            nanites.OffsetStore(-(weavingThingCount * ThingInfo.GetMass(weavingThing) * FOU.Settings.KilogramsPerNanite * 0.01f));
+            var caravan = parent.pawn.GetCaravan();
 
-            weavingThing = ThingInfo.Empty;
-            weavingThingCount = 0;
+            if (caravan is null)
+            {
+                weaveQueue = null;
+                return;
+            }
 
+            var node = weaveQueue.First;
+
+            while (node != null)
+            {
+                var weavingThing = node.Value.Model;
+                var weavingThingCount = node.Value.Count;
+
+                caravan.WeaveThing(weavingThing, weavingThingCount);
+                nanites.OffsetStore(-(weavingThingCount * ThingInfo.GetMass(weavingThing) / (FOU.Settings.KilogramsPerNanite * 100f)));
+
+                node = node.Next;
+            }
+
+            caravan.RecacheInventory();
+            Messages.Message("FOU.NaniteAbility.SpawnedToCaravan".Translate(caravan.LabelCap.Colorize(ColoredText.NameColor)).Resolve(),
+                MessageTypeDefOf.PositiveEvent, historical: false);
+
+            weaveQueue = null;
+
+            base.Apply(target);
+        }
+
+        public override void Apply(LocalTargetInfo target, LocalTargetInfo dest)
+        {
+            if (weaveQueue is null)
+            {
+                return;
+            }
+
+            if (!parent.pawn.TryGetNanites(out var nanites))
+            {
+                weaveQueue = null;
+                return;
+            }
+
+            var map = parent.pawn.MapHeld;
+
+            if (map is null)
+            {
+                weaveQueue = null;
+                return;
+            }
+
+            var pos = target.Cell;
+            var node = weaveQueue.First;
+
+            if (target.Thing is Pawn pawn)
+            {
+                while (node != null)
+                {
+                    var weavingThing = node.Value.Model;
+                    var weavingThingCount = node.Value.Count;
+
+                    pawn.WeaveThing(weavingThing, weavingThingCount);
+                    nanites.OffsetStore(-(weavingThingCount * ThingInfo.GetMass(weavingThing) / (FOU.Settings.KilogramsPerNanite * 100f)));
+
+                    node = node.Next;
+                }
+
+                pawn.inventory.UnloadEverything = true;
+
+                map.effecterMaintainer.AddEffecterToMaintain(EffecterDefOf.Skip_ExitNoDelay.Spawn(pawn, map), pos, 60);
+                FOUDefOf.FOU_TransportExit.PlayOneShot(new TargetInfo(pawn));
+            }
+            else
+            {
+                while (node != null)
+                {
+                    var weavingThing = node.Value.Model;
+                    var weavingThingCount = node.Value.Count;
+
+                    map.WeaveThing(pos, weavingThing, weavingThingCount);
+                    nanites.OffsetStore(-(weavingThingCount * ThingInfo.GetMass(weavingThing) / (FOU.Settings.KilogramsPerNanite * 100f)));
+
+                    node = node.Next;
+                }
+            }
+
+            weaveQueue = null;
             base.Apply(target, dest);
         }
 
-        public override bool CanApplyOn(GlobalTargetInfo target) => false;
+        public override bool CanApplyOn(GlobalTargetInfo target) => true;
 
         public override bool CanApplyOn(LocalTargetInfo target, LocalTargetInfo dest) => true;
+
+        public override Window ConfirmationDialog(GlobalTargetInfo target, Action confirmAction)
+        {
+            return new ThingWeaveWindow(this, confirmAction);
+        }
 
         public override Window ConfirmationDialog(LocalTargetInfo target, Action confirmAction)
         {
@@ -58,6 +152,11 @@ namespace ForeignerOfUniverse.Comps.AbilityEffects
 
         public override string ExtraLabelMouseAttachment(LocalTargetInfo target)
         {
+            if (target.Thing is Pawn pawn)
+            {
+                return "FOU.NaniteAbility.SpawnToPawn".Translate(pawn.Named("PAWN")).Resolve();
+            }
+
             var map = parent.pawn.Map;
 
             if (map is null)
@@ -70,7 +169,7 @@ namespace ForeignerOfUniverse.Comps.AbilityEffects
                 || target.Cell.Impassable(map) || !target.Cell.WalkableBy(map, parent.pawn))
             {
                 return "FOU.NaniteAbility.CannotSpawnTo".Translate();
-            }
+            };
 
             return "FOU.NaniteAbility.SpawnTo".Translate();
         }
@@ -92,6 +191,7 @@ namespace ForeignerOfUniverse.Comps.AbilityEffects
         public override void PostExposeData()
         {
             Scribe_Collections.Look(ref weavableThings, "WeavableThings", LookMode.Deep);
+            Scribe_Collections.Look(ref weavePolicies, "WeavePolicies", LookMode.Deep);
 
             if (Scribe.mode is LoadSaveMode.PostLoadInit)
             {
@@ -103,11 +203,21 @@ namespace ForeignerOfUniverse.Comps.AbilityEffects
                 {
                     weavableThings = new HashSet<ThingInfo>(weavableThings.Select(ThingInfo.Resolve));
                 }
+
+                if (weavePolicies is null)
+                {
+                    weavePolicies = new List<ThingWeavePolicy>();
+                }
             }
         }
 
         public override bool Valid(LocalTargetInfo target, bool throwMessages = false)
         {
+            if (target.Thing is Pawn)
+            {
+                return true;
+            }
+
             var map = parent.pawn.Map;
 
             if (map is null)
@@ -137,27 +247,9 @@ namespace ForeignerOfUniverse.Comps.AbilityEffects
             return true;
         }
 
-        public override bool Valid(GlobalTargetInfo target, bool throwMessages = false) => false;
+        public override bool Valid(GlobalTargetInfo target, bool throwMessages = false) => true;
 
         #endregion
-
-
-        private void WeaveThings(LocalTargetInfo target)
-        {
-            var map = parent.pawn.Map;
-            var pos = target.Cell;
-
-            var weaveInfo = new ThingWeaveInfo(weavingThing);
-
-            for (var i = weavingThingCount; i > 0; i -= weavingThing.DefInfo.Def.stackLimit)
-            {
-                var thing = weaveInfo.Weave(i);
-
-                GenSpawn.Spawn(thing, pos, map, WipeMode.VanishOrMoveAside);
-                map.effecterMaintainer.AddEffecterToMaintain(EffecterDefOf.Skip_ExitNoDelay.Spawn(thing, map), thing.Position, 60);
-                FOUDefOf.FOU_TransportExit.PlayOneShot(new TargetInfo(thing));
-            }
-        }
 
 
         //------------------------------------------------------
@@ -169,8 +261,8 @@ namespace ForeignerOfUniverse.Comps.AbilityEffects
         #region Internal Fields
 
         internal HashSet<ThingInfo> weavableThings = new HashSet<ThingInfo>();
-        internal ThingInfo weavingThing = ThingInfo.Empty;
-        internal int weavingThingCount;
+        internal List<ThingWeavePolicy> weavePolicies = new List<ThingWeavePolicy>();
+        internal LinkedList<ThingWeavableView> weaveQueue = new LinkedList<ThingWeavableView>();
 
         #endregion
     }

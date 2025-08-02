@@ -25,7 +25,7 @@ namespace ForeignerOfUniverse.Views
     {
         public HediffDefOverviewView()
         {
-            _searchBox = new SearchBox { Margin = new Thickness(0f, 6f, 0f, 6f) };
+            _searchBox = new SearchBox();
             _searchBox.Search += OnSearch;
 
             _infos = new StackPanel { Margin = 4f, Filter = Filter, VerticalAlignment = VerticalAlignment.Top }
@@ -43,17 +43,18 @@ namespace ForeignerOfUniverse.Views
                 BorderBrush = BrushUtility.Grey,
                 BorderThickness = 1f,
                 Content = new ScrollViewer { Content = _infos, HorizontalScrollBarVisibility = ScrollBarVisibility.Hidden },
-                Padding = 8f
+                Margin = new Thickness(0f, 4f, 0f, 0f),
+                Padding = 4f
             };
 
-            var grid = new Grid()
-                .DefineRows(36f, Grid.Remain)
+            var grid = new Grid { Margin = 4f }
+                .DefineRows(30f, Grid.Remain)
                 .Set(_searchBox, infoPanel);
 
             return new Border
             {
-                Background = BrushUtility.DarkGrey,
-                BorderBrush = BrushUtility.Grey,
+                Background = BrushUtility.DarkerGrey,
+                BorderBrush = BrushUtility.LightGrey,
                 BorderThickness = 1f,
                 Content = grid
             };
@@ -81,7 +82,17 @@ namespace ForeignerOfUniverse.Views
         #endregion]
 
 
+        //------------------------------------------------------
+        //
+        //  Private Fields
+        //
+        //------------------------------------------------------
+
+        #region Private Fields
+
         private readonly StackPanel _infos;
-        private readonly SearchBox _searchBox;  
+        private readonly SearchBox _searchBox;
+
+        #endregion
     }
 }

@@ -40,7 +40,12 @@
     <!-- EN: Configures the <![CDATA[<color=#D09B61>higher dimensional nanites</color>]]> required per kilogram of matter reconstructed for <![CDATA[<color=#D09B61>matter weave</color>]]> ability. -->
 	<FOU.Settings.KilogramsPerNanite.Tooltip>决定了使用<![CDATA[<color=#D09B61>物质编织</color>]]>时，每单位高维微械对应的千克质量。</FOU.Settings.KilogramsPerNanite.Tooltip>
 
-    <!-- EN: <![CDATA[<color=#D09B61>Indiscriminate disintegration</color>]]> ability consumption:  -->
+	<!-- EN: Damage absorption rate:  -->
+	<FOU.Settings.NanitesPerDamage.Label>伤害吸收率：</FOU.Settings.NanitesPerDamage.Label>
+    <!-- EN: Configures the <![CDATA[<color=#D09B61>higher dimensional nanites</color>]]> consumed per damage point absorbed by the <![CDATA[<color=#D09B61>contravention barrier</color>]]>. -->
+	<FOU.Settings.NanitesPerDamage.Tooltip>决定了<![CDATA[<color=#D09B61>逆理屏障</color>]]>吸收每点伤害消耗的高维微械。</FOU.Settings.NanitesPerDamage.Tooltip>
+
+	<!-- EN: <![CDATA[<color=#D09B61>Indiscriminate disintegration</color>]]> ability consumption:  -->
 	<FOU.Settings.IndiscriminateDisintegrationCost.Label><![CDATA[<color=#D09B61>无差别分解</color>]]>能力消耗：</FOU.Settings.IndiscriminateDisintegrationCost.Label>
     <!-- EN: Configures the <![CDATA[<color=#D09B61>higher dimensional nanites</color>]]> cost for activating <![CDATA[<color=#D09B61>indiscriminate disintegration</color>]]> ability. -->
 	<FOU.Settings.IndiscriminateDisintegrationCost.Tooltip>决定了<![CDATA[<color=#D09B61>无差别分解</color>]]>能力消耗的高维微械量。</FOU.Settings.IndiscriminateDisintegrationCost.Tooltip>
@@ -59,6 +64,11 @@
 	<FOU.Settings.RecoveryProgramCooldown.Label><![CDATA[<color=#D09B61>重构程序</color>]]>冷却时间：</FOU.Settings.RecoveryProgramCooldown.Label>
 	<!-- EN: Configures the cooldown for <![CDATA[<color=#D09B61>Recovery program</color>]]> from <![CDATA[<color=#D09B61>「Phoenix」</color>]]>.\n\nThe unit here is <![CDATA[<color=#D09B61>Tick</color>]]>, and 60,000 <![CDATA[<color=#D09B61>Ticks</color>]]> equal one in-game day.  -->
 	<FOU.Settings.RecoveryProgramCooldown.Tooltip><![CDATA[<color=#D09B61>「溯生协议」</color>]]>的<![CDATA[<color=#D09B61>重构程序</color>]]>的冷却时间。/n/n单位为 <![CDATA[<color=#D09B61>Tick</color>]]>，一天等于 60000 <![CDATA[<color=#D09B61>Tick</color>]]>。</FOU.Settings.RecoveryProgramCooldown.Tooltip>
+
+	<!-- EN: Auto hide ability's gizmo  -->
+	<FOU.Settings.HideGizmoWhenMultiSelected.Label>选择多个人物时隐藏技能</FOU.Settings.HideGizmoWhenMultiSelected.Label>
+	<!-- EN: Whether to hifr ability when characters multi selected.  -->
+	<FOU.Settings.HideGizmoWhenMultiSelected.Tooltip>在选择多个殖民者时隐藏技能图标。</FOU.Settings.HideGizmoWhenMultiSelected.Tooltip>
 
 	<!-- EN: Reset -->
 	<FOU.Settings.ResetButton.Label>重置</FOU.Settings.ResetButton.Label>

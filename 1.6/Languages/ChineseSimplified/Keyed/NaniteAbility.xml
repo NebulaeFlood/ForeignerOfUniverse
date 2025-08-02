@@ -19,6 +19,14 @@
 	<FOU.NaniteAbility.TargetThingDoNotNeedRecover>不能对无需修复的对象使用{0}。</FOU.NaniteAbility.TargetThingDoNotNeedRecover>
 
 
+	<!-- EN: {0} has no items to disintegrate. -->
+	<FOU.NaniteAbility.EmptyInventoryTip>{0}没有可分解的物品。</FOU.NaniteAbility.EmptyInventoryTip>
+	<!-- EN: Must select at least one item to disintegrate. -->
+	<FOU.NaniteAbility.DisintegrateTargetIsNull>必须选择要分解的物品。</FOU.NaniteAbility.DisintegrateTargetIsNull>
+	<!-- EN: Disintegrate selected items from {PAWN_labelShort}'s inventory. -->	
+	<FOU.NaniteAbility.DisintegratePawnInventory>分解{PAWN_labelShort}身上的指定物品。</FOU.NaniteAbility.DisintegratePawnInventory>
+	<!-- EN: {PAWN_labelShort} disintegrated the items from {1}. -->	
+	<FOU.NaniteAbility.DisintegratedInventory>{PAWN_labelShort}分解了{1}的物品。</FOU.NaniteAbility.DisintegratedInventory>
 	<!-- EN: Will cost {0} x{1}. -->
 	<FOU.NaniteAbility.TargetThingCostInfo>将会分解{0} x{1}。</FOU.NaniteAbility.TargetThingCostInfo>
 	<!-- EN: Assembly yield -->
@@ -40,11 +48,17 @@
 
 
 	<!-- EN: Use {0} on items to store their blueprints here. -->
-	<FOU.NaniteAbility.EmptyTip>对物品使用{0}以将其记录于此。</FOU.NaniteAbility.EmptyTip>
-	<!-- EN: Reconstruct items at this location. -->
-	<FOU.NaniteAbility.SpawnTo>将重构的物品放置到此处。</FOU.NaniteAbility.SpawnTo>
+	<FOU.NaniteAbility.EmptyRecordTip>对物品使用{0}以将其记录于此。</FOU.NaniteAbility.EmptyRecordTip>
+	<!-- EN: Must select at least one item to reconstruct. -->
+	<FOU.NaniteAbility.WeaveTargetIsNull>必须选择要重构的物品。</FOU.NaniteAbility.WeaveTargetIsNull>
 	<!-- EN: Cannot reconstruct at this location. -->
 	<FOU.NaniteAbility.CannotSpawnTo>无法在此重构物品。</FOU.NaniteAbility.CannotSpawnTo>
+	<!-- EN: Reconstruct items at this location. -->
+	<FOU.NaniteAbility.SpawnTo>将重构的物品放置到此处。</FOU.NaniteAbility.SpawnTo>
+	<!-- EN: Reconstruct items onto {PAWN_labelShort}. -->
+	<FOU.NaniteAbility.SpawnToPawn>重构物品到{PAWN_labelShort}身上。</FOU.NaniteAbility.SpawnToPawn>
+	<!-- EN: Reconstructed items added to {0}. -->
+	<FOU.NaniteAbility.SpawnedToCaravan>已将重构的物品添加到{0}中。</FOU.NaniteAbility.SpawnedToCaravan>
 
 	
 	<!-- EN: Cannot teleport {0} to this location. -->

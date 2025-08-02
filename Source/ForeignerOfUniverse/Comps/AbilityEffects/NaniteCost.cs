@@ -47,6 +47,8 @@ namespace ForeignerOfUniverse.Comps.AbilityEffects
             }
         }
 
+        public override bool ShouldHideGizmo => FOU.Settings.HideGizmoWhenMultiSelected && Find.Selector.SelectedPawns.Count != 1;
+
         #endregion
 
 
@@ -131,7 +133,7 @@ namespace ForeignerOfUniverse.Comps.AbilityEffects
     }
 
 
-    public class Properties_NaniteCost : CompProperties_AbilityEffect
+    public sealed class Properties_NaniteCost : CompProperties_AbilityEffect
     {
         public float nanitesCost;
 

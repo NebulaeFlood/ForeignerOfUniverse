@@ -47,7 +47,7 @@ namespace ForeignerOfUniverse.Views
                 Content = new Border
                 {
                     Background = BrushUtility.WindowBackground,
-                    BorderBrush = BrushUtility.Grey,
+                    BorderBrush = BrushUtility.LightGrey,
                     BorderThickness = 1f,
                     Content = Model.GenerateLayout(),
                     Margin = new Thickness(0f, 0f, 4f, 4f)
@@ -57,8 +57,8 @@ namespace ForeignerOfUniverse.Views
 
             return new Border
             {
-                Background = BrushUtility.DarkGrey,
-                BorderBrush = BrushUtility.Grey,
+                Background = BrushUtility.DarkerGrey,
+                BorderBrush = BrushUtility.LightGrey,
                 BorderThickness = 1f,
                 Content = expander
             };

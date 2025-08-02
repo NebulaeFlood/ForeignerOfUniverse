@@ -23,6 +23,8 @@ namespace ForeignerOfUniverse.Models
 
         #region Public Fields
 
+        public int Count;
+
         public DefInfo<ThingDef> DefInfo;
         public DefInfo<ThingDef> StuffDefInfo;
         public DefInfo<ThingStyleDef> StyleDefInfo;
@@ -55,7 +57,7 @@ namespace ForeignerOfUniverse.Models
             {
                 var anyBladelinkTrait = AnyBladelinkTrait && BladelinkTraits.Count > 0;
                 var anyUniqueTrait = AnyUniqueTrait && UniqueTraits.Count > 0;
-                var description = $"{LabelCap.Colorize(ColoredText.TipSectionTitleColor)}\n\n{DefInfo.Def.description}";
+                var description = DefInfo.Def.description;
 
                 if (anyBladelinkTrait || anyUniqueTrait)
                 {
@@ -97,8 +99,17 @@ namespace ForeignerOfUniverse.Models
         #endregion
 
 
+        //------------------------------------------------------
+        //
+        //  Constructors
+        //
+        //------------------------------------------------------
+
+        #region Constructors
+
         internal ThingInfo(Thing thing)
         {
+            Count = 0;
             DefInfo = new DefInfo<ThingDef>(thing.def);
 
             _hashCode = DefInfo.GetHashCode();
@@ -167,6 +178,30 @@ namespace ForeignerOfUniverse.Models
             Loaded = true;
         }
 
+        internal ThingInfo(ThingInfo thing, int count)
+        {
+            Count = count;
+
+            DefInfo = thing.DefInfo;
+            StuffDefInfo = thing.StuffDefInfo;
+            StyleDefInfo = thing.StyleDefInfo;
+
+            Qualified = thing.Qualified;
+            Quality = thing.Quality;
+
+            AnyBladelinkTrait = thing.AnyBladelinkTrait;
+            BladelinkTraits = thing.BladelinkTraits;
+
+            AnyUniqueTrait = thing.AnyUniqueTrait;
+            UniqueTraits = thing.UniqueTraits;
+
+            Loaded = true;
+
+            _hashCode = thing._hashCode;
+        }
+
+        #endregion
+
 
         //------------------------------------------------------
         //
@@ -199,6 +234,8 @@ namespace ForeignerOfUniverse.Models
 
         public void ExposeData()
         {
+            Scribe_Values.Look(ref Count, nameof(Count), defaultValue: 0);
+
             Scribe_Deep.Look(ref DefInfo, nameof(DefInfo));
             Scribe_Deep.Look(ref StuffDefInfo, nameof(StuffDefInfo));
             Scribe_Deep.Look(ref StyleDefInfo, nameof(StyleDefInfo));

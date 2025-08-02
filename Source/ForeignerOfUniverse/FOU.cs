@@ -30,12 +30,6 @@ namespace ForeignerOfUniverse
         {
             HarmonyInstance = new Harmony("Nebulae.ForeignerOfUniverse");
             HarmonyInstance.PatchAll(Assembly.GetExecutingAssembly());
-
-            if (ModsConfig.AnomalyActive)
-            {
-                HarmonyInstance.Patch(AccessTools.Method(typeof(AnomalyUtility), nameof(AnomalyUtility.TryDuplicatePawn)),
-                    transpiler: new HarmonyMethod(AccessTools.Method(typeof(AnomalyUtility_Patch), nameof(AnomalyUtility_Patch.TryDuplicatePawnTranspiler))));
-            }
         }
 
         public FOU(ModContentPack content) : base(content) { }

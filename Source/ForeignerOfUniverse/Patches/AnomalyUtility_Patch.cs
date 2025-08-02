@@ -7,8 +7,10 @@ using System.Reflection.Emit;
 
 namespace ForeignerOfUniverse.Patches
 {
+    [HarmonyPatch(typeof(AnomalyUtility), nameof(AnomalyUtility.TryDuplicatePawn))]
     internal static class AnomalyUtility_Patch
     {
+        [HarmonyTranspiler]
         internal static IEnumerable<CodeInstruction> TryDuplicatePawnTranspiler(IEnumerable<CodeInstruction> instructions, ILGenerator il)
         {
             Label originStartPoint = il.DefineLabel();
