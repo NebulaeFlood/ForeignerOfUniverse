@@ -42,6 +42,8 @@ namespace ForeignerOfUniverse.Comps.AbilityEffects
 
             var node = disintegrateQueue.First;
 
+            Thing.allowDestroyNonDestroyable = true;
+
             while (node != null)
             {
                 var thing = node.Value.Model;
@@ -54,6 +56,8 @@ namespace ForeignerOfUniverse.Comps.AbilityEffects
 
                 node = node.Next;
             }
+
+            Thing.allowDestroyNonDestroyable = false;
 
             disintegrateQueue = null;
 
@@ -74,6 +78,8 @@ namespace ForeignerOfUniverse.Comps.AbilityEffects
 
                 var node = disintegrateQueue.First;
 
+                Thing.allowDestroyNonDestroyable = true;
+
                 while (node != null)
                 {
                     var thing = node.Value.Model;
@@ -88,6 +94,8 @@ namespace ForeignerOfUniverse.Comps.AbilityEffects
                     node = node.Next;
                 }
 
+                Thing.allowDestroyNonDestroyable = false;
+
                 Messages.Message("FOU.NaniteAbility.DisintegratedInventory".Translate(parent.pawn.Named("PAWN"), pawn.LabelShortCap.Colorize(ColoredText.NameColor)).Resolve(),
                     MessageTypeDefOf.NeutralEvent, historical: false);
                 disintegrateQueue = null;
@@ -99,7 +107,13 @@ namespace ForeignerOfUniverse.Comps.AbilityEffects
 
                 parent.pawn.OffsetNaniteStore(cost * unitsPerMaterial * 0.01f);
                 parent.pawn.RecordWeavableThing(thing);
+
+                Thing.allowDestroyNonDestroyable = true;
+
                 thing.Disintegrate(cost);
+
+                Thing.allowDestroyNonDestroyable = false;
+
                 base.Apply(target, dest);
             }
         }
