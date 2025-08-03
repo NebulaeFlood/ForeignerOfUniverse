@@ -318,6 +318,14 @@ namespace ForeignerOfUniverse.Views
 
         private void OnConfirm(object sender, RoutedEventArgs args)
         {
+            if (LayoutManager.Owner is ThingWeaveWindow window)
+            {
+                window.Comp.weavePolicies = _policies.LogicalChildren
+                    .Cast<ThingWeavePolicyView>()
+                    .Select(ThingWeavePolicyView.GetModel)
+                    .ToList();
+            }
+
             LayoutManager.Owner.OnAcceptKeyPressed();
         }
 

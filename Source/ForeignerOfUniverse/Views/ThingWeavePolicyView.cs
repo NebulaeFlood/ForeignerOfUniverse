@@ -91,10 +91,25 @@ namespace ForeignerOfUniverse.Views
         }
 
 
+        //------------------------------------------------------
+        //
+        //  Public Static Methods
+        //
+        //------------------------------------------------------
+
+        #region Public Static Methods
+
         public static ThingWeavePolicyView Convert(ThingWeavePolicy model)
         {
             return new ThingWeavePolicyView(model);
         }
+
+        public static ThingWeavePolicy GetModel(ThingWeavePolicyView view)
+        {
+            return view.Model;
+        }
+
+        #endregion
 
 
         //------------------------------------------------------
