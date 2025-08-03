@@ -11,10 +11,10 @@ using Verse;
 namespace ForeignerOfUniverse.Patches
 {
     [HarmonyPatch(typeof(CompDrug), nameof(CompDrug.PostIngested))]
-    internal static class CompDrug_Patch
+    public static class CompDrug_Patch
     {
         [HarmonyTranspiler]
-        internal static IEnumerable<CodeInstruction> PostIngestedTranspiler(IEnumerable<CodeInstruction> instructions)
+        public static IEnumerable<CodeInstruction> PostIngestedTranspiler(IEnumerable<CodeInstruction> instructions)
         {
             bool patched = false;
 

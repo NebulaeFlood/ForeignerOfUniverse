@@ -11,10 +11,10 @@ using Verse;
 namespace ForeignerOfUniverse.Patches
 {
     [HarmonyPatch(typeof(Pawn_HealthTracker), nameof(Pawn_HealthTracker.CheckForStateChange))]
-    internal static class Pawn_HealthTracker_Patch
+    public static class Pawn_HealthTracker_Patch
     {
         [HarmonyTranspiler]
-        internal static IEnumerable<CodeInstruction> CheckForStateChangeTranspiler(IEnumerable<CodeInstruction> instructions, ILGenerator il)
+        public static IEnumerable<CodeInstruction> CheckForStateChangeTranspiler(IEnumerable<CodeInstruction> instructions, ILGenerator il)
         {
             var codes = instructions.ToArray();
             var method = AccessTools.Method(typeof(Pawn_HealthTracker), nameof(Pawn_HealthTracker.ShouldBeDead));

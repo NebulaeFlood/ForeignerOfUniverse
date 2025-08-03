@@ -5,10 +5,10 @@ using RimWorld;
 namespace ForeignerOfUniverse.Patches
 {
     [HarmonyPatch(typeof(Pawn_GeneTracker), nameof(Pawn_GeneTracker.AddictionChanceFactor))]
-    internal static class Pawn_GeneTracker_Patch
+    public static class Pawn_GeneTracker_Patch
     {
         [HarmonyPrefix]
-        internal static bool AddictionChanceFactorPrefix(Pawn_GeneTracker __instance, ref float __result)
+        public static bool AddictionChanceFactorPrefix(Pawn_GeneTracker __instance, ref float __result)
         {
             var nanite = __instance.GetFirstGeneOfType<HigherDimensionalNanites>();
 

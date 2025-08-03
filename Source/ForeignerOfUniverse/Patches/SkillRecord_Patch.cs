@@ -7,10 +7,10 @@ namespace ForeignerOfUniverse.Patches
 {
     [HarmonyPriority(int.MaxValue)]
     [HarmonyPatch(typeof(SkillRecord), nameof(SkillRecord.Interval))]
-    internal static class SkillRecord_Patch
+    public static class SkillRecord_Patch
     {
         [HarmonyPrefix]
-        internal static bool IntervalPrefix(SkillRecord __instance, Pawn ___pawn)
+        public static bool IntervalPrefix(SkillRecord __instance, Pawn ___pawn)
         {
             if (___pawn.TryGetNanites(out var nanites) && nanites.protocol.NooNet)
             {
