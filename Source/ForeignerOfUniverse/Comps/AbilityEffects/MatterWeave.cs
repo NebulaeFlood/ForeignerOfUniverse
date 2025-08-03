@@ -170,7 +170,7 @@ namespace ForeignerOfUniverse.Comps.AbilityEffects
             return "FOU.NaniteAbility.SpawnTo".Translate();
         }
 
-        public override string ExtraTooltipPart() => $"{"FOU.NaniteAbility.KilogramsPerNanite".Translate().Resolve().Colorize(ColoredText.TipSectionTitleColor)}: {FOU.Settings.KilogramsPerNanite}/kg";
+        public override string ExtraTooltipPart() => $"{"FOU.NaniteAbility.KilogramsPerNanite".Translate().Resolve().Colorize(ColoredText.TipSectionTitleColor)}: {1f / FOU.Settings.KilogramsPerNanite}/kg";
 
         public override bool GizmoDisabled(out string reason)
         {

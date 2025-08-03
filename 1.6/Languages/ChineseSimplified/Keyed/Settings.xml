@@ -37,7 +37,7 @@
 
 	<!-- EN: Kilograms per Nanite:  -->
 	<FOU.Settings.KilogramsPerNanite.Label>微械单位：</FOU.Settings.KilogramsPerNanite.Label>
-    <!-- EN: Configures the <![CDATA[<color=#D09B61>higher dimensional nanites</color>]]> required per kilogram of matter reconstructed for <![CDATA[<color=#D09B61>matter weave</color>]]> ability. -->
+    <!-- EN: Configures kilograms of matter per <![CDATA[<color=#D09B61>higher dimensional nanites</color>]]> for <![CDATA[<color=#D09B61>matter weave</color>]]> ability. -->
 	<FOU.Settings.KilogramsPerNanite.Tooltip>决定了使用<![CDATA[<color=#D09B61>物质编织</color>]]>时，每单位高维微械对应的千克质量。</FOU.Settings.KilogramsPerNanite.Tooltip>
 
 	<!-- EN: Damage absorption rate:  -->

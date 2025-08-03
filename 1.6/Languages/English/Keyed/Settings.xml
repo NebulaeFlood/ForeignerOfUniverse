@@ -20,7 +20,7 @@
     <FOU.Settings.NanitesPerKilogram.Tooltip>Configures per kilogram of matter yield of <![CDATA[<color=#D09B61>higher dimensional nanites</color>]]> by <![CDATA[<color=#D09B61>matter disintegration</color>]]> ability.</FOU.Settings.NanitesPerKilogram.Tooltip>
 
 	<FOU.Settings.KilogramsPerNanite.Label>Kilograms per nanite:</FOU.Settings.KilogramsPerNanite.Label>
-	<FOU.Settings.KilogramsPerNanite.Tooltip>Configures the <![CDATA[<color=#D09B61>higher dimensional nanites</color>]]> required per kilogram of matter reconstructed for <![CDATA[<color=#D09B61>matter weave</color>]]> ability.</FOU.Settings.KilogramsPerNanite.Tooltip>
+	<FOU.Settings.KilogramsPerNanite.Tooltip>Configures kilograms of matter per <![CDATA[<color=#D09B61>higher dimensional nanites</color>]]> for <![CDATA[<color=#D09B61>matter weave</color>]]> ability.</FOU.Settings.KilogramsPerNanite.Tooltip>
 
 	<FOU.Settings.NanitesPerDamage.Label>Damage absorption rate:</FOU.Settings.NanitesPerDamage.Label>
 	<FOU.Settings.NanitesPerDamage.Tooltip>Configures the <![CDATA[<color=#D09B61>higher dimensional nanites</color>]]> consumed per damage point absorbed by the <![CDATA[<color=#D09B61>contravention barrier</color>]]>.</FOU.Settings.NanitesPerDamage.Tooltip>
