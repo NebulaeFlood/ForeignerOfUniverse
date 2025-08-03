@@ -48,7 +48,6 @@
             <PsychicEntropyMax>2</PsychicEntropyMax>
             <PsychicEntropyRecoveryRate>2</PsychicEntropyRecoveryRate>
             <PsychicSensitivity>1.5</PsychicSensitivity>
-            <PsychicRitualQualityOffset MayRequire="Ludeon.RimWorld.Anomaly">1.5</PsychicRitualQualityOffset>
             <ArrestSuccessChance>1.5</ArrestSuccessChance>
             <NegotiationAbility>2</NegotiationAbility>
             <SocialImpact>2</SocialImpact>
