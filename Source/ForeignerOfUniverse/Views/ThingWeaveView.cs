@@ -19,6 +19,17 @@ namespace ForeignerOfUniverse.Views
 {
     internal sealed class ThingWeaveView : CompositeControl
     {
+        public IEnumerable<ThingWeavePolicy> OrderedProlicies
+        {
+            get
+            {
+                return _policies.LogicalChildren
+                    .Cast<ThingWeavePolicyView>()
+                    .Select(ThingWeavePolicyView.GetModel);
+            }
+        }
+
+
         internal ThingWeaveView(MatterWeave comp)
         {
             var naniteStore = comp.parent.pawn.genes.GetFirstGeneOfType<HigherDimensionalNanites>().Value * 100f;
@@ -318,14 +329,6 @@ namespace ForeignerOfUniverse.Views
 
         private void OnConfirm(object sender, RoutedEventArgs args)
         {
-            if (LayoutManager.Owner is ThingWeaveWindow window)
-            {
-                window.Comp.weavePolicies = _policies.LogicalChildren
-                    .Cast<ThingWeavePolicyView>()
-                    .Select(ThingWeavePolicyView.GetModel)
-                    .ToList();
-            }
-
             LayoutManager.Owner.OnAcceptKeyPressed();
         }
 

@@ -3,6 +3,7 @@ using ForeignerOfUniverse.Views;
 using Nebulae.RimWorld.UI.Windows;
 using RimWorld;
 using System;
+using System.Linq;
 using Verse;
 
 namespace ForeignerOfUniverse.Windows
@@ -65,6 +66,8 @@ namespace ForeignerOfUniverse.Windows
                 Comp.weaveQueue = _view.selectedViews;
                 _confirmAction();
             }
+
+            Comp.weavePolicies = _view.OrderedProlicies.ToList();
         }
 
         #endregion
