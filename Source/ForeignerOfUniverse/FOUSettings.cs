@@ -39,6 +39,8 @@ namespace ForeignerOfUniverse
 
         [BooleanEntry]
         public bool HideGizmoWhenMultiSelected = true;
+        [BooleanEntry]
+        public bool SendLetterWhenImmunized = true;
 
 
         public HashSet<HediffInfo> AscensionImmutableHediffs;
@@ -65,6 +67,7 @@ namespace ForeignerOfUniverse
             Scribe_Values.Look(ref RecoveryProgramCooldown, nameof(RecoveryProgramCooldown), defaultValue: 6000);
 
             Scribe_Values.Look(ref HideGizmoWhenMultiSelected, nameof(HideGizmoWhenMultiSelected), defaultValue: true);
+            Scribe_Values.Look(ref SendLetterWhenImmunized, nameof(SendLetterWhenImmunized), defaultValue: true);
 
             Scribe_Collections.Look(ref AscensionImmutableHediffs, nameof(AscensionImmutableHediffs), LookMode.Deep);
             Scribe_Collections.Look(ref NooNetImmutableHediffs, nameof(NooNetImmutableHediffs), LookMode.Deep);
@@ -90,6 +93,7 @@ namespace ForeignerOfUniverse
             RecoveryProgramCooldown = 6000;
 
             HideGizmoWhenMultiSelected = true;
+            SendLetterWhenImmunized = true;
         }
     }
 }

@@ -43,6 +43,9 @@
     <FOU.Settings.ResetButton.Label>Reset</FOU.Settings.ResetButton.Label>
     <FOU.Settings.ResetButton.Tooltip>Resets the above options to default.</FOU.Settings.ResetButton.Tooltip>
 
+	<FOU.Settings.SendLetterWhenImmunized.Label>Send immunized letter</FOU.Settings.SendLetterWhenImmunized.Label>
+	<FOU.Settings.SendLetterWhenImmunized.Tooltip>Send a letter when any protocol found an immunized health condition.</FOU.Settings.SendLetterWhenImmunized.Tooltip>
+
     <FOU.Settings.Protocols.Tooltip>Configure health conditions immunized by {0} protocol.</FOU.Settings.Protocols.Tooltip>
 
     <FOU.Settings.Protocols.ImmuneDiseases.AddButton.Tooltip>Try to add new immunized health condition.</FOU.Settings.Protocols.ImmuneDiseases.AddButton.Tooltip>

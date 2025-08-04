@@ -70,6 +70,12 @@
 	<!-- EN: Whether to hifr ability when characters multi selected.  -->
 	<FOU.Settings.HideGizmoWhenMultiSelected.Tooltip>在选择多个殖民者时隐藏技能图标。</FOU.Settings.HideGizmoWhenMultiSelected.Tooltip>
 
+	<!-- EN: Send immunized letter  -->
+	<FOU.Settings.SendLetterWhenImmunized.Label>发送微械免疫信件</FOU.Settings.SendLetterWhenImmunized.Label>
+	<!-- EN: Send a letter when any protocol found an immunized health condition.  -->
+	<FOU.Settings.SendLetterWhenImmunized.Tooltip>当协议免疫了任意健康状态状态后，发送提示信件。</FOU.Settings.SendLetterWhenImmunized.Tooltip>
+
+
 	<!-- EN: Reset -->
 	<FOU.Settings.ResetButton.Label>重置</FOU.Settings.ResetButton.Label>
     <!-- EN: Resets the above options to defult. -->

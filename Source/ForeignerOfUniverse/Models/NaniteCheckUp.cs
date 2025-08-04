@@ -16,6 +16,7 @@ namespace ForeignerOfUniverse.Models
 
     internal readonly struct NaniteCheckUp
     {
+        public readonly bool AnyDisease;
         public readonly LinkedList<Hediff> ImmunizedDiseases;
 
         public readonly IEnumerable<Hediff_Injury> Injuries;
@@ -46,6 +47,7 @@ namespace ForeignerOfUniverse.Models
             ShouldEnforcePhoenix = protocol.Phoenix;
             ShouldEnforcePsychicShild = protocol.NooNet && protocol.PsychicShildOpen;
 
+            AnyDisease = false;
             ImmunizedDiseases = new LinkedList<Hediff>();
 
             NaniteState = NaniteState.Normal;
@@ -62,16 +64,19 @@ namespace ForeignerOfUniverse.Models
 
                 if (protocol.Ascension && NaniteImmunityUtility.AscensionImmunizedHediffDefs.Contains(hediff.def))
                 {
+                    AnyDisease = true;
                     ImmunizedDiseases.AddLast(hediff);
                     continue;
                 }
                 else if (protocol.NooNet && NaniteImmunityUtility.NooNetImmunizedHediffDefs.Contains(hediff.def))
                 {
+                    AnyDisease = true;
                     ImmunizedDiseases.AddLast(hediff);
                     continue;
                 }
                 else if (protocol.Phoenix && NaniteImmunityUtility.PhoenixImmunizedHediffDefs.Contains(hediff.def))
                 {
+                    AnyDisease = true;
                     ImmunizedDiseases.AddLast(hediff);
                     continue;
                 }

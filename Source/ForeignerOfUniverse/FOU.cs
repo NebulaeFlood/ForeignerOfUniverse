@@ -42,7 +42,7 @@ namespace ForeignerOfUniverse
         {
             var resetButton = new Button
             {
-                Margin = new Thickness(12f, 4f, 12f, 4f),
+                Margin = new Thickness(4f, 0f, 4f, 4f),
                 Text = "FOU.Settings.ResetButton.Label".Translate(),
                 Tooltip = "FOU.Settings.ResetButton.Tooltip".Translate()
             };
@@ -52,9 +52,24 @@ namespace ForeignerOfUniverse
                 Window.Content = CreateContent();
             };
 
+            var scrollViewer = new ScrollViewer
+            {
+                Content = Settings.GenerateLayout(),
+                HorizontalScrollBarVisibility = ScrollBarVisibility.Hidden
+            };
+
+            var scrollViewerBorder = new Border
+            {
+                Background = BrushUtility.WindowBackground,
+                BorderBrush = BrushUtility.LightGrey,
+                BorderThickness = 1f,
+                Margin = 4f,
+                Content = scrollViewer
+            };
+
             var basicPanel = new Grid()
                 .DefineRows(Grid.Remain, 38f)
-                .Set(Settings.GenerateLayout(), resetButton);
+                .Set(scrollViewerBorder, resetButton);
 
             var panel = new TabControl()
                 .Set(

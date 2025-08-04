@@ -18,7 +18,7 @@
 
 	<!-- EN: {PAWN_labelShort}'s {2} has healed by higher dimensional nanites. -->
 	<FOU.Letters.DiseaseCured.Content>{PAWN_labelShort}的以下状态已被高维微械治愈：\n{1}</FOU.Letters.DiseaseCured.Content>
-	<!-- EN: Metalhorrors Excised -->
+	<!-- EN: Nanite Immunity -->
 	<FOU.Letters.DiseaseCured.Label>微械免疫</FOU.Letters.DiseaseCured.Label>
 
 	<!-- EN: {PAWN_labelShort} has departed the colony.\n\nAuthorization for {1} protocol is confirmed.\n\nActivate recall protocol for immediate retrieval of {PAWN_labelShort}? -->

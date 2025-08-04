@@ -272,7 +272,10 @@ namespace ForeignerOfUniverse.Genes
             bool shouldNotify = pawn.Faction == Faction.OfPlayer || pawn.HostFaction == Faction.OfPlayer;
             _checkUp = new NaniteCheckUp(protocol, pawn.health.hediffSet.hediffs);
 
-            RemoveDiseases(_checkUp, shouldNotify);
+            if (_checkUp.AnyDisease)
+            {
+                RemoveDiseases(_checkUp, shouldNotify && FOU.Settings.SendLetterWhenImmunized);
+            }
 
             if (protocol.Phoenix)
             {
