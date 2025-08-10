@@ -44,4 +44,4 @@
 >/li>
 >```
 ## 4. Replace all search results from step 2.
-## 4. Save file, fix finished.
+## 5. Save file, fix finished.

@@ -37,14 +37,17 @@
     <FOU.Settings.RecoveryProgramCooldown.Label><![CDATA[<color=#D09B61>Recovery program</color>]]> ability cooldown: </FOU.Settings.RecoveryProgramCooldown.Label>
     <FOU.Settings.RecoveryProgramCooldown.Tooltip>Configures the cooldown for <![CDATA[<color=#D09B61>Recovery program</color>]]> from <![CDATA[<color=#D09B61>「Phoenix」</color>]]>.\n\nThe unit here is <![CDATA[<color=#D09B61>Tick</color>]]>, and 60,000 <![CDATA[<color=#D09B61>Ticks</color>]]> equal one in-game day.</FOU.Settings.RecoveryProgramCooldown.Tooltip>
 
+	<FOU.Settings.AutomaticSkillExperienceGrowth.Label>Automatic skill experience growth</FOU.Settings.AutomaticSkillExperienceGrowth.Label>
+	<FOU.Settings.AutomaticSkillExperienceGrowth.Tooltip>Whether to grow skill experience automatically when acquired <![CDATA[<color=#D09B61>「NOONET」</color>]]> clearance.</FOU.Settings.AutomaticSkillExperienceGrowth.Tooltip>
+
 	<FOU.Settings.HideGizmoWhenMultiSelected.Label>Auto hide ability's gizmo</FOU.Settings.HideGizmoWhenMultiSelected.Label>
 	<FOU.Settings.HideGizmoWhenMultiSelected.Tooltip>Whether to hifr ability when characters multi selected.</FOU.Settings.HideGizmoWhenMultiSelected.Tooltip>
 
-    <FOU.Settings.ResetButton.Label>Reset</FOU.Settings.ResetButton.Label>
-    <FOU.Settings.ResetButton.Tooltip>Resets the above options to default.</FOU.Settings.ResetButton.Tooltip>
-
 	<FOU.Settings.SendLetterWhenImmunized.Label>Send immunized letter</FOU.Settings.SendLetterWhenImmunized.Label>
 	<FOU.Settings.SendLetterWhenImmunized.Tooltip>Send a letter when any protocol found an immunized health condition.</FOU.Settings.SendLetterWhenImmunized.Tooltip>
+
+    <FOU.Settings.ResetButton.Label>Reset</FOU.Settings.ResetButton.Label>
+    <FOU.Settings.ResetButton.Tooltip>Resets the above options to default.</FOU.Settings.ResetButton.Tooltip>
 
     <FOU.Settings.Protocols.Tooltip>Configure health conditions immunized by {0} protocol.</FOU.Settings.Protocols.Tooltip>
 

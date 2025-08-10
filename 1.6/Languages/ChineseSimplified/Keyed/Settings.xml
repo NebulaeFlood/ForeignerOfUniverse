@@ -64,6 +64,11 @@
 	<FOU.Settings.RecoveryProgramCooldown.Label><![CDATA[<color=#D09B61>重构程序</color>]]>冷却时间：</FOU.Settings.RecoveryProgramCooldown.Label>
 	<!-- EN: Configures the cooldown for <![CDATA[<color=#D09B61>Recovery program</color>]]> from <![CDATA[<color=#D09B61>「Phoenix」</color>]]>.\n\nThe unit here is <![CDATA[<color=#D09B61>Tick</color>]]>, and 60,000 <![CDATA[<color=#D09B61>Ticks</color>]]> equal one in-game day.  -->
 	<FOU.Settings.RecoveryProgramCooldown.Tooltip><![CDATA[<color=#D09B61>「溯生协议」</color>]]>的<![CDATA[<color=#D09B61>重构程序</color>]]>的冷却时间。/n/n单位为 <![CDATA[<color=#D09B61>Tick</color>]]>，一天等于 60000 <![CDATA[<color=#D09B61>Tick</color>]]>。</FOU.Settings.RecoveryProgramCooldown.Tooltip>
+	
+	<!-- EN: Automatic skill experience growth  -->
+	<FOU.Settings.AutomaticSkillExperienceGrowth.Label>自动精进技能</FOU.Settings.AutomaticSkillExperienceGrowth.Label>
+	<!-- EN: Whether to grow skill experience automatically when acquired <![CDATA[<color=#D09B61>「NOONET」</color>]]> clearance.  -->
+	<FOU.Settings.AutomaticSkillExperienceGrowth.Tooltip><![CDATA[<color=#D09B61>「智网协议」</color>]]>是否会使人物经验自然增长。</FOU.Settings.AutomaticSkillExperienceGrowth.Tooltip>
 
 	<!-- EN: Auto hide ability's gizmo  -->
 	<FOU.Settings.HideGizmoWhenMultiSelected.Label>选择多个人物时隐藏技能</FOU.Settings.HideGizmoWhenMultiSelected.Label>

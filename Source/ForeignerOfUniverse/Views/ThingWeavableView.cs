@@ -143,7 +143,7 @@ namespace ForeignerOfUniverse.Views
                 _numberBox.IsEnabled = false;
                 _numberBox.MinValue = 0f;
 
-                Tooltip = $"{Tooltip.text}\n\n{"FOU.ThingInfo.Weave.Disabled.Tooltip".Translate().Colorize(ColoredText.WarningColor)}";
+                Tooltip = $"{Tooltip}\n\n{"FOU.ThingInfo.Weave.Disabled.Tooltip".Translate().Colorize(ColoredText.WarningColor)}";
 
                 panel = new Grid { Margin = 4f }
                     .DefineColumns(34f, Grid.Remain, 34f, 120f)
@@ -165,7 +165,7 @@ namespace ForeignerOfUniverse.Views
 
             if (_selected)
             {
-                _background.Background = BrushUtility.DarkerGrey;
+                _background.Background = BrushUtility.DarkGrey;
                 _selected = false;
 
                 if (this.TryFindPartent<ThingWeaveView>(out var view))

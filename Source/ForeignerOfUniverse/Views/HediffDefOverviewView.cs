@@ -15,10 +15,9 @@ namespace ForeignerOfUniverse.Views
         public HediffDefOverviewView()
         {
             _searchBox = new SearchBox();
-            _searchBox.Search += OnSearch;
 
-            _infos = new StackPanel { Margin = 4f, Filter = Filter, VerticalAlignment = VerticalAlignment.Top }
-                .Set(DefDatabase<HediffDef>.AllDefs.Select(ReadonlyHediffView.Convert));
+            _infos = new StackPanel { Margin = 4f, VerticalAlignment = VerticalAlignment.Top };
+            _infos.Set(DefDatabase<HediffDef>.AllDefs.Select(ReadonlyHediffView.Convert)).Bind(_searchBox);
 
             Initialize();
         }
@@ -48,27 +47,6 @@ namespace ForeignerOfUniverse.Views
                 Content = grid
             };
         }
-
-
-        //------------------------------------------------------
-        //
-        //  Private Methods
-        //
-        //------------------------------------------------------
-
-        #region Private Methods
-
-        private bool Filter(Control control)
-        {
-            return _searchBox.Matches(control.Name);
-        }
-
-        private void OnSearch(SearchBox sender, EventArgs args)
-        {
-            _infos.InvalidateFilter();
-        }
-
-        #endregion]
 
 
         //------------------------------------------------------

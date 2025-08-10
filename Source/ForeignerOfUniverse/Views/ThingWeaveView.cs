@@ -61,7 +61,6 @@ namespace ForeignerOfUniverse.Views
             _confirmButton.Click += OnConfirm;
 
             _searchBox = new SearchBox();
-            _searchBox.Search += OnSearch;
             _searchBox.Focus();
 
             ThingWeavableView Convert(ThingInfo info)
@@ -77,8 +76,11 @@ namespace ForeignerOfUniverse.Views
 
             _anyWeavableThing = thingViews.Any();
 
-            _infos = new StackPanel { Margin = 4f, Filter = Filter, VerticalAlignment = VerticalAlignment.Top }.Set(thingViews);
-            _policies = new StackPanel { Margin = 4f, Filter = Filter, VerticalAlignment = VerticalAlignment.Top }.Set(policyViews);
+            _infos = new StackPanel { Margin = 4f, VerticalAlignment = VerticalAlignment.Top };
+            _infos.Set(thingViews).Bind(_searchBox);
+
+            _policies = new StackPanel { Margin = 4f, VerticalAlignment = VerticalAlignment.Top };
+            _policies.Set(policyViews).Bind(_searchBox);
 
             Initialize();
         }
@@ -300,11 +302,6 @@ namespace ForeignerOfUniverse.Views
 
         #region Private Methods
 
-        private bool Filter(Control control)
-        {
-            return _searchBox.Matches(control.Name);
-        }
-
         private void OnAsPolicy(object sender, RoutedEventArgs args)
         {
             var comp = ((ThingWeaveWindow)LayoutManager.Owner).Comp;
@@ -330,12 +327,6 @@ namespace ForeignerOfUniverse.Views
         private void OnConfirm(object sender, RoutedEventArgs args)
         {
             LayoutManager.Owner.OnAcceptKeyPressed();
-        }
-
-        private void OnSearch(SearchBox sender, EventArgs args)
-        {
-            _infos.InvalidateFilter();
-            _policies.InvalidateFilter();
         }
 
         private IEnumerable<ThingInfo> ProcessSelectedViews()

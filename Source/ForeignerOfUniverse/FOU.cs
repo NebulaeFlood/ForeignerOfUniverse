@@ -46,7 +46,7 @@ namespace ForeignerOfUniverse
                 Text = "FOU.Settings.ResetButton.Label".Translate(),
                 Tooltip = "FOU.Settings.ResetButton.Tooltip".Translate()
             };
-            resetButton.Click += (sender, args) =>
+            resetButton.Click += delegate
             {
                 Settings.Reset();
                 Window.Content = CreateContent();

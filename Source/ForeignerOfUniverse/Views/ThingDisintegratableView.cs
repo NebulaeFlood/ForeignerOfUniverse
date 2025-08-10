@@ -108,7 +108,7 @@ namespace ForeignerOfUniverse.Views
 
             if (_selected)
             {
-                _background.Background = BrushUtility.DarkerGrey;
+                _background.Background = BrushUtility.DarkGrey;
                 _selected = false;
 
                 if (this.TryFindPartent<ThingDisintegrateView>(out var view))

@@ -12,7 +12,7 @@ namespace ForeignerOfUniverse.Patches
         [HarmonyPrefix]
         public static bool IntervalPrefix(SkillRecord __instance, Pawn ___pawn)
         {
-            if (___pawn.TryGetNanites(out var nanites) && nanites.protocol.NooNet)
+            if (___pawn.TryGetNanites(out var nanites) && nanites.protocol.NooNet && FOU.Settings.AutomaticSkillExperienceGrowth)
             {
                 __instance.Learn(8f, ignoreLearnRate: false);
                 return false;

@@ -19,15 +19,14 @@ namespace ForeignerOfUniverse.Views
         internal ThingDisintegrateView(IEnumerable<Thing> disintegratableThings, string targetLabel)
         {
             _searchBox = new SearchBox();
-            _searchBox.Search += OnSearch;
 
             _views = disintegratableThings
                 .OrderBy(GetMass)
                 .Select(ThingDisintegratableView.Convert)
                 .ToArray();
 
-            _infos = new StackPanel { Margin = 4f, Filter = Filter, VerticalAlignment = VerticalAlignment.Top }
-                .Set(_views);
+            _infos = new StackPanel { Margin = 4f, VerticalAlignment = VerticalAlignment.Top };
+            _infos.Set(_views).Bind(_searchBox);
 
             _confirmTooltip = "FOU.ThingInfo.Disintegrate.Confirm.Tooltip".Translate();
             _confirmDisabledTooltip = $"{"FOU.ThingInfo.Disintegrate.Confirm.Tooltip".Translate()}\n\n{"FOU.NaniteAbility.DisintegrateTargetIsNull".Translate().Colorize(ColoredText.WarningColor)}";
@@ -175,11 +174,6 @@ namespace ForeignerOfUniverse.Views
 
         #region Private Methods
 
-        private bool Filter(Control control)
-        {
-            return _searchBox.Matches(control.Name);
-        }
-
         private void OnCancle(object sender, RoutedEventArgs args)
         {
             LayoutManager.Owner.OnCancelKeyPressed();
@@ -204,11 +198,6 @@ namespace ForeignerOfUniverse.Views
             }
 
             LayoutManager.Owner.OnAcceptKeyPressed();
-        }
-
-        private void OnSearch(SearchBox sender, EventArgs args)
-        {
-            _infos.InvalidateFilter();
         }
 
         #endregion

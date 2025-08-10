@@ -38,6 +38,9 @@ namespace ForeignerOfUniverse
         public int RecoveryProgramCooldown = 6000;
 
         [BooleanEntry]
+        public bool AutomaticSkillExperienceGrowth = true;
+
+        [BooleanEntry]
         public bool HideGizmoWhenMultiSelected = true;
         [BooleanEntry]
         public bool SendLetterWhenImmunized = true;
@@ -66,6 +69,8 @@ namespace ForeignerOfUniverse
 
             Scribe_Values.Look(ref RecoveryProgramCooldown, nameof(RecoveryProgramCooldown), defaultValue: 6000);
 
+            Scribe_Values.Look(ref AutomaticSkillExperienceGrowth, nameof(AutomaticSkillExperienceGrowth), defaultValue: true);
+
             Scribe_Values.Look(ref HideGizmoWhenMultiSelected, nameof(HideGizmoWhenMultiSelected), defaultValue: true);
             Scribe_Values.Look(ref SendLetterWhenImmunized, nameof(SendLetterWhenImmunized), defaultValue: true);
 
@@ -91,6 +96,8 @@ namespace ForeignerOfUniverse
             IndiscriminateDisintegrationRadius = 4f;
 
             RecoveryProgramCooldown = 6000;
+
+            AutomaticSkillExperienceGrowth = true;
 
             HideGizmoWhenMultiSelected = true;
             SendLetterWhenImmunized = true;
