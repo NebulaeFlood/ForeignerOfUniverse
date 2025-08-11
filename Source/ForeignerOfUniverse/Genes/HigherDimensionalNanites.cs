@@ -99,7 +99,13 @@ namespace ForeignerOfUniverse.Genes
                 return 0;
             }
 
-            unitsPerMaterial = material.def.GetStatValueAbstract(StatDefOf.Mass, material.Stuff) * FOU.Settings.NanitesPerKilogram;
+            unitsPerMaterial = material.GetStatValue(StatDefOf.Mass) * FOU.Settings.NanitesPerKilogram;
+
+            if (material.stackCount == 1)
+            {
+                return 1;
+            }
+
             return Mathf.CeilToInt((max - cur) * 100f / unitsPerMaterial);
         }
 
